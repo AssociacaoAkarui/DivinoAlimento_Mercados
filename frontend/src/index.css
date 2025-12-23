@@ -19,7 +19,7 @@
         --secondary-hover: 38 96% 48%;
         --secondary-pressed: 38 96% 43%;
 
-        --accent: 88 86% 41%; /* #4ea328 - Secondary green */
+        --accent: 88 86% 35%; /* Ajustado de 41% para 35% para melhor contraste WCAG */
         --accent-foreground: 0 0% 100%;
 
         --warning: 51 100% 49%; /* #f7da00 - Yellow */

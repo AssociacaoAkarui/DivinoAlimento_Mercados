@@ -110,13 +110,14 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label
                       htmlFor="email"
-                      className="text-sm lg:text-base font-medium"
+                      id="email-label"
+                      className="text-sm lg:text-base font-medium block"
                     >
                       E-mail
                     </Label>
                     <div className="relative">
                       <Mail
-                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground"
+                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground pointer-events-none"
                         aria-hidden="true"
                       />
                       <Input
@@ -126,6 +127,7 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="pl-10 lg:pl-12 lg:h-12 lg:text-base focus-ring"
+                        aria-labelledby="email-label"
                         required
                       />
                     </div>
@@ -134,13 +136,14 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label
                       htmlFor="password"
-                      className="text-sm lg:text-base font-medium"
+                      id="password-label"
+                      className="text-sm lg:text-base font-medium block"
                     >
                       Senha
                     </Label>
                     <div className="relative">
                       <Lock
-                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground"
+                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground pointer-events-none"
                         aria-hidden="true"
                       />
                       <Input
@@ -150,6 +153,7 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="pl-10 lg:pl-12 pr-10 lg:pr-12 lg:h-12 lg:text-base focus-ring"
+                        aria-labelledby="password-label"
                         required
                       />
                       <Button
