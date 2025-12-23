@@ -52,7 +52,7 @@
 
         /* Functional Colors */
         --muted: 0 0% 96%;
-        --muted-foreground: 0 0% 38%; /* Ajustado de 45% para 38% para melhor contraste (WCAG AA) */
+        --muted-foreground: 0 0% 35%; /* Ajustado para 35% para garantir contraste 4.5:1 (WCAG AA) */
 
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 100%;

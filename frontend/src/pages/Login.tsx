@@ -115,7 +115,10 @@ const Login = () => {
                       E-mail
                     </Label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                      <Mail
+                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                       <Input
                         id="email"
                         type="email"
@@ -136,7 +139,10 @@ const Login = () => {
                       Senha
                     </Label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                      <Lock
+                        className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                       <Input
                         id="password"
                         type={showPassword ? "text" : "password"}
