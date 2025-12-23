@@ -80,8 +80,10 @@ const Login = () => {
           size="icon-sm"
           onClick={() => navigate("/")}
           className="focus-ring"
+          aria-label="Voltar para página inicial"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+          <span className="sr-only">Voltar para página inicial</span>
         </Button>
       }
     >
@@ -93,9 +95,9 @@ const Login = () => {
 
           <Card className="w-full shadow-lg">
             <CardHeader className="text-center pb-4">
-              <CardTitle className="font-poppins text-2xl lg:text-3xl text-gradient-primary">
+              <h1 className="font-poppins text-2xl lg:text-3xl text-gradient-primary font-semibold leading-none tracking-tight">
                 Entrar
-              </CardTitle>
+              </h1>
               <p className="text-sm lg:text-base text-muted-foreground">
                 Acesse sua conta do Divino Alimento
               </p>
@@ -148,11 +150,21 @@ const Login = () => {
                       size="icon-sm"
                       className="absolute right-2 top-2 lg:right-3 lg:top-3"
                       onClick={() => setShowPassword(!showPassword)}
+                      aria-label={
+                        showPassword ? "Ocultar senha" : "Mostrar senha"
+                      }
+                      aria-pressed={showPassword}
                     >
                       {showPassword ? (
-                        <EyeOff className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <EyeOff
+                          className="w-4 h-4 lg:w-5 lg:h-5"
+                          aria-hidden="true"
+                        />
                       ) : (
-                        <Eye className="w-4 h-4 lg:w-5 lg:h-5" />
+                        <Eye
+                          className="w-4 h-4 lg:w-5 lg:h-5"
+                          aria-hidden="true"
+                        />
                       )}
                     </Button>
                   </div>
@@ -169,7 +181,7 @@ const Login = () => {
 
                 <Button
                   type="submit"
-                  className="w-full lg:h-12 lg:text-base"
+                  className="w-full h-11 lg:h-12 text-base"
                   disabled={isLoading}
                   size="lg"
                 >
@@ -186,7 +198,7 @@ const Login = () => {
 
               <Button
                 variant="outline"
-                className="w-full lg:h-12 lg:text-base"
+                className="w-full h-11 lg:h-12 text-base"
                 onClick={handleGoogleLogin}
                 size="lg"
               >
@@ -211,7 +223,7 @@ const Login = () => {
                 Continuar com Google
               </Button>
 
-              <div className="text-center">
+              <div className="text-center space-y-2">
                 <p className="text-sm lg:text-base text-muted-foreground">
                   Não tem conta?{" "}
                   <Link
@@ -219,6 +231,14 @@ const Login = () => {
                     className="text-primary hover:underline font-medium focus-ring rounded px-1"
                   >
                     Criar conta
+                  </Link>
+                </p>
+                <p className="text-sm lg:text-base text-muted-foreground">
+                  <Link
+                    to="/"
+                    className="text-primary hover:underline font-medium focus-ring rounded px-1"
+                  >
+                    ← Voltar para página inicial
                   </Link>
                 </p>
               </div>
