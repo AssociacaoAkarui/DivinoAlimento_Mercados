@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useIsDesktop } from "@/hooks/use-is-desktop";
 import AppBarDivino from "./AppBarDivino";
 import AppShell from "./AppShell";
 
@@ -20,6 +21,7 @@ export const ResponsiveLayout = ({
   showHeader = true,
 }: ResponsiveLayoutProps) => {
   const location = useLocation();
+  const isDesktop = useIsDesktop();
   const isAdminRoute = location.pathname.startsWith("/admin");
   const isFornecedorRoute = location.pathname.startsWith("/fornecedor");
   const isLoginRoute =
@@ -29,18 +31,9 @@ export const ResponsiveLayout = ({
     location.pathname.includes("/onboarding");
 
   if (isFornecedorRoute && isLoginRoute) {
-    return (
-      <>
-        <div className="lg:hidden min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
-          {showHeader && (
-            <AppBarDivino leftContent={leftHeaderContent}>
-              {headerContent}
-            </AppBarDivino>
-          )}
-          <main className="flex-1 flex flex-col px-4 py-6">{children}</main>
-        </div>
-
-        <div className="hidden lg:flex min-h-screen bg-gradient-surface overflow-x-hidden">
+    if (isDesktop) {
+      return (
+        <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex">
           <AppShell className={className}>
             {showHeader && (
               <AppBarDivino leftContent={leftHeaderContent}>
@@ -52,7 +45,18 @@ export const ResponsiveLayout = ({
             </main>
           </AppShell>
         </div>
-      </>
+      );
+    }
+
+    return (
+      <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
+        {showHeader && (
+          <AppBarDivino leftContent={leftHeaderContent}>
+            {headerContent}
+          </AppBarDivino>
+        )}
+        <main className="flex-1 flex flex-col px-4 py-6">{children}</main>
+      </div>
     );
   }
 
@@ -78,18 +82,9 @@ export const ResponsiveLayout = ({
     );
   }
 
-  return (
-    <>
-      <div className="lg:hidden min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
-        {showHeader && (
-          <AppBarDivino leftContent={leftHeaderContent}>
-            {headerContent}
-          </AppBarDivino>
-        )}
-        <main className="flex-1 px-4 pt-8 pb-6">{children}</main>
-      </div>
-
-      <div className="hidden lg:block min-h-screen bg-gradient-surface overflow-x-hidden">
+  if (isDesktop) {
+    return (
+      <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
         <AppShell className={className}>
           {showHeader && (
             <AppBarDivino leftContent={leftHeaderContent}>
@@ -108,7 +103,18 @@ export const ResponsiveLayout = ({
           </main>
         </AppShell>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
+      {showHeader && (
+        <AppBarDivino leftContent={leftHeaderContent}>
+          {headerContent}
+        </AppBarDivino>
+      )}
+      <main className="flex-1 px-4 pt-8 pb-6">{children}</main>
+    </div>
   );
 };
 
