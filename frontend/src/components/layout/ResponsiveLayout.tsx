@@ -30,8 +30,8 @@ export const ResponsiveLayout = ({
 
   if (isFornecedorRoute && isLoginRoute) {
     return (
-      <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
-        <div className="lg:hidden min-h-screen flex flex-col overflow-x-hidden">
+      <>
+        <div className="lg:hidden min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
           {showHeader && (
             <AppBarDivino leftContent={leftHeaderContent}>
               {headerContent}
@@ -40,22 +40,19 @@ export const ResponsiveLayout = ({
           <main className="flex-1 flex flex-col px-4 py-6">{children}</main>
         </div>
 
-        <div className="hidden lg:flex min-h-screen">
+        <div className="hidden lg:flex min-h-screen bg-gradient-surface overflow-x-hidden">
           <AppShell className={className}>
             {showHeader && (
               <AppBarDivino leftContent={leftHeaderContent}>
                 {headerContent}
               </AppBarDivino>
             )}
-            <div
-              role="main"
-              className="flex-1 flex items-center justify-center px-8 py-12"
-            >
+            <main className="flex-1 flex items-center justify-center px-8 py-12">
               <div className="w-full max-w-md">{children}</div>
-            </div>
+            </main>
           </AppShell>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -82,8 +79,8 @@ export const ResponsiveLayout = ({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
-      <div className="lg:hidden min-h-screen flex flex-col overflow-x-hidden">
+    <>
+      <div className="lg:hidden min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
         {showHeader && (
           <AppBarDivino leftContent={leftHeaderContent}>
             {headerContent}
@@ -92,7 +89,7 @@ export const ResponsiveLayout = ({
         <main className="flex-1 px-4 pt-8 pb-6">{children}</main>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="hidden lg:block min-h-screen bg-gradient-surface overflow-x-hidden">
         <AppShell className={className}>
           {showHeader && (
             <AppBarDivino leftContent={leftHeaderContent}>
@@ -100,8 +97,7 @@ export const ResponsiveLayout = ({
             </AppBarDivino>
           )}
 
-          <div
-            role="main"
+          <main
             className={cn(
               "flex-1 py-8",
               "grid grid-cols-1 lg:grid-cols-12 gap-8",
@@ -109,10 +105,10 @@ export const ResponsiveLayout = ({
             )}
           >
             <div className="lg:col-span-12">{children}</div>
-          </div>
+          </main>
         </AppShell>
       </div>
-    </div>
+    </>
   );
 };
 
