@@ -205,10 +205,12 @@ const Register = () => {
         <Button
           variant="ghost"
           size="icon-sm"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/")}
           className="focus-ring"
+          aria-label="Voltar para página inicial"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+          <span className="sr-only">Voltar para página inicial</span>
         </Button>
       }
     >
@@ -222,9 +224,9 @@ const Register = () => {
             <CardHeader className="text-center pb-4">
               <div className="flex items-center justify-center space-x-2 mb-2">
                 <LeafIcon size="lg" className="text-primary" />
-                <CardTitle className="font-poppins text-2xl lg:text-3xl text-gradient-primary">
+                <h1 className="font-poppins text-2xl lg:text-3xl text-gradient-primary font-semibold leading-none tracking-tight">
                   Novo Cadastro
-                </CardTitle>
+                </h1>
                 <LeafIcon size="lg" className="text-accent" />
               </div>
               <p className="text-sm lg:text-base text-muted-foreground">
@@ -242,9 +244,9 @@ const Register = () => {
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-[7fr_5fr] md:gap-8 min-[1200px]:grid-cols-2 min-[1200px]:gap-6">
                     {/* Left Column - Main Information */}
                     <div className="space-y-4">
-                      <h3 className="font-poppins text-lg font-semibold text-foreground">
+                      <h2 className="font-poppins text-lg font-semibold text-foreground">
                         Informações Principais
-                      </h3>
+                      </h2>
 
                       <FormField
                         control={form.control}
@@ -431,12 +433,12 @@ const Register = () => {
                     {/* Right Column - Profile Selection & Markets */}
                     <div className="space-y-4">
                       <div>
-                        <h3 className="font-poppins text-lg font-semibold text-foreground mb-2 max-[767px]:mb-2.5 min-[1200px]:mb-4">
+                        <h2 className="font-poppins text-lg font-semibold text-foreground mb-2 max-[767px]:mb-2.5 min-[1200px]:mb-4">
                           Seleção de Perfis
-                        </h3>
-                        <Label className="text-sm lg:text-base font-medium text-muted-foreground">
+                        </h2>
+                        <p className="text-sm lg:text-base font-medium text-muted-foreground">
                           Escolha seus perfis (múltipla seleção)
-                        </Label>
+                        </p>
                       </div>
 
                       <div className="space-y-3">
@@ -622,87 +624,219 @@ const Register = () => {
                       </div>
 
                       {/* Validation Status */}
-                      <div className="p-4 border rounded-[14px] bg-white shadow-sm mt-4">
-                        <h4 className="text-sm font-semibold text-foreground mb-3">
+                      <div
+                        className="p-4 border rounded-[14px] bg-white shadow-sm mt-4"
+                        role="status"
+                        aria-live="polite"
+                        aria-atomic="true"
+                      >
+                        <h3 className="text-sm font-semibold text-foreground mb-3">
                           Status da Validação:
-                        </h4>
-                        <div className="space-y-2">
-                          <div className="flex items-center space-x-2">
+                        </h3>
+                        <ul className="space-y-2" role="list">
+                          <li className="flex items-center space-x-2">
                             {watchedValues.name?.trim() ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.name?.trim()
+                                  ? "Nome completo informado - concluído"
+                                  : "Nome completo informado - pendente"
+                              }
+                            >
                               Nome completo informado
                             </span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.phone &&
                             /^\(\d{2}\)\s\d{4,5}-\d{4}$/.test(
                               watchedValues.phone,
                             ) ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">Celular válido</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.phone &&
+                                /^\(\d{2}\)\s\d{4,5}-\d{4}$/.test(
+                                  watchedValues.phone,
+                                )
+                                  ? "Celular válido - concluído"
+                                  : "Celular válido - pendente"
+                              }
+                            >
+                              Celular válido
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.gender ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">Gênero selecionado</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.gender
+                                  ? "Gênero selecionado - concluído"
+                                  : "Gênero selecionado - pendente"
+                              }
+                            >
+                              Gênero selecionado
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.email &&
                             /\S+@\S+\.\S+/.test(watchedValues.email) ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">E-mail válido</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.email &&
+                                /\S+@\S+\.\S+/.test(watchedValues.email)
+                                  ? "E-mail válido - concluído"
+                                  : "E-mail válido - pendente"
+                              }
+                            >
+                              E-mail válido
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.email ===
                               watchedValues.confirmEmail &&
                             watchedValues.email ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">E-mails coincidem</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.email ===
+                                  watchedValues.confirmEmail &&
+                                watchedValues.email
+                                  ? "E-mails coincidem - concluído"
+                                  : "E-mails coincidem - pendente"
+                              }
+                            >
+                              E-mails coincidem
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.password &&
                             watchedValues.password.length >= 6 ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">Senha criada</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.password &&
+                                watchedValues.password.length >= 6
+                                  ? "Senha criada - concluído"
+                                  : "Senha criada - pendente"
+                              }
+                            >
+                              Senha criada
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {watchedValues.password ===
                               watchedValues.confirmPassword &&
                             watchedValues.password ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">Senhas coincidem</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                watchedValues.password ===
+                                  watchedValues.confirmPassword &&
+                                watchedValues.password
+                                  ? "Senhas coincidem - concluído"
+                                  : "Senhas coincidem - pendente"
+                              }
+                            >
+                              Senhas coincidem
+                            </span>
+                          </li>
+                          <li className="flex items-center space-x-2">
                             {hasAnyProfile ? (
-                              <CheckCircle2 className="w-4 h-4 text-success" />
+                              <CheckCircle2
+                                className="w-4 h-4 text-success"
+                                aria-hidden="true"
+                              />
                             ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                              <div
+                                className="w-4 h-4 rounded-full border-2 border-muted-foreground"
+                                aria-hidden="true"
+                              />
                             )}
-                            <span className="text-sm">Perfil selecionado</span>
-                          </div>
-                        </div>
+                            <span
+                              className="text-sm"
+                              aria-label={
+                                hasAnyProfile
+                                  ? "Perfil selecionado - concluído"
+                                  : "Perfil selecionado - pendente"
+                              }
+                            >
+                              Perfil selecionado
+                            </span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -722,7 +856,7 @@ const Register = () => {
                 </form>
               </Form>
 
-              <div className="text-center mt-6">
+              <div className="text-center mt-6 space-y-2">
                 <p className="text-sm lg:text-base text-muted-foreground">
                   Já tem conta?{" "}
                   <Link
@@ -730,6 +864,14 @@ const Register = () => {
                     className="text-primary hover:underline font-medium focus-ring rounded px-1"
                   >
                     Fazer login
+                  </Link>
+                </p>
+                <p className="text-sm lg:text-base text-muted-foreground">
+                  <Link
+                    to="/"
+                    className="text-primary hover:underline font-medium focus-ring rounded px-1"
+                  >
+                    ← Voltar para página inicial
                   </Link>
                 </p>
               </div>
