@@ -59,22 +59,18 @@ export const ResponsiveLayout = ({
     );
   }
 
-  // Desktop Admin Layout - Without Sidebar (same as consumer/supplier)
   if (isAdminRoute && !isLoginRoute) {
     return (
       <AppShell className={className}>
-        {/* Header */}
         {showHeader && (
           <AppBarDivino leftContent={leftHeaderContent}>
             {headerContent}
           </AppBarDivino>
         )}
 
-        {/* Main Content with 12 column grid */}
         <main
           className={cn(
             "flex-1 py-6 lg:py-8",
-            // Grid system for desktop
             "grid grid-cols-1 lg:grid-cols-12 gap-6",
             className,
           )}
