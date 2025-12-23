@@ -110,7 +110,6 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label
                       htmlFor="email"
-                      id="email-label"
                       className="text-sm lg:text-base font-medium block"
                     >
                       E-mail
@@ -127,7 +126,6 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="pl-10 lg:pl-12 lg:h-12 lg:text-base focus-ring"
-                        aria-labelledby="email-label"
                         required
                       />
                     </div>
@@ -136,7 +134,6 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label
                       htmlFor="password"
-                      id="password-label"
                       className="text-sm lg:text-base font-medium block"
                     >
                       Senha
@@ -153,7 +150,6 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="pl-10 lg:pl-12 pr-10 lg:pr-12 lg:h-12 lg:text-base focus-ring"
-                        aria-labelledby="password-label"
                         required
                       />
                       <Button
