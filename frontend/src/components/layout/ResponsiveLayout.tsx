@@ -30,23 +30,12 @@ export const ResponsiveLayout = ({
 
   if (isFornecedorRoute && isLoginRoute) {
     return (
-      <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
-        <div className="min-h-screen flex flex-col overflow-x-hidden lg:hidden">
-          {showHeader && (
-            <AppBarDivino leftContent={leftHeaderContent}>
-              {headerContent}
-            </AppBarDivino>
-          )}
-        </div>
-        <div className="hidden lg:flex min-h-screen">
-          <AppShell className={className}>
-            {showHeader && (
-              <AppBarDivino leftContent={leftHeaderContent}>
-                {headerContent}
-              </AppBarDivino>
-            )}
-          </AppShell>
-        </div>
+      <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
+        {showHeader && (
+          <AppBarDivino leftContent={leftHeaderContent}>
+            {headerContent}
+          </AppBarDivino>
+        )}
         <main className="flex-1 flex flex-col px-4 py-6 lg:items-center lg:justify-center lg:px-8 lg:py-12">
           <div className="w-full lg:max-w-md">{children}</div>
         </main>
@@ -81,8 +70,8 @@ export const ResponsiveLayout = ({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
-      <div className="min-h-screen flex flex-col overflow-x-hidden lg:hidden">
+    <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col lg:block">
+      <div className="lg:hidden">
         {showHeader && (
           <AppBarDivino leftContent={leftHeaderContent}>
             {headerContent}
