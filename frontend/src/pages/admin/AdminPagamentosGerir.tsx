@@ -257,6 +257,7 @@ const AdminPagamentosGerir = () => {
           size="icon"
           onClick={() => navigate("/admin/dashboard")}
           className="text-white hover:text-primary transition-colors"
+          aria-label="Voltar para dashboard"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
