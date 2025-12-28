@@ -534,6 +534,7 @@ export default function AdminOferta() {
             }
           }}
           className="text-white hover:bg-white/20"
+          aria-label="Voltar para lista de ciclos"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
