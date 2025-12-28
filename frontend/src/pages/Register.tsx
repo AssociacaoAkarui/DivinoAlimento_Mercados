@@ -458,7 +458,7 @@ const Register = () => {
                                 );
                               }
                             }}
-                            aria-label={`Selecionar perfil: ${roleLabel("consumidor", watchedValues.gender)}`}
+                            
                           >
                             <FormField
                               control={form.control}
@@ -503,7 +503,7 @@ const Register = () => {
                                 );
                               }
                             }}
-                            aria-label={`Selecionar perfil: ${roleLabel("fornecedor", watchedValues.gender)}`}
+                            
                           >
                             <FormField
                               control={form.control}
@@ -548,7 +548,7 @@ const Register = () => {
                                 );
                               }
                             }}
-                            aria-label={`Selecionar perfil: ${roleLabel("admin", watchedValues.gender)}`}
+                            
                           >
                             <FormField
                               control={form.control}
@@ -590,7 +590,7 @@ const Register = () => {
                                 );
                               }
                             }}
-                            aria-label={`Selecionar perfil: ${roleLabel("adminmercado", watchedValues.gender)}`}
+                            
                           >
                             <FormField
                               control={form.control}
@@ -648,11 +648,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.name?.trim()
-                                  ? "Nome completo informado - concluído"
-                                  : "Nome completo informado - pendente"
-                              }
                             >
                               Nome completo informado
                             </span>
@@ -674,14 +669,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.phone &&
-                                /^\(\d{2}\)\s\d{4,5}-\d{4}$/.test(
-                                  watchedValues.phone,
-                                )
-                                  ? "Celular válido - concluído"
-                                  : "Celular válido - pendente"
-                              }
                             >
                               Celular válido
                             </span>
@@ -700,11 +687,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.gender
-                                  ? "Gênero selecionado - concluído"
-                                  : "Gênero selecionado - pendente"
-                              }
                             >
                               Gênero selecionado
                             </span>
@@ -724,12 +706,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.email &&
-                                /\S+@\S+\.\S+/.test(watchedValues.email)
-                                  ? "E-mail válido - concluído"
-                                  : "E-mail válido - pendente"
-                              }
                             >
                               E-mail válido
                             </span>
@@ -750,13 +726,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.email ===
-                                  watchedValues.confirmEmail &&
-                                watchedValues.email
-                                  ? "E-mails coincidem - concluído"
-                                  : "E-mails coincidem - pendente"
-                              }
                             >
                               E-mails coincidem
                             </span>
@@ -776,12 +745,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.password &&
-                                watchedValues.password.length >= 6
-                                  ? "Senha criada - concluído"
-                                  : "Senha criada - pendente"
-                              }
                             >
                               Senha criada
                             </span>
@@ -802,13 +765,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                watchedValues.password ===
-                                  watchedValues.confirmPassword &&
-                                watchedValues.password
-                                  ? "Senhas coincidem - concluído"
-                                  : "Senhas coincidem - pendente"
-                              }
                             >
                               Senhas coincidem
                             </span>
@@ -827,11 +783,6 @@ const Register = () => {
                             )}
                             <span
                               className="text-sm"
-                              aria-label={
-                                hasAnyProfile
-                                  ? "Perfil selecionado - concluído"
-                                  : "Perfil selecionado - pendente"
-                              }
                             >
                               Perfil selecionado
                             </span>
