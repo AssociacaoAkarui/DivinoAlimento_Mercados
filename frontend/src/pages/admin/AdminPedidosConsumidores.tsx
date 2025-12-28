@@ -240,6 +240,7 @@ export default function AdminPedidosConsumidores() {
           size="icon"
           onClick={() => navigate("/admin/ciclo-index")}
           className="text-white hover:bg-white/20"
+          aria-label="Voltar para lista de ciclos"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
