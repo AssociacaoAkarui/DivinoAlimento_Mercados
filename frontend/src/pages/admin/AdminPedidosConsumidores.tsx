@@ -371,10 +371,10 @@ export default function AdminPedidosConsumidores() {
           <Table caption="Pedidos dos Consumidores">
             <TableHeader>
               <TableRow>
-                <TableHead>Consumidor(a)</TableHead>
-                <TableHead>Alimento</TableHead>
+                <TableHead scope="col">Consumidor(a)</TableHead>
+                <TableHead scope="col">Alimento</TableHead>
                 <TableHead
-                  className="cursor-pointer hover:bg-muted/50 transition-colors"
+                  scope="col" aria-label="Ordenar por fornecedor" className="cursor-pointer hover:bg-muted/50 transition-colors"
                   onClick={handleSortByFornecedor}
                 >
                   <div className="flex items-center gap-2">
@@ -387,11 +387,11 @@ export default function AdminPedidosConsumidores() {
                     )}
                   </div>
                 </TableHead>
-                <TableHead>Medida</TableHead>
-                <TableHead className="text-right">Valor Unitário</TableHead>
-                <TableHead className="text-right">Quantidade</TableHead>
-                <TableHead className="text-right">Total</TableHead>
-                <TableHead className="text-center">Ações</TableHead>
+                <TableHead scope="col">Medida</TableHead>
+                <TableHead scope="col" className="text-right">Valor Unitário</TableHead>
+                <TableHead scope="col" className="text-right">Quantidade</TableHead>
+                <TableHead scope="col" className="text-right">Total</TableHead>
+                <TableHead scope="col" className="text-center">Ações</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
