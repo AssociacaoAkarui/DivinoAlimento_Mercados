@@ -153,6 +153,7 @@ const Usuarios = () => {
                             variant="outline"
                             size="sm"
                             onClick={() => handleEdit(usuario.id)}
+                            aria-label="Editar usuário"
                             className="flex items-center gap-2"
                           >
                             <Edit2 className="w-4 h-4" />
@@ -162,6 +163,7 @@ const Usuarios = () => {
                             variant="outline"
                             size="sm"
                             onClick={() => handleDelete(usuario.id)}
+                            aria-label="Excluir usuário"
                             className="flex items-center gap-2 text-destructive hover:text-destructive"
                           >
                             <Trash2 className="w-4 h-4" />
