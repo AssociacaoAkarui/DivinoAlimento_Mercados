@@ -462,12 +462,12 @@ const Register = () => {
                           >
                             <FormField
                               control={form.control}
-                              name="profiles.consumidor"
+                              name="profiles.consumidor" aria-label="Perfil Consumidor"
                               render={({ field }) => (
                                 <FormItem className="flex flex-col gap-1 w-full">
                                   <div className="flex items-center gap-2.5">
                                     <FormControl>
-                                      <Checkbox
+                                      <Checkbox aria-label="Selecionar perfil Consumidor"
                                         checked={field.value}
                                         onCheckedChange={field.onChange}
                                         className="pointer-events-none"
@@ -507,12 +507,12 @@ const Register = () => {
                           >
                             <FormField
                               control={form.control}
-                              name="profiles.fornecedor"
+                              name="profiles.fornecedor" aria-label="Perfil Fornecedor"
                               render={({ field }) => (
                                 <FormItem className="flex flex-col gap-1 w-full">
                                   <div className="flex items-center gap-2.5">
                                     <FormControl>
-                                      <Checkbox
+                                      <Checkbox aria-label="Selecionar perfil Fornecedor"
                                         checked={field.value}
                                         onCheckedChange={field.onChange}
                                         className="pointer-events-none"
@@ -557,7 +557,7 @@ const Register = () => {
                                 <FormItem className="flex flex-col gap-1 w-full">
                                   <div className="flex items-center gap-2.5">
                                     <FormControl>
-                                      <Checkbox
+                                      <Checkbox aria-label="Selecionar perfil Administrador de Mercado"
                                         checked={field.value}
                                         onCheckedChange={field.onChange}
                                         className="pointer-events-none"
@@ -599,7 +599,7 @@ const Register = () => {
                                 <FormItem className="flex flex-col gap-1 w-full">
                                   <div className="flex items-center gap-2.5">
                                     <FormControl>
-                                      <Checkbox
+                                      <Checkbox aria-label="Selecionar perfil Administrador"
                                         checked={field.value}
                                         onCheckedChange={field.onChange}
                                         className="pointer-events-none"
