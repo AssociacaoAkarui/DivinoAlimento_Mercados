@@ -135,9 +135,9 @@ const Usuarios = () => {
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <h3 className="font-medium text-sm md:text-base">
+                            <h2 className="font-medium text-sm md:text-base">
                               {usuario.nome}
-                            </h3>
+                            </h2>
                             <Badge
                               className={getStatusBadgeColor(usuario.status)}
                             >

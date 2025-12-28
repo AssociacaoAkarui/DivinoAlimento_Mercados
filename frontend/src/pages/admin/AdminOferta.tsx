@@ -829,9 +829,9 @@ export default function AdminOferta() {
 
               {/* Certificações & Etiquetas */}
               <div className="border-t pt-4 mt-2">
-                <h3 className="text-base font-semibold mb-4">
+                <h2 className="text-base font-semibold mb-4">
                   Certificações & Etiquetas
-                </h3>
+                </h2>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Certificação */}

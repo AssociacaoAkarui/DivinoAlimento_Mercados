@@ -229,9 +229,9 @@ const AdminProdutosSubmissoes = () => {
                           className="w-16 h-16 object-cover rounded-lg"
                         />
                         <div className="flex-1">
-                          <h3 className="font-semibold text-lg">
+                          <h2 className="font-semibold text-lg">
                             {submission.nomeProduto}
-                          </h3>
+                          </h2>
                           <p className="text-sm text-muted-foreground">
                             Fornecedor:{" "}
                             {submission.fornecedor?.nome || "Desconhecido"}

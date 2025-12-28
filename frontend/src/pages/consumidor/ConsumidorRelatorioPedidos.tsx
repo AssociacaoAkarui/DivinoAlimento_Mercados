@@ -141,7 +141,7 @@ export default function ConsumidorRelatorioPedidos() {
               <Card key={ciclo.id} className="p-4 space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-start justify-between gap-2">
-                    <h3 className="font-semibold text-lg">{ciclo.nome}</h3>
+                    <h2 className="font-semibold text-lg">{ciclo.nome}</h2>
                     <Badge variant="success">Ativo</Badge>
                   </div>
                   <div className="text-sm text-muted-foreground">

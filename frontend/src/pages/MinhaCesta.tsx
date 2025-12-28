@@ -118,9 +118,9 @@ const MinhaCesta = () => {
                   <ShoppingBasket className="w-10 h-10 text-muted-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">
+                  <h2 className="text-lg font-semibold mb-2">
                     Você ainda não tem itens na cesta deste ciclo.
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground mb-4">
                     Confira os alimentos disponíveis na venda direta
                   </p>

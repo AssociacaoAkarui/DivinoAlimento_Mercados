@@ -317,9 +317,9 @@ const PedidoConsumidores = () => {
                       <div className="flex items-start gap-2 mb-3">
                         <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                         <div className="flex-1">
-                          <h3 className="font-poppins font-bold text-base text-primary leading-tight">
+                          <h2 className="font-poppins font-bold text-base text-primary leading-tight">
                             {item.nome}
-                          </h3>
+                          </h2>
                           <p className="text-sm text-muted-foreground mt-0.5">
                             Fornecedor: {item.fornecedor}
                           </p>
@@ -530,9 +530,9 @@ const PedidoConsumidores = () => {
                             <Circle className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                           )}
                           <div className="flex-1">
-                            <h3 className="font-poppins font-bold text-base text-primary leading-tight">
+                            <h2 className="font-poppins font-bold text-base text-primary leading-tight">
                               {produto.nome}
-                            </h3>
+                            </h2>
                             <p className="text-sm text-muted-foreground mt-0.5">
                               Fornecedor: {produto.fornecedor}
                             </p>

@@ -439,7 +439,7 @@ const AdminCiclo = () => {
                   <Calendar className="h-12 w-12 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Gestao de Ciclos</h3>
+                  <h2 className="font-semibold mb-2">Gestao de Ciclos</h2>
                   <p className="text-sm text-muted-foreground">
                     Configure periodos de oferta e entrega para organizar as
                     vendas

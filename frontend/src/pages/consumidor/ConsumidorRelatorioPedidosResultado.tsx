@@ -446,9 +446,9 @@ export default function ConsumidorRelatorioPedidosResultado() {
                   <div className="space-y-3">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-semibold text-lg">
+                        <h2 className="font-semibold text-lg">
                           {pedido.alimento}
-                        </h3>
+                        </h2>
                         <p className="text-sm text-muted-foreground">
                           {pedido.fornecedor}
                         </p>

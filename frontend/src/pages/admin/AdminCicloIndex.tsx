@@ -408,7 +408,7 @@ export default function AdminCicloIndex() {
               <Card key={ciclo.id} className="p-4">
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-medium">{ciclo.nome}</h3>
+                    <h2 className="font-medium">{ciclo.nome}</h2>
                     <Badge className={getStatusColor(ciclo.status)}>
                       {formatStatus(ciclo.status)}
                     </Badge>

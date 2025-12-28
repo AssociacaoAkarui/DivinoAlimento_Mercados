@@ -16,6 +16,7 @@ interface CycleCardProps {
   extrasWindowActive?: boolean;
   timeRemaining?: string;
   className?: string;
+  headingLevel?: 'h2' | 'h3' | 'h4';
 }
 
 const statusConfig = {
@@ -36,17 +37,18 @@ const statusConfig = {
   }
 };
 
-export const CycleCard = ({ 
-  title, 
-  startDate, 
-  endDate, 
+export const CycleCard = ({
+  title,
+  startDate,
+  endDate,
   cycleType,
-  status, 
-  description, 
+  status,
+  description,
   offerWindowActive = false,
   extrasWindowActive = false,
   timeRemaining,
-  className 
+  className,
+  headingLevel: Tag = 'h2'
 }: CycleCardProps) => {
   const config = statusConfig[status];
 
@@ -61,14 +63,14 @@ export const CycleCard = ({
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h3 className="font-poppins font-semibold text-lg text-foreground mb-1">
+            <Tag className="font-poppins font-semibold text-lg text-foreground mb-1">
               {title}
-            </h3>
+            </Tag>
             <Badge variant="outline" className="text-xs mb-2">
               Ciclo {cycleType === 'semanal' ? 'Semanal' : 'Quinzenal'}
             </Badge>
           </div>
-          <Badge 
+          <Badge
             variant={status === 'active' ? 'default' : 'secondary'}
             className={cn(
               'text-xs',

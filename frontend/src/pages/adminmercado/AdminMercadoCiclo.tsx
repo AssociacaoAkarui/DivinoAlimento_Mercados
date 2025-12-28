@@ -1092,7 +1092,7 @@ const AdminMercadoCiclo = () => {
                       <Calendar className="h-12 w-12 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Gestão de Ciclos</h3>
+                      <h2 className="font-semibold mb-2">Gestão de Ciclos</h2>
                       <p className="text-sm text-muted-foreground">
                         Configure períodos de oferta e vendas para cada mercado
                       </p>

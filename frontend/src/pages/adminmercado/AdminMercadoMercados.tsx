@@ -548,9 +548,9 @@ const AdminMercadoMercados = () => {
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-medium text-foreground truncate">
+                          <h2 className="font-medium text-foreground truncate">
                             {market.name}
-                          </h3>
+                          </h2>
                           <div className="flex items-center space-x-1 mt-1">
                             <MapPin className="w-3 h-3 text-muted-foreground flex-shrink-0" />
                             <span className="text-xs text-muted-foreground">
@@ -1008,9 +1008,9 @@ const AdminMercadoMercados = () => {
             <Card>
               <CardContent className="p-8 lg:p-16 text-center">
                 <Store className="w-16 h-16 lg:w-24 lg:h-24 mx-auto text-muted-foreground mb-6" />
-                <h3 className="text-lg lg:text-xl font-medium text-foreground mb-2">
+                <h2 className="text-lg lg:text-xl font-medium text-foreground mb-2">
                   Selecione um Mercado
-                </h3>
+                </h2>
                 <p className="text-muted-foreground lg:text-base">
                   Escolha um mercado na lista ao lado para ver os detalhes e
                   fazer edições.
