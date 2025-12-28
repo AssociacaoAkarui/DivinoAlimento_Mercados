@@ -190,7 +190,7 @@ const UsuarioIndex = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg md:text-xl">
+            <CardTitle as="h2" className="text-lg md:text-xl">
               Lista de Usuários
             </CardTitle>
           </CardHeader>

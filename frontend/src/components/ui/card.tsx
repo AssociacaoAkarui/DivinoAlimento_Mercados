@@ -34,7 +34,7 @@ interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
 }
 
 const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
-  ({ className, as: Tag = "h3", ...props }, ref) => (
+  ({ className, as: Tag = "h2", ...props }, ref) => (
     <Tag
       ref={ref}
       className={cn(
