@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logoDivino from "@/assets/LOGO_DIVINO_ALIMENTOS.png";
+import logoDivino from "@/assets/LOGO_DIVINO_ALIMENTOS.webp";
 import logoAkarui from "@/assets/logo-akarui.png";
 import logoTekopora from "@/assets/logo-tekopora.png";
 import heroAlimentos from "@/assets/hero-alimentos.png";
@@ -27,6 +27,7 @@ const Index = () => {
           >
             <img
               src={logoDivino}
+              fetchPriority="high"
               alt="Divino Alimento"
               className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] lg:w-[200px] lg:h-[200px] object-contain"
             />

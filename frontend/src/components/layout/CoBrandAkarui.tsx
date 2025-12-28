@@ -1,5 +1,5 @@
 import React from 'react';
-import logoDivino from '@/assets/LOGO_DIVINO_ALIMENTOS.png';
+import logoDivino from '@/assets/LOGO_DIVINO_ALIMENTOS.webp';
 
 interface CoBrandAkaruiProps {
   className?: string;
@@ -17,6 +17,7 @@ export const CoBrandAkarui = ({ className }: CoBrandAkaruiProps) => {
         >
           <img 
             src={logoDivino}
+            fetchPriority="high"
             alt="Divino Alimento"
             className="w-[220px] h-auto object-contain"
           />
