@@ -301,7 +301,7 @@ export default function AdminPrecos() {
                 {filteredProdutos.map((produto) => (
                   <TableRow
                     key={produto.id}
-                    className={produto.modified ? "bg-amber-50" : ""}
+                    className={produto.modified ? "bg-amber-100" : ""}
                   >
                     <TableCell className="font-medium">
                       {produto.nome}
@@ -332,7 +332,7 @@ export default function AdminPrecos() {
           {filteredProdutos.map((produto) => (
             <Card
               key={produto.id}
-              className={produto.modified ? "border-amber-400 bg-amber-50" : ""}
+              className={produto.modified ? "border-amber-400 bg-amber-100" : ""}
             >
               <CardHeader>
                 <CardTitle className="text-lg">{produto.nome}</CardTitle>
@@ -376,7 +376,7 @@ export default function AdminPrecos() {
           <Button
             onClick={handleSaveAll}
             disabled={!hasModifications}
-            className="bg-green-600 hover:bg-green-700"
+            className="bg-green-700 hover:bg-green-800"
           >
             <Save className="mr-2 h-4 w-4" />
             {hasModifications
