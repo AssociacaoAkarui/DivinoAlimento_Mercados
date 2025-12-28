@@ -1,81 +1,90 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProtectedRoute } from "@/components/routing/ProtectedRoute";
-import Index from "./pages/Index";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-import MinhaCesta from "./pages/MinhaCesta";
-import PedidoConsumidores from "./pages/PedidoConsumidores";
-import ConsumidorPagamentos from "./pages/consumidor/ConsumidorPagamentos";
-import ConsumidorSelecionarCiclo from "./pages/consumidor/ConsumidorSelecionarCiclo";
-import ConsumidorRelatorioPedidos from "./pages/consumidor/ConsumidorRelatorioPedidos";
-import ConsumidorRelatorioPedidosResultado from "./pages/consumidor/ConsumidorRelatorioPedidosResultado";
-import NotFound from "./pages/NotFound";
+const Index = lazy(() => import("./pages/Index"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const MinhaCesta = lazy(() => import("./pages/MinhaCesta"));
+const PedidoConsumidores = lazy(() => import("./pages/PedidoConsumidores"));
+const ConsumidorPagamentos = lazy(() => import("./pages/consumidor/ConsumidorPagamentos"));
+const ConsumidorSelecionarCiclo = lazy(() => import("./pages/consumidor/ConsumidorSelecionarCiclo"));
+const ConsumidorRelatorioPedidos = lazy(() => import("./pages/consumidor/ConsumidorRelatorioPedidos"));
+const ConsumidorRelatorioPedidosResultado = lazy(() => import("./pages/consumidor/ConsumidorRelatorioPedidosResultado"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Fornecedor pages
-import LojaProdutor from "./pages/fornecedor/LojaProdutor";
-import FornecedorSelecionarCiclo from "./pages/fornecedor/FornecedorSelecionarCiclo";
-import FornecedorSelecionarCicloEntregas from "./pages/fornecedor/FornecedorSelecionarCicloEntregas";
-import FornecedorEntregas from "./pages/fornecedor/FornecedorEntregas";
+const LojaProdutor = lazy(() => import("./pages/fornecedor/LojaProdutor"));
+const FornecedorSelecionarCiclo = lazy(() => import("./pages/fornecedor/FornecedorSelecionarCiclo"));
+const FornecedorSelecionarCicloEntregas = lazy(() => import("./pages/fornecedor/FornecedorSelecionarCicloEntregas"));
+const FornecedorEntregas = lazy(() => import("./pages/fornecedor/FornecedorEntregas"));
 
 // Admin pages
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import AdminMercados from "./pages/admin/AdminMercados";
-import AdminPrecos from "./pages/admin/AdminPrecos";
-import AdminPrecosLista from "./pages/admin/AdminPrecosLista";
-import AdminCategorias from "./pages/admin/AdminCategorias";
-import AdminCategoriaNovo from "./pages/admin/AdminCategoriaNovo";
-import AdminCategoriaDados from "./pages/admin/AdminCategoriaDados";
-import AdminProdutos from "./pages/admin/AdminProdutos";
-import AdminProdutoNovo from "./pages/admin/AdminProdutoNovo";
-import AdminProdutoEditar from "./pages/admin/AdminProdutoEditar";
-import AdminProdutosComercializaveis from "./pages/admin/AdminProdutosComercializaveis";
-import AdminProdutoComercializavelNovo from "./pages/admin/AdminProdutoComercializavelNovo";
-import AdminProdutoComercializavelEditar from "./pages/admin/AdminProdutoComercializavelEditar";
-import AdminCicloIndex from "./pages/admin/AdminCicloIndex";
-import AdminCiclo from "./pages/admin/AdminCiclo";
-import AdminOferta from "./pages/admin/AdminOferta";
-import AdminComposicaoCesta from "./pages/admin/AdminComposicaoCesta";
-import AdminComposicaoLote from "./pages/admin/AdminComposicaoLote";
-import AdminComposicaoVendaDiretaLiberar from "./pages/admin/AdminComposicaoVendaDiretaLiberar";
-import AdminLiberarVendaDireta from "./pages/admin/AdminLiberarVendaDireta";
-import AdminEntregasFornecedores from "./pages/admin/AdminEntregasFornecedores";
-import AdminPedidosConsumidores from "./pages/admin/AdminPedidosConsumidores";
-import AdminRelatorioFornecedores from "./pages/admin/AdminRelatorioFornecedores";
-import AdminRelatorioFornecedoresResultado from "./pages/admin/AdminRelatorioFornecedoresResultado";
-import AdminRelatorioConsumidores from "./pages/admin/AdminRelatorioConsumidores";
-import AdminRelatorioConsumidoresResultado from "./pages/admin/AdminRelatorioConsumidoresResultado";
-import AdminMigrarOfertas from "./pages/admin/AdminMigrarOfertas";
-import AdminPagamentosGerar from "./pages/admin/AdminPagamentosGerar";
-import AdminPagamentosGerir from "./pages/admin/AdminPagamentosGerir";
-import Usuarios from "./pages/Usuarios";
-import UsuarioIndex from "./pages/UsuarioIndex";
-import UsuarioDados from "./pages/UsuarioDados";
-import UsuarioNovo from "./pages/UsuarioNovo";
-import AdminMercadoDashboard from "./pages/adminmercado/AdminMercadoDashboard";
-import AdminMercadoMercados from "./pages/adminmercado/AdminMercadoMercados";
-import AdminMercadoPrecos from "./pages/adminmercado/AdminMercadoPrecos";
-import AdminMercadoPrecosGestao from "./pages/adminmercado/AdminMercadoPrecosGestao";
-import AdminMercadoCicloIndex from "./pages/adminmercado/AdminMercadoCicloIndex";
-import AdminMercadoCiclo from "./pages/adminmercado/AdminMercadoCiclo";
-import AdminMercadoComposicaoCesta from "./pages/adminmercado/AdminMercadoComposicaoCesta";
-import AdminMercadoComposicaoLote from "./pages/adminmercado/AdminMercadoComposicaoLote";
-import AdminMercadoMigrarOfertas from "./pages/adminmercado/AdminMercadoMigrarOfertas";
-import AdminMercadoRelatorioFornecedores from "./pages/adminmercado/AdminMercadoRelatorioFornecedores";
-import AdminMercadoRelatorioFornecedoresResultado from "./pages/adminmercado/AdminMercadoRelatorioFornecedoresResultado";
-import AdminMercadoRelatorioConsumidores from "./pages/adminmercado/AdminMercadoRelatorioConsumidores";
-import AdminMercadoRelatorioConsumidoresResultado from "./pages/adminmercado/AdminMercadoRelatorioConsumidoresResultado";
-import AdminMercadoRelatorioFornecedoresCiclo from "./pages/adminmercado/AdminMercadoRelatorioFornecedoresCiclo";
-import AdminMercadoRelatorioConsumidoresCiclo from "./pages/adminmercado/AdminMercadoRelatorioConsumidoresCiclo";
-import AdminMercadoPontosEntrega from "./pages/adminmercado/AdminMercadoPontosEntrega";
-import AdminMercadoPontoEntregaNovo from "./pages/adminmercado/AdminMercadoPontoEntregaNovo";
-import AdminMercadoPontoEntregaEditar from "./pages/adminmercado/AdminMercadoPontoEntregaEditar";
+const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const AdminMercados = lazy(() => import("./pages/admin/AdminMercados"));
+const AdminPrecos = lazy(() => import("./pages/admin/AdminPrecos"));
+const AdminPrecosLista = lazy(() => import("./pages/admin/AdminPrecosLista"));
+const AdminCategorias = lazy(() => import("./pages/admin/AdminCategorias"));
+const AdminCategoriaNovo = lazy(() => import("./pages/admin/AdminCategoriaNovo"));
+const AdminCategoriaDados = lazy(() => import("./pages/admin/AdminCategoriaDados"));
+const AdminProdutos = lazy(() => import("./pages/admin/AdminProdutos"));
+const AdminProdutoNovo = lazy(() => import("./pages/admin/AdminProdutoNovo"));
+const AdminProdutoEditar = lazy(() => import("./pages/admin/AdminProdutoEditar"));
+const AdminProdutosComercializaveis = lazy(() => import("./pages/admin/AdminProdutosComercializaveis"));
+const AdminProdutoComercializavelNovo = lazy(() => import("./pages/admin/AdminProdutoComercializavelNovo"));
+const AdminProdutoComercializavelEditar = lazy(() => import("./pages/admin/AdminProdutoComercializavelEditar"));
+const AdminCicloIndex = lazy(() => import("./pages/admin/AdminCicloIndex"));
+const AdminCiclo = lazy(() => import("./pages/admin/AdminCiclo"));
+const AdminOferta = lazy(() => import("./pages/admin/AdminOferta"));
+const AdminComposicaoCesta = lazy(() => import("./pages/admin/AdminComposicaoCesta"));
+const AdminComposicaoLote = lazy(() => import("./pages/admin/AdminComposicaoLote"));
+const AdminComposicaoVendaDiretaLiberar = lazy(() => import("./pages/admin/AdminComposicaoVendaDiretaLiberar"));
+const AdminLiberarVendaDireta = lazy(() => import("./pages/admin/AdminLiberarVendaDireta"));
+const AdminEntregasFornecedores = lazy(() => import("./pages/admin/AdminEntregasFornecedores"));
+const AdminPedidosConsumidores = lazy(() => import("./pages/admin/AdminPedidosConsumidores"));
+const AdminRelatorioFornecedores = lazy(() => import("./pages/admin/AdminRelatorioFornecedores"));
+const AdminRelatorioFornecedoresResultado = lazy(() => import("./pages/admin/AdminRelatorioFornecedoresResultado"));
+const AdminRelatorioConsumidores = lazy(() => import("./pages/admin/AdminRelatorioConsumidores"));
+const AdminRelatorioConsumidoresResultado = lazy(() => import("./pages/admin/AdminRelatorioConsumidoresResultado"));
+const AdminMigrarOfertas = lazy(() => import("./pages/admin/AdminMigrarOfertas"));
+const AdminPagamentosGerar = lazy(() => import("./pages/admin/AdminPagamentosGerar"));
+const AdminPagamentosGerir = lazy(() => import("./pages/admin/AdminPagamentosGerir"));
+const Usuarios = lazy(() => import("./pages/Usuarios"));
+const UsuarioIndex = lazy(() => import("./pages/UsuarioIndex"));
+const UsuarioDados = lazy(() => import("./pages/UsuarioDados"));
+const UsuarioNovo = lazy(() => import("./pages/UsuarioNovo"));
+const AdminMercadoDashboard = lazy(() => import("./pages/adminmercado/AdminMercadoDashboard"));
+const AdminMercadoMercados = lazy(() => import("./pages/adminmercado/AdminMercadoMercados"));
+const AdminMercadoPrecos = lazy(() => import("./pages/adminmercado/AdminMercadoPrecos"));
+const AdminMercadoPrecosGestao = lazy(() => import("./pages/adminmercado/AdminMercadoPrecosGestao"));
+const AdminMercadoCicloIndex = lazy(() => import("./pages/adminmercado/AdminMercadoCicloIndex"));
+const AdminMercadoCiclo = lazy(() => import("./pages/adminmercado/AdminMercadoCiclo"));
+const AdminMercadoComposicaoCesta = lazy(() => import("./pages/adminmercado/AdminMercadoComposicaoCesta"));
+const AdminMercadoComposicaoLote = lazy(() => import("./pages/adminmercado/AdminMercadoComposicaoLote"));
+const AdminMercadoMigrarOfertas = lazy(() => import("./pages/adminmercado/AdminMercadoMigrarOfertas"));
+const AdminMercadoRelatorioFornecedores = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioFornecedores"));
+const AdminMercadoRelatorioFornecedoresResultado = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioFornecedoresResultado"));
+const AdminMercadoRelatorioConsumidores = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioConsumidores"));
+const AdminMercadoRelatorioConsumidoresResultado = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioConsumidoresResultado"));
+const AdminMercadoRelatorioFornecedoresCiclo = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioFornecedoresCiclo"));
+const AdminMercadoRelatorioConsumidoresCiclo = lazy(() => import("./pages/adminmercado/AdminMercadoRelatorioConsumidoresCiclo"));
+const AdminMercadoPontosEntrega = lazy(() => import("./pages/adminmercado/AdminMercadoPontosEntrega"));
+const AdminMercadoPontoEntregaNovo = lazy(() => import("./pages/adminmercado/AdminMercadoPontoEntregaNovo"));
+const AdminMercadoPontoEntregaEditar = lazy(() => import("./pages/adminmercado/AdminMercadoPontoEntregaEditar"));
 
 const queryClient = new QueryClient();
+
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -83,7 +92,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
           {/* Public Routes */}
           <Route
             path="/"
@@ -672,7 +682,8 @@ const App = () => (
               </ProtectedRoute>
             }
           />
-        </Routes>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
