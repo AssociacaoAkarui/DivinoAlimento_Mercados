@@ -116,7 +116,8 @@ const AdminMercadoPontoEntregaNovo = () => {
           size="icon-sm"
           onClick={() => navigate("/adminmercado/pontos-entrega")}
           className="text-primary-foreground hover:bg-primary-hover"
-        >
+            aria-label="Voltar"
+          >
           <ArrowLeft className="w-4 h-4" />
         </Button>
       }

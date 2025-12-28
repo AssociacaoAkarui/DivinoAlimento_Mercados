@@ -142,6 +142,7 @@ const AdminProdutosSubmissoes = () => {
             size="icon-sm"
             onClick={() => navigate("/admin/dashboard")}
             className="text-primary-foreground hover:bg-primary-hover"
+            aria-label="Voltar"
           >
             <ArrowLeft className="w-4 h-4" />
           </Button>
@@ -163,6 +164,7 @@ const AdminProdutosSubmissoes = () => {
             size="icon-sm"
             onClick={() => navigate("/admin/dashboard")}
             className="text-primary-foreground hover:bg-primary-hover"
+            aria-label="Voltar"
           >
             <ArrowLeft className="w-4 h-4" />
           </Button>
@@ -183,7 +185,8 @@ const AdminProdutosSubmissoes = () => {
           size="icon-sm"
           onClick={() => navigate("/admin/dashboard")}
           className="text-primary-foreground hover:bg-primary-hover"
-        >
+            aria-label="Voltar"
+          >
           <ArrowLeft className="w-4 h-4" />
         </Button>
       }

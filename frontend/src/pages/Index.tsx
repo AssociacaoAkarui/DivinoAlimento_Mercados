@@ -72,13 +72,15 @@ const Index = () => {
           entrar/cadastrar
         </button>
 
-        {/* Rodapé com logos */}
-        <footer className="flex flex-col items-center gap-8 mb-16 lg:mb-20 mt-auto">
-          <div className="w-[200px] h-[4px] bg-[#2E7D32] opacity-40" />
-          <p className="text-[#4B5563] text-lg sm:text-xl lg:text-2xl font-semibold">
+      </main>
+
+      {/* Rodapé com logos - Fora do main para cumprir WCAG landmark_06 */}
+      <footer className="flex flex-col items-center gap-8 pb-16 lg:pb-20 px-4 lg:px-8 max-w-[1200px] mx-auto w-full">
+        <div className="w-[200px] h-[4px] bg-[#2E7D32] opacity-40" />
+        <p className="text-[#4B5563] text-lg sm:text-xl lg:text-2xl font-semibold">
             desenvolvido por:
           </p>
-          <div className="flex items-center gap-12 sm:gap-16 lg:gap-20">
+        <div className="flex items-center gap-12 sm:gap-16 lg:gap-20">
             <a
               href="https://www.akarui.org.br/"
               target="_blank"
@@ -107,7 +109,6 @@ const Index = () => {
             </a>
           </div>
         </footer>
-      </main>
     </div>
   );
 };

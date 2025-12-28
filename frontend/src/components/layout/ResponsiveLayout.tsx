@@ -13,6 +13,15 @@ interface ResponsiveLayoutProps {
   showHeader?: boolean;
 }
 
+const SkipLink = () => (
+  <a
+    href="#main-content"
+    className="absolute left-[-9999px] top-auto focus:left-4 focus:top-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+  >
+    Pular para conteúdo principal
+  </a>
+);
+
 export const ResponsiveLayout = ({
   children,
   className,
@@ -34,13 +43,14 @@ export const ResponsiveLayout = ({
     if (isDesktop) {
       return (
         <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex">
+          <SkipLink />
           <AppShell className={className}>
             {showHeader && (
               <AppBarDivino leftContent={leftHeaderContent}>
                 {headerContent}
               </AppBarDivino>
             )}
-            <main className="flex-1 flex items-center justify-center px-8 py-12">
+            <main id="main-content" className="flex-1 flex items-center justify-center px-8 py-12">
               <div className="w-full max-w-md">{children}</div>
             </main>
           </AppShell>
@@ -50,12 +60,13 @@ export const ResponsiveLayout = ({
 
     return (
       <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
+        <SkipLink />
         {showHeader && (
           <AppBarDivino leftContent={leftHeaderContent}>
             {headerContent}
           </AppBarDivino>
         )}
-        <main className="flex-1 flex flex-col px-4 py-6">{children}</main>
+        <main id="main-content" className="flex-1 flex flex-col px-4 py-6">{children}</main>
       </div>
     );
   }
@@ -63,6 +74,7 @@ export const ResponsiveLayout = ({
   if (isAdminRoute && !isLoginRoute) {
     return (
       <AppShell className={className}>
+        <SkipLink />
         {showHeader && (
           <AppBarDivino leftContent={leftHeaderContent}>
             {headerContent}
@@ -70,6 +82,7 @@ export const ResponsiveLayout = ({
         )}
 
         <main
+          id="main-content"
           className={cn(
             "flex-1 py-6 lg:py-8",
             "grid grid-cols-1 lg:grid-cols-12 gap-6",
@@ -85,6 +98,7 @@ export const ResponsiveLayout = ({
   if (isDesktop) {
     return (
       <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
+        <SkipLink />
         <AppShell className={className}>
           {showHeader && (
             <AppBarDivino leftContent={leftHeaderContent}>
@@ -93,6 +107,7 @@ export const ResponsiveLayout = ({
           )}
 
           <main
+            id="main-content"
             className={cn(
               "flex-1 py-8",
               "grid grid-cols-1 lg:grid-cols-12 gap-8",
@@ -108,12 +123,13 @@ export const ResponsiveLayout = ({
 
   return (
     <div className="min-h-screen bg-gradient-surface overflow-x-hidden flex flex-col">
+      <SkipLink />
       {showHeader && (
         <AppBarDivino leftContent={leftHeaderContent}>
           {headerContent}
         </AppBarDivino>
       )}
-      <main className="flex-1 px-4 pt-8 pb-6">{children}</main>
+      <main id="main-content" className="flex-1 px-4 pt-8 pb-6">{children}</main>
     </div>
   );
 };
