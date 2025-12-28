@@ -9,7 +9,7 @@
 @layer base {
     :root {
         /* Brand Colors - Divino Alimento Palette */
-        --primary: 142 100% 29%; /* #009436 - Primary green */
+        --primary: 142 100% 26%; /* #007a2e - Adjusted for WCAG AA contrast 4.77:1 */ /* #009436 - Primary green */
         --primary-foreground: 0 0% 100%; /* White text on green */
         --primary-hover: 142 100% 25%; /* Darker green for hover */
         --primary-pressed: 142 100% 20%; /* Even darker for pressed */
@@ -54,7 +54,7 @@
         --muted: 0 0% 96%;
         --muted-foreground: 0 0% 35%; /* Ajustado para 35% para garantir contraste 4.5:1 (WCAG AA) */
 
-        --destructive: 0 84% 60%;
+        --destructive: 0 84% 50%; /* Adjusted for WCAG AA 4.52:1 */
         --destructive-foreground: 0 0% 100%;
 
         --success: 142 100% 29%;
