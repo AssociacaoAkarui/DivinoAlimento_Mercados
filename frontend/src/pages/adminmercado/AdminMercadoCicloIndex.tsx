@@ -490,7 +490,7 @@ export default function AdminMercadoCicloIndex() {
 
         <div className="hidden md:block">
           <Card>
-            <Table>
+            <Table caption="Lista de Ciclos">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Ciclo</TableHead>

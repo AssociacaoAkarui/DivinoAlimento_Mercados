@@ -368,7 +368,7 @@ export default function AdminPedidosConsumidores() {
 
         {/* Table */}
         <Card>
-          <Table>
+          <Table caption="Pedidos dos Consumidores">
             <TableHeader>
               <TableRow>
                 <TableHead>Consumidor(a)</TableHead>

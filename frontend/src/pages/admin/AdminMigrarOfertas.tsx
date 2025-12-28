@@ -585,7 +585,7 @@ const AdminMigrarOfertas = () => {
               </div>
 
               <div className="rounded-md border">
-                <Table>
+                <Table caption="Migrar Ofertas">
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-12">Sel.</TableHead>

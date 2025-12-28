@@ -280,7 +280,7 @@ export default function AdminRelatorioConsumidoresResultado() {
 
             {!isMobile ? (
               <Card>
-                <Table>
+                <Table caption="Relatório de Pedidos dos Consumidores">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Ciclo</TableHead>

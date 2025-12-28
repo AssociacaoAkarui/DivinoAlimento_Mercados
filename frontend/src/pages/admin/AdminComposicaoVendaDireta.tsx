@@ -503,7 +503,7 @@ export default function AdminComposicaoVendaDireta() {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <Table>
+                <Table caption="Composição de Venda Direta">
                   <TableHeader>
                     <TableRow>
                       <TableHead className="min-w-[180px]">Produto</TableHead>

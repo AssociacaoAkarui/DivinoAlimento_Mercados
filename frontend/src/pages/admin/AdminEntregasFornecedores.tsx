@@ -298,7 +298,7 @@ export default function AdminEntregasFornecedores() {
 
         {/* Table */}
         <Card>
-          <Table>
+          <Table caption="Entregas dos Fornecedores">
             <TableHeader>
               <TableRow>
                 <TableHead

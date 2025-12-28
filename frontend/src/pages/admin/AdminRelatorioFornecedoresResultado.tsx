@@ -279,7 +279,7 @@ export default function AdminRelatorioFornecedoresResultado() {
 
             {!isMobile ? (
               <Card>
-                <Table>
+                <Table caption="Relatório de Pedidos dos Fornecedores">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Ciclo</TableHead>

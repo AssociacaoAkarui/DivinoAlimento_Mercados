@@ -268,7 +268,7 @@ const AdminCategorias = () => {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <Table>
+                <Table caption="Lista de Categorias">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Nome da Categoria</TableHead>

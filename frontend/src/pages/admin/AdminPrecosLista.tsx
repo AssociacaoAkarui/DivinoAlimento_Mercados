@@ -193,7 +193,7 @@ export default function AdminPrecosLista() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table caption="Lista de Mercados para Gestão de Preços">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Mercado</TableHead>

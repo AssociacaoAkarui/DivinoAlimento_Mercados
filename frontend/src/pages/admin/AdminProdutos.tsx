@@ -282,7 +282,7 @@ const AdminProdutos = () => {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <Table>
+                <Table caption="Lista de Alimentos Base">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Nome do Alimento</TableHead>

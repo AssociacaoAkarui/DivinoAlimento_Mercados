@@ -988,7 +988,7 @@ export default function AdminOferta() {
               <>
                 {/* Desktop View */}
                 <div className="hidden md:block overflow-x-auto">
-                  <Table>
+                  <Table caption="Detalhes da Oferta">
                     <TableHeader>
                       <TableRow>
                         <TableHead>Alimento</TableHead>

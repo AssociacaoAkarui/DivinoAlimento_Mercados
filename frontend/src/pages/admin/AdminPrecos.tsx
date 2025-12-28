@@ -288,7 +288,7 @@ export default function AdminPrecos() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table caption="Gestão de Preços">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Alimento</TableHead>
