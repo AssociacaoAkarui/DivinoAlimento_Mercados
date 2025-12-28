@@ -329,7 +329,7 @@ export default function ConsumidorRelatorioPedidosResultado() {
         {/* Tabela Desktop */}
         {!isMobile && (
           <Card>
-            <Table>
+            <Table caption="Resultado do relatório de pedidos">
               <TableHeader>
                 <TableRow>
                   <TableHead

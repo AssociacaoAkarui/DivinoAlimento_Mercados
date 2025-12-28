@@ -588,7 +588,7 @@ export default function AdminMercadoMigrarOfertas() {
               </div>
 
               <div className="rounded-md border">
-                <Table>
+                <Table caption="Lista de ofertas para migração">
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-12">Sel.</TableHead>

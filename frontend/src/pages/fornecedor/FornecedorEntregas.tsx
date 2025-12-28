@@ -401,7 +401,7 @@ export default function FornecedorEntregas() {
             </CardContent>
           ) : (
             <div className="overflow-x-auto">
-              <Table>
+              <Table caption="Lista de entregas por fornecedor">
                 <TableHeader>
                   <TableRow>
                     <TableHead>Produto</TableHead>

@@ -204,7 +204,7 @@ export default function AdminMercadoPrecos() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table caption="Lista de preços">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Mercado</TableHead>

@@ -70,7 +70,7 @@ export default function ConsumidorRelatorioPedidos() {
         {/* Desktop Table */}
         <div className="hidden md:block">
           <Card>
-            <Table>
+            <Table caption="Lista de relatórios de pedidos por ciclo">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Ciclo</TableHead>

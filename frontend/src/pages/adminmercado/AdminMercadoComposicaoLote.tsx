@@ -423,7 +423,7 @@ export default function AdminMercadoComposicaoLote() {
               </div>
             </CardHeader>
             <CardContent>
-              <Table>
+              <Table caption="Lista de composição de lotes">
                 <TableHeader>
                   <TableRow>
                     <TableHead>Alimento</TableHead>

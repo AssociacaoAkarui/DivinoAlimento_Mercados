@@ -291,7 +291,7 @@ export default function AdminMercadoRelatorioConsumidores() {
           </div>
         ) : !isMobile ? (
           <Card>
-            <Table>
+            <Table caption="Lista de relatórios de consumidores por ciclo">
               <TableHeader>
                 <TableRow>
                   <TableHead>Consumidor(a)</TableHead>

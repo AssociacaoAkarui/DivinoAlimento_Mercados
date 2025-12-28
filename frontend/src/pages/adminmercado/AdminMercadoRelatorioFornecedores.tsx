@@ -307,7 +307,7 @@ export default function AdminMercadoRelatorioFornecedores() {
           </div>
         ) : !isMobile ? (
           <Card>
-            <Table>
+            <Table caption="Lista de relatórios de fornecedores por ciclo">
               <TableHeader>
                 <TableRow>
                   <TableHead

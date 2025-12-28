@@ -96,7 +96,7 @@ export default function ConsumidorSelecionarCiclo() {
         {!isLoading && !error && (
           <div className="hidden md:block">
             <Card>
-              <Table>
+              <Table caption="Lista de ciclos disponíveis">
                 <TableHeader>
                   <TableRow>
                     <TableHead>Nome do Ciclo</TableHead>

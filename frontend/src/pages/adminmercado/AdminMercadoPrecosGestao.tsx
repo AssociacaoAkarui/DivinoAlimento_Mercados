@@ -283,7 +283,7 @@ export default function AdminMercadoPrecosGestao() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Table>
+            <Table caption="Gestão de preços">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Alimento</TableHead>

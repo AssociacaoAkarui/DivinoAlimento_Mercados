@@ -288,7 +288,7 @@ const AdminMercadoPontosEntrega = () => {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <Table>
+                <Table caption="Lista de pontos de entrega">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Nome</TableHead>

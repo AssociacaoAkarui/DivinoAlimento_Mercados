@@ -372,7 +372,7 @@ export default function OfertaCiclo() {
                       ))}
                     </div>
                   ) : (
-                    <Table>
+                    <Table caption="Lista de ofertas do ciclo">
                       <TableHeader>
                         <TableRow>
                           <TableHead>Alimento</TableHead>
@@ -673,7 +673,7 @@ export default function OfertaCiclo() {
                           ))}
                         </div>
                       ) : (
-                        <Table>
+                        <Table caption="Lista de ofertas do ciclo">
                           <TableHeader>
                             <TableRow>
                               <TableHead>Produto</TableHead>

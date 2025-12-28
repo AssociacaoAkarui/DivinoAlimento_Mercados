@@ -111,7 +111,7 @@ const AdminRelatorioConsumidores = () => {
               </div>
             ) : !isMobile ? (
               <div className="rounded-md border">
-                <Table>
+                <Table caption="Lista de relatórios de consumidores por ciclo">
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-12"></TableHead>

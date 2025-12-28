@@ -222,7 +222,7 @@ export default function ConsumidorPagamentos() {
           </div>
         ) : (
           <Card>
-            <Table>
+            <Table caption="Histórico de pagamentos">
               <TableHeader>
                 <TableRow>
                   <TableHead>Data</TableHead>

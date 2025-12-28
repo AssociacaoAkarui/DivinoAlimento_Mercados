@@ -271,7 +271,7 @@ export default function AdminMercadoRelatorioConsumidoresResultado() {
           </div>
         ) : !isMobile ? (
           <Card>
-            <Table>
+            <Table caption="Resultado do relatório de consumidores">
               <TableHeader>
                 <TableRow>
                   <TableHead>Ciclo</TableHead>

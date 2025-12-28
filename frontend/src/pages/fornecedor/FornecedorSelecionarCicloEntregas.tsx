@@ -70,7 +70,7 @@ export default function FornecedorSelecionarCicloEntregas() {
         {/* Desktop Table */}
         <div className="hidden md:block">
           <Card>
-            <Table>
+            <Table caption="Lista de ciclos para entregas">
               <TableHeader>
                 <TableRow>
                   <TableHead>Nome do Ciclo</TableHead>

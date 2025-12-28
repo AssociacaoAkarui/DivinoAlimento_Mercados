@@ -115,7 +115,7 @@ const AdminMercadoRelatorioFornecedoresCiclo = () => {
               </div>
             ) : !isMobile ? (
               <div className="rounded-md border">
-                <Table>
+                <Table caption="Lista de ciclos para relatório de fornecedores">
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-12"></TableHead>
