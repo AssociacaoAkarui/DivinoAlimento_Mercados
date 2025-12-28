@@ -218,7 +218,7 @@ const UsuarioIndex = () => {
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <Table>
+                <Table caption="Lista de usuários do sistema">
                   <TableHeader>
                     <TableRow>
                       <TableHead>Nome Completo</TableHead>
