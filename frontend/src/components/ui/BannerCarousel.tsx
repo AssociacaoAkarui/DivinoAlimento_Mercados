@@ -333,7 +333,6 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
                         <Button
                           variant="outline"
                           className="bg-white/20 border-white/30 hover:bg-white/30 text-current"
-                          tabIndex={0}
                           aria-label={`Ver alimentos do ${banner.title}`}
                         >
                           Ver Alimentos
@@ -367,11 +366,9 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
         {/* Navigation Arrows - Responsivo para mobile */}
         <CarouselPrevious
           className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-white/30 h-8 w-8 md:h-10 md:w-10"
-          tabIndex={0}
         />
         <CarouselNext
           className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-white/30 h-8 w-8 md:h-10 md:w-10"
-          tabIndex={0}
         />
       </Carousel>
     </section>
