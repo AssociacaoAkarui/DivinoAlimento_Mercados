@@ -365,10 +365,10 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
 
         {/* Navigation Arrows - Responsivo para mobile */}
         <CarouselPrevious
-          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-white/30 h-8 w-8 md:h-10 md:w-10"
+          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-white/40 h-8 w-8 md:h-10 md:w-10 z-20 shadow-md"
         />
         <CarouselNext
-          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border-white/30 h-8 w-8 md:h-10 md:w-10"
+          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-white/40 h-8 w-8 md:h-10 md:w-10 z-20 shadow-md"
         />
       </Carousel>
     </section>

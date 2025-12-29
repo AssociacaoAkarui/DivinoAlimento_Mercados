@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Faixa branca superior */}
-      <div className="h-12 lg:h-16 bg-white" />
+      <div className="h-16 sm:h-12 lg:h-16 bg-white" />
 
       {/* Header laranja com logo sobreposto */}
       <header className="relative h-20 lg:h-28 bg-[#F29B2C] flex items-center justify-center">
@@ -38,7 +38,7 @@ const Index = () => {
       {/* Container principal centralizado */}
       <main className="flex-1 flex flex-col items-center px-4 lg:px-8 max-w-[1200px] mx-auto w-full">
         {/* Bloco institucional com ícone folha + texto */}
-        <section className="flex items-center justify-center gap-3 mt-16 lg:mt-20 mb-8 lg:mb-10 max-w-[720px] px-4 mx-auto">
+        <section className="flex items-center justify-center gap-3 mt-20 sm:mt-24 lg:mt-20 mb-8 lg:mb-10 max-w-[720px] px-4 mx-auto">
           <img
             src={leafIcon}
             alt="Folha verde"

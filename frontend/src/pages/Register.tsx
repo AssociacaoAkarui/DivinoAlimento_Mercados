@@ -434,13 +434,13 @@ const Register = () => {
                                 <Input
                                   type={showConfirmPassword ? "text" : "password"}
                                   placeholder="Digite novamente sua senha"
-                                  className="pl-10 lg:pl-12 pr-20 lg:pr-24 lg:h-12 lg:text-base"
+                                  className="pl-10 lg:pl-12 pr-[88px] lg:pr-24 lg:h-12 lg:text-base"
                                   {...field}
                                 />
                                 {watchedValues.confirmPassword &&
                                   watchedValues.password ===
                                     watchedValues.confirmPassword && (
-                                    <CheckCircle2 className="absolute right-12 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" aria-label="Senhas coincidem" />
+                                    <CheckCircle2 className="absolute right-[44px] lg:right-12 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" aria-label="Senhas coincidem" />
                                   )}
                                 <Button
                                   type="button"
