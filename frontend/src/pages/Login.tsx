@@ -90,7 +90,7 @@ const Login = () => {
           </Button>
         }
       >
-        <div className="flex items-center justify-center min-h-screen py-12">
+        <div className="flex items-center justify-center min-h-screen py-2 sm:py-4 lg:py-6">
           <div className="w-full max-w-md lg:max-w-lg px-4">
             {/* Co-brand AKARUI */}
             <CoBrandAkarui />

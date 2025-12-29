@@ -220,7 +220,7 @@ const Register = () => {
       }
     >
       {/* Desktop centered registration with co-brand */}
-      <div className="flex items-center justify-center min-h-screen py-12 max-[767px]:pb-24">
+      <div className="flex items-center justify-center min-h-screen py-2 sm:py-4 lg:py-6 max-[767px]:pb-6">
         <div className="w-full max-w-[1140px] mx-auto px-6">
           {/* Co-brand AKARUI */}
           <CoBrandAkarui />

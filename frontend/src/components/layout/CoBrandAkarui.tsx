@@ -7,7 +7,7 @@ interface CoBrandAkaruiProps {
 
 export const CoBrandAkarui = ({ className }: CoBrandAkaruiProps) => {
   return (
-    <div className={`text-center ${className}`} style={{ marginTop: '40px', marginBottom: '24px' }}>
+    <div className={`text-center mt-0 sm:mt-2 lg:mt-4 mb-2 sm:mb-4 ${className}`}>
       <div className="flex justify-center">
         <a 
           href="https://github.com/AssociacaoAkarui/DivinoAlimento"
