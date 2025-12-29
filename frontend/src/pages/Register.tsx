@@ -29,6 +29,8 @@ import {
   Mail,
   Phone,
   Lock,
+  Eye,
+  EyeOff,
   CheckCircle2,
   Store,
   ShoppingBasket,
@@ -107,6 +109,9 @@ const Register = () => {
       selectedMarket: "",
     },
   });
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const watchedValues = form.watch();
   const profiles = watchedValues.profiles || {
@@ -390,11 +395,26 @@ const Register = () => {
                               <div className="relative">
                                 <Lock className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
-                                  type="password"
+                                  type={showPassword ? "text" : "password"}
                                   placeholder="Digite sua senha"
-                                  className="pl-10 lg:pl-12 lg:h-12 lg:text-base"
+                                  className="pl-10 lg:pl-12 pr-10 lg:pr-12 lg:h-12 lg:text-base"
                                   {...field}
                                 />
+                                <Button
+                                  type="button"
+                                  variant="ghost"
+                                  size="icon-sm"
+                                  className="absolute right-2 top-2 lg:right-3 lg:top-3"
+                                  onClick={() => setShowPassword(!showPassword)}
+                                  aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
+                                  aria-pressed={showPassword}
+                                >
+                                  {showPassword ? (
+                                    <EyeOff className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+                                  ) : (
+                                    <Eye className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+                                  )}
+                                </Button>
                               </div>
                             </FormControl>
                             <FormMessage />
@@ -412,16 +432,31 @@ const Register = () => {
                               <div className="relative">
                                 <Lock className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
-                                  type="password"
+                                  type={showConfirmPassword ? "text" : "password"}
                                   placeholder="Digite novamente sua senha"
-                                  className="pl-10 lg:pl-12 pr-10 lg:pr-12 lg:h-12 lg:text-base"
+                                  className="pl-10 lg:pl-12 pr-20 lg:pr-24 lg:h-12 lg:text-base"
                                   {...field}
                                 />
                                 {watchedValues.confirmPassword &&
                                   watchedValues.password ===
                                     watchedValues.confirmPassword && (
-                                    <CheckCircle2 className="absolute right-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" />
+                                    <CheckCircle2 className="absolute right-12 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" aria-label="Senhas coincidem" />
                                   )}
+                                <Button
+                                  type="button"
+                                  variant="ghost"
+                                  size="icon-sm"
+                                  className="absolute right-2 top-2 lg:right-3 lg:top-3"
+                                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                  aria-label={showConfirmPassword ? "Ocultar confirmação de senha" : "Mostrar confirmação de senha"}
+                                  aria-pressed={showConfirmPassword}
+                                >
+                                  {showConfirmPassword ? (
+                                    <EyeOff className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+                                  ) : (
+                                    <Eye className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
+                                  )}
+                                </Button>
                               </div>
                             </FormControl>
                             <FormMessage />
@@ -634,7 +669,9 @@ const Register = () => {
                           Status da Validação:
                         </h3>
                         <ul className="space-y-2" role="list">
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.name?.trim() ? "Completo: Nome completo informado" : "Pendente: Nome completo informado"}
+                          >
                             {watchedValues.name?.trim() ? (
                               <CheckCircle2
                                 className="w-4 h-4 text-success"
@@ -652,7 +689,9 @@ const Register = () => {
                               Nome completo informado
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.phone && /^\(\d{2}\)\s\d{4,5}-\d{4}$/.test(watchedValues.phone) ? "Completo: Celular válido" : "Pendente: Celular válido"}
+                          >
                             {watchedValues.phone &&
                             /^\(\d{2}\)\s\d{4,5}-\d{4}$/.test(
                               watchedValues.phone,
@@ -673,7 +712,9 @@ const Register = () => {
                               Celular válido
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.gender ? "Completo: Gênero selecionado" : "Pendente: Gênero selecionado"}
+                          >
                             {watchedValues.gender ? (
                               <CheckCircle2
                                 className="w-4 h-4 text-success"
@@ -691,7 +732,9 @@ const Register = () => {
                               Gênero selecionado
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.email && /\S+@\S+\.\S+/.test(watchedValues.email) ? "Completo: E-mail válido" : "Pendente: E-mail válido"}
+                          >
                             {watchedValues.email &&
                             /\S+@\S+\.\S+/.test(watchedValues.email) ? (
                               <CheckCircle2
@@ -710,7 +753,9 @@ const Register = () => {
                               E-mail válido
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.email === watchedValues.confirmEmail && watchedValues.email ? "Completo: E-mails coincidem" : "Pendente: E-mails coincidem"}
+                          >
                             {watchedValues.email ===
                               watchedValues.confirmEmail &&
                             watchedValues.email ? (
@@ -730,7 +775,9 @@ const Register = () => {
                               E-mails coincidem
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.password && watchedValues.password.length >= 6 ? "Completo: Senha criada" : "Pendente: Senha criada"}
+                          >
                             {watchedValues.password &&
                             watchedValues.password.length >= 6 ? (
                               <CheckCircle2
@@ -749,7 +796,9 @@ const Register = () => {
                               Senha criada
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={watchedValues.password === watchedValues.confirmPassword && watchedValues.password ? "Completo: Senhas coincidem" : "Pendente: Senhas coincidem"}
+                          >
                             {watchedValues.password ===
                               watchedValues.confirmPassword &&
                             watchedValues.password ? (
@@ -769,7 +818,9 @@ const Register = () => {
                               Senhas coincidem
                             </span>
                           </li>
-                          <li className="flex items-center space-x-2">
+                          <li className="flex items-center space-x-2"
+                            aria-label={hasAnyProfile ? "Completo: Perfil selecionado" : "Pendente: Perfil selecionado"}
+                          >
                             {hasAnyProfile ? (
                               <CheckCircle2
                                 className="w-4 h-4 text-success"
