@@ -182,7 +182,10 @@ const Dashboard = () => {
 
             {isLoading ? (
               <div className="flex justify-center py-8">
-                <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin text-primary" />
+                <Loader2
+                  aria-hidden="true"
+                  className="h-8 w-8 animate-spin text-primary"
+                />
               </div>
             ) : cicloAtivo ? (
               <>
@@ -194,7 +197,7 @@ const Dashboard = () => {
                         onClick={() => setCicloSelecionadoId(ciclo.id)}
                         className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                           cicloAtivo.id === ciclo.id
-                            ? "bg-[#FFA726] text-white"
+                            ? "bg-[#BF360C] text-white"
                             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                         }`}
                         style={{ fontFamily: "Poppins, sans-serif" }}
@@ -205,7 +208,7 @@ const Dashboard = () => {
                   </div>
                 ) : (
                   <div className="flex justify-center mb-4">
-                    <div className="bg-[#FFA726] rounded-full px-6 py-2">
+                    <div className="bg-[#BF360C] rounded-full px-6 py-2">
                       <span
                         className="text-white text-sm font-medium"
                         style={{ fontFamily: "Poppins, sans-serif" }}
@@ -343,7 +346,10 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight aria-hidden="true" className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <ChevronRight
+                      aria-hidden="true"
+                      className="w-5 h-5 text-muted-foreground flex-shrink-0"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -385,7 +391,10 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight aria-hidden="true" className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <ChevronRight
+                      aria-hidden="true"
+                      className="w-5 h-5 text-muted-foreground flex-shrink-0"
+                    />
                   </div>
                 </CardContent>
               </Card>
