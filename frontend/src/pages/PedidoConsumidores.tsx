@@ -196,7 +196,7 @@ const PedidoConsumidores = () => {
       toast({
         title: "Pedido registrado com sucesso!",
         description: `${selectedProducts.size} produto(s) adicionado(s) ao pedido.`,
-        className: "bg-green-600 text-white border-green-700",
+        className: "bg-green-800 text-white border-green-700",
       });
 
       setTimeout(() => {

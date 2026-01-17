@@ -550,8 +550,8 @@ export default function AdminOferta() {
                 variant={periodoOfertaAberto ? "default" : "secondary"}
                 className={
                   periodoOfertaAberto
-                    ? "bg-green-600 hover:bg-green-700 text-white whitespace-nowrap md:order-2"
-                    : "bg-orange-500 hover:bg-orange-600 text-white whitespace-nowrap md:order-2"
+                    ? "bg-green-800 hover:bg-green-900 text-white whitespace-nowrap md:order-2"
+                    : "bg-orange-700 hover:bg-orange-800 text-white whitespace-nowrap md:order-2"
                 }
               >
                 {periodoOfertaAberto
@@ -592,9 +592,15 @@ export default function AdminOferta() {
               >
                 <div className="flex items-center gap-2">
                   {isSaving ? (
-                    <Loader2 aria-hidden="true" className="h-5 w-5 text-yellow-600 animate-spin" />
+                    <Loader2
+                      aria-hidden="true"
+                      className="h-5 w-5 text-yellow-600 animate-spin"
+                    />
                   ) : (
-                    <CheckCircle2 aria-hidden="true" className="h-5 w-5 text-green-600" />
+                    <CheckCircle2
+                      aria-hidden="true"
+                      className="h-5 w-5 text-green-700"
+                    />
                   )}
                   <p
                     className={`text-sm ${
@@ -613,7 +619,7 @@ export default function AdminOferta() {
             <div className="flex items-center justify-center gap-3 py-4">
               {/* Etapa 1 - Completa */}
               <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white font-bold">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-800 text-white font-bold">
                   <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
                 </div>
                 <span className="text-sm font-medium text-foreground">
@@ -621,14 +627,18 @@ export default function AdminOferta() {
                 </span>
               </div>
 
-              <div className="h-0.5 w-12 md:w-20 bg-green-600" />
+              <div className="h-0.5 w-12 md:w-20 bg-green-800" />
 
               {/* Etapa 2 - Ativa ou Completa */}
               <div className="flex items-center gap-2">
                 <div
-                  className={`flex items-center justify-center w-8 h-8 rounded-full ${ofertaSalva ? "bg-green-600" : "bg-green-600"} text-white font-bold`}
+                  className={`flex items-center justify-center w-8 h-8 rounded-full ${ofertaSalva ? "bg-green-800" : "bg-green-800"} text-white font-bold`}
                 >
-                  {ofertaSalva ? <CheckCircle2 aria-hidden="true" className="h-5 w-5" /> : "2"}
+                  {ofertaSalva ? (
+                    <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
+                  ) : (
+                    "2"
+                  )}
                 </div>
                 <span className="text-sm font-medium text-foreground">
                   Seleção de produtos
@@ -636,13 +646,13 @@ export default function AdminOferta() {
               </div>
 
               <div
-                className={`h-0.5 w-12 md:w-20 ${ofertaSalva ? "bg-green-600" : "bg-muted"}`}
+                className={`h-0.5 w-12 md:w-20 ${ofertaSalva ? "bg-green-800" : "bg-muted"}`}
               />
 
               {/* Etapa 3 - Pendente ou Completa */}
               <div className="flex items-center gap-2">
                 <div
-                  className={`flex items-center justify-center w-8 h-8 rounded-full ${ofertaSalva ? "bg-green-600 text-white" : "border-2 border-muted text-muted-foreground"} font-bold`}
+                  className={`flex items-center justify-center w-8 h-8 rounded-full ${ofertaSalva ? "bg-green-800 text-white" : "border-2 border-muted text-muted-foreground"} font-bold`}
                 >
                   3
                 </div>
@@ -693,7 +703,10 @@ export default function AdminOferta() {
               <div>
                 <Label htmlFor="search">Buscar alimento</Label>
                 <div className="relative">
-                  <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Search
+                    aria-hidden="true"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                  />
                   <Input
                     id="search"
                     placeholder="Digite o nome do alimento..."
@@ -973,7 +986,7 @@ export default function AdminOferta() {
               <Button
                 onClick={handleSalvarOferta}
                 disabled={salvandoOferta}
-                className="bg-green-600 hover:bg-green-700"
+                className="bg-green-800 hover:bg-green-700"
               >
                 {salvandoOferta ? "Salvando..." : "Salvar Oferta"}
               </Button>
@@ -1053,7 +1066,7 @@ export default function AdminOferta() {
                                 }
                                 className={
                                   oferta.certificacao === "organico"
-                                    ? "bg-green-600 text-white hover:bg-green-700"
+                                    ? "bg-green-800 text-white hover:bg-green-700"
                                     : oferta.certificacao === "transicao"
                                       ? "bg-lime-600 text-white hover:bg-lime-700"
                                       : "bg-slate-500 text-white hover:bg-slate-600"
@@ -1167,7 +1180,7 @@ export default function AdminOferta() {
                               }
                               className={
                                 oferta.certificacao === "organico"
-                                  ? "bg-green-600 text-white hover:bg-green-700"
+                                  ? "bg-green-800 text-white hover:bg-green-700"
                                   : oferta.certificacao === "transicao"
                                     ? "bg-lime-600 text-white hover:bg-lime-700"
                                     : "bg-slate-500 text-white hover:bg-slate-600"

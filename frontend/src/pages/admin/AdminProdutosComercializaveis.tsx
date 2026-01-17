@@ -292,7 +292,7 @@ const AdminProdutosComercializaveis = () => {
                               variant="outline"
                               size="sm"
                               onClick={() => handleEdit(produto.id)}
-                              className="flex items-center gap-2 border-green-600 text-green-600 hover:bg-green-50"
+                              className="flex items-center gap-2 border-green-700 text-green-700 hover:bg-green-50"
                             >
                               <Edit2 className="w-4 h-4" />
                               <span className="hidden md:inline">Editar</span>

@@ -431,7 +431,7 @@ export default function AdminPedidosConsumidores() {
                             variant="outline"
                             className={`text-xs ${
                               pedido.certificacao === "organico"
-                                ? "border-green-600 text-green-600"
+                                ? "border-green-700 text-green-700"
                                 : pedido.certificacao === "transicao"
                                   ? "border-yellow-600 text-yellow-600"
                                   : "border-gray-400 text-gray-600"

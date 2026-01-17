@@ -355,7 +355,7 @@ export default function AdminEntregasFornecedores() {
                             variant="outline"
                             className={`text-xs ${
                               entrega.certificacao === "organico"
-                                ? "border-green-600 text-green-600"
+                                ? "border-green-700 text-green-700"
                                 : entrega.certificacao === "transicao"
                                   ? "border-yellow-600 text-yellow-600"
                                   : "border-gray-400 text-gray-600"
