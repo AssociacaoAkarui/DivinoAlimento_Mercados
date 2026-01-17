@@ -572,9 +572,9 @@ const AdminMercados = () => {
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1 min-w-0">
-                          <h2 className="font-medium text-foreground truncate">
+                          <h3 className="font-medium text-foreground truncate">
                             {market.name}
-                          </h2>
+                          </h3>
                           <div className="flex items-center space-x-1 mt-1">
                             <MapPin
                               aria-hidden="true"
@@ -665,7 +665,10 @@ const AdminMercados = () => {
             <Card>
               <CardHeader className="flex flex-row items-center justify-between">
                 <div>
-                  <CardTitle className="text-lg lg:text-xl flex items-center space-x-3">
+                  <CardTitle
+                    as="h3"
+                    className="text-lg lg:text-xl flex items-center space-x-3"
+                  >
                     <Store
                       aria-hidden="true"
                       className="w-5 h-5 lg:w-6 lg:h-6 text-primary"
@@ -749,6 +752,7 @@ const AdminMercados = () => {
                                 <RadioGroupItem
                                   value={option.value}
                                   id={`edit-market-type-${option.value}`}
+                                  aria-label={option.label}
                                 />
                                 <Label
                                   htmlFor={`edit-market-type-${option.value}`}
@@ -862,9 +866,12 @@ const AdminMercados = () => {
                       )}
                     </div>
                     <div>
-                      <Label>Taxa Administrativa (%)</Label>
+                      <Label htmlFor="edit-administrative-fee">
+                        Taxa Administrativa (%)
+                      </Label>
                       {isEditingMarket ? (
                         <Input
+                          id="edit-administrative-fee"
                           type="number"
                           value={editData?.administrativeFee || ""}
                           onChange={(e) =>
@@ -911,6 +918,7 @@ const AdminMercados = () => {
                             <RadioGroupItem
                               value="ativo"
                               id="edit-status-ativo"
+                              aria-label="Ativo"
                             />
                             <Label
                               htmlFor="edit-status-ativo"
@@ -923,6 +931,7 @@ const AdminMercados = () => {
                             <RadioGroupItem
                               value="inativo"
                               id="edit-status-inativo"
+                              aria-label="Inativo"
                             />
                             <Label
                               htmlFor="edit-status-inativo"
