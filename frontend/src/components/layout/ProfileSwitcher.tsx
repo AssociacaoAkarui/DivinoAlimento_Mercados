@@ -36,13 +36,13 @@ const getDefaultRoute = (role: UserRole): string => {
 const getRoleIcon = (role: UserRole) => {
   switch (role) {
     case "consumidor":
-      return <ShoppingBasket className="w-4 h-4" />;
+      return <ShoppingBasket aria-hidden="true" className="w-4 h-4" />;
     case "fornecedor":
-      return <Store className="w-4 h-4" />;
+      return <Store aria-hidden="true" className="w-4 h-4" />;
     case "admin":
-      return <Shield className="w-4 h-4" />;
+      return <Shield aria-hidden="true" className="w-4 h-4" />;
     case "adminmercado":
-      return <UserCheck className="w-4 h-4" />;
+      return <UserCheck aria-hidden="true" className="w-4 h-4" />;
   }
 };
 
@@ -73,7 +73,7 @@ export const ProfileSwitcher: React.FC = () => {
         <Button variant="outline" size="sm" className="gap-2">
           {getRoleIcon(activeRole)}
           <span>{roleLabel(activeRole, user.gender)}</span>
-          <ChevronDown className="w-4 h-4" />
+          <ChevronDown aria-hidden="true" className="w-4 h-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">

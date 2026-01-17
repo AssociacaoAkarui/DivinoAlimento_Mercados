@@ -132,9 +132,9 @@ export function ProductGroupItem({
                 aria-label={isExpanded ? "Colapsar grupo" : "Expandir grupo"}
               >
                 {isExpanded ? (
-                  <ChevronUp className="h-4 w-4" />
+                  <ChevronUp aria-hidden="true" className="h-4 w-4" />
                 ) : (
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown aria-hidden="true" className="h-4 w-4" />
                 )}
               </Button>
             </CollapsibleTrigger>

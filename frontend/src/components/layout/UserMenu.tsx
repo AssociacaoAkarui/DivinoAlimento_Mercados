@@ -64,11 +64,11 @@ export const UserMenu: React.FC = () => {
         <button className="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none">
           <Avatar className="h-10 w-10 border-2 border-primary">
             <AvatarFallback className="bg-primary text-primary-foreground">
-              <User className="h-5 w-5" />
+              <User aria-hidden="true" className="h-5 w-5" />
             </AvatarFallback>
           </Avatar>
           <span className="font-semibold text-primary">{displayName}</span>
-          <ChevronDown className="h-4 w-4 text-primary" />
+          <ChevronDown aria-hidden="true" className="h-4 w-4 text-primary" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56 bg-background shadow-lg">
@@ -100,7 +100,7 @@ export const UserMenu: React.FC = () => {
           onClick={handleLogout}
           className="cursor-pointer text-destructive hover:bg-destructive/10 focus:bg-destructive/10 focus:text-destructive"
         >
-          <LogOut className="mr-2 h-4 w-4" />
+          <LogOut aria-hidden="true" className="mr-2 h-4 w-4" />
           <span>Sair</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -193,7 +193,7 @@ export const UserMenuLarge: React.FC = () => {
         <Avatar className="h-20 w-20 border-4 border-white shadow-lg">
           <AvatarImage src={user.photoURL} alt={displayName} />
           <AvatarFallback className="bg-primary text-primary-foreground text-xl">
-            <User className="h-10 w-10" />
+            <User aria-hidden="true" className="h-10 w-10" />
           </AvatarFallback>
         </Avatar>
 
@@ -202,7 +202,7 @@ export const UserMenuLarge: React.FC = () => {
           <span className="font-semibold text-lg text-foreground">
             {displayName}
           </span>
-          <ChevronDown
+          <ChevronDown aria-hidden="true"
             className={cn(
               "h-4 w-4 text-muted-foreground transition-transform",
               isOpen && "rotate-180",
@@ -286,7 +286,7 @@ export const UserMenuLarge: React.FC = () => {
               className="w-full px-4 py-3 text-left transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none"
             >
               <div className="flex items-center gap-2">
-                <LogOut className="h-4 w-4 text-destructive" />
+                <LogOut aria-hidden="true" className="h-4 w-4 text-destructive" />
                 <span className="text-sm font-medium text-destructive">
                   Sair
                 </span>

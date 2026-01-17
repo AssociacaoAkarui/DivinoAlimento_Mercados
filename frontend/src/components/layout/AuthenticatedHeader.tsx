@@ -40,13 +40,13 @@ const getDefaultRoute = (role: UserRole): string => {
 const getRoleIcon = (role: UserRole) => {
   switch (role) {
     case "consumidor":
-      return <ShoppingBasket className="w-4 h-4" />;
+      return <ShoppingBasket aria-hidden="true" className="w-4 h-4" />;
     case "fornecedor":
-      return <Store className="w-4 h-4" />;
+      return <Store aria-hidden="true" className="w-4 h-4" />;
     case "admin":
-      return <Shield className="w-4 h-4" />;
+      return <Shield aria-hidden="true" className="w-4 h-4" />;
     case "adminmercado":
-      return <UserCheck className="w-4 h-4" />;
+      return <UserCheck aria-hidden="true" className="w-4 h-4" />;
   }
 };
 
@@ -169,7 +169,7 @@ export const AuthenticatedHeader: React.FC = () => {
                       {getDisplayName()}
                     </span>
 
-                    <ChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
+                    <ChevronDown aria-hidden="true" className="w-3.5 h-3.5 text-muted-foreground" />
                   </button>
                 </DropdownMenuTrigger>
 
@@ -216,7 +216,7 @@ export const AuthenticatedHeader: React.FC = () => {
                     onClick={handleLogout}
                     className="gap-2 cursor-pointer text-destructive focus:text-destructive"
                   >
-                    <LogOut className="w-4 h-4" />
+                    <LogOut aria-hidden="true" className="w-4 h-4" />
                     <span>Sair</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -276,7 +276,7 @@ export const AuthenticatedHeader: React.FC = () => {
                       </span>
                     </div>
 
-                    <ChevronDown className="w-4 h-4 text-white" />
+                    <ChevronDown aria-hidden="true" className="w-4 h-4 text-white" />
                   </button>
                 </DropdownMenuTrigger>
 
@@ -323,7 +323,7 @@ export const AuthenticatedHeader: React.FC = () => {
                     onClick={handleLogout}
                     className="gap-2 cursor-pointer text-destructive focus:text-destructive"
                   >
-                    <LogOut className="w-4 h-4" />
+                    <LogOut aria-hidden="true" className="w-4 h-4" />
                     <span>Sair</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>

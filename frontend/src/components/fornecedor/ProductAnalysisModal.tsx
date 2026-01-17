@@ -60,7 +60,7 @@ const ProductAnalysisModal: React.FC<ProductAnalysisModalProps> = ({
           <DialogTitle className="flex items-center justify-between">
             <span>Análise do Alimento</span>
             <Button variant="ghost" size="icon" onClick={onClose}>
-              <X className="w-4 h-4" />
+              <X aria-hidden="true" title="Fechar" className="w-4 h-4" />
             </Button>
           </DialogTitle>
         </DialogHeader>
@@ -85,7 +85,7 @@ const ProductAnalysisModal: React.FC<ProductAnalysisModalProps> = ({
                 <strong>Março a Julho</strong>
               </div>
               <div className="flex items-center space-x-1">
-                <Calendar className="w-3 h-3" />
+                <Calendar aria-hidden="true" className="w-3 h-3" />
                 <span>Data de Submissão: </span>
                 <strong>{product.lastUpdated.toLocaleDateString('pt-BR')}</strong>
               </div>
@@ -191,7 +191,7 @@ const ProductAnalysisModal: React.FC<ProductAnalysisModalProps> = ({
                 disabled={!rejectionReason.trim()}
                 className="flex-1 bg-red-500 hover:bg-red-600"
               >
-                <X className="w-4 h-4 mr-1" />
+                <X aria-hidden="true" className="w-4 h-4 mr-1" />
                 Reprovar
               </Button>
             )}

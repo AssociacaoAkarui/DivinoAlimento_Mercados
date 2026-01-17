@@ -151,7 +151,7 @@ export const UserRoleModal: React.FC<UserRoleModalProps> = ({
           className="absolute top-3 right-3 h-11 w-11 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           aria-label="Fechar menu de perfil"
         >
-          <X className="h-5 w-5 text-gray-600" />
+          <X aria-hidden="true" className="h-5 w-5 text-gray-600" />
         </button>
 
         {/* Large Avatar */}
@@ -229,7 +229,7 @@ export const UserRoleModal: React.FC<UserRoleModalProps> = ({
           onClick={handleLogout}
           className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
         >
-          <LogOut className="h-5 w-5" />
+          <LogOut aria-hidden="true" className="h-5 w-5" />
           Sair
         </button>
       </div>

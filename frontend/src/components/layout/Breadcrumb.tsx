@@ -56,14 +56,14 @@ export const Breadcrumb = () => {
             to="/admin/dashboard"
             className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Home className="h-4 w-4" />
+            <Home aria-hidden="true" className="h-4 w-4" />
             <span className="sr-only">Admin</span>
           </Link>
         </li>
 
         {breadcrumbs.map((breadcrumb) => (
           <li key={breadcrumb.path} className="flex items-center">
-            <ChevronRight className="h-4 w-4 text-muted-foreground mx-1" />
+            <ChevronRight aria-hidden="true" className="h-4 w-4 text-muted-foreground mx-1" />
             {breadcrumb.isLast ? (
               <span className="font-medium text-foreground">
                 {breadcrumb.label}

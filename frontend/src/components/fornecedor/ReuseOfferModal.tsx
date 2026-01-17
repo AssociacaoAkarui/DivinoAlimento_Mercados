@@ -34,7 +34,7 @@ const ReuseOfferModal: React.FC<ReuseOfferModalProps> = ({
 
         <div className="space-y-6 py-4">
           <div className="flex items-center justify-center space-x-4 p-6 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg border border-primary/10">
-            <Package className="w-12 h-12 text-primary" />
+            <Package aria-hidden="true" className="w-12 h-12 text-primary" />
             <div className="text-center">
               <h3 className="text-2xl font-bold text-primary">
                 {previousCycleData.totalProducts}
@@ -89,7 +89,7 @@ const ReuseOfferModal: React.FC<ReuseOfferModalProps> = ({
               onClick={onStartFresh}
               className="w-full h-12 flex items-center justify-center space-x-2"
             >
-              <Plus className="w-4 h-4" />
+              <Plus aria-hidden="true" className="w-4 h-4" />
               <span>Não, começar do zero</span>
             </Button>
           </div>

@@ -242,7 +242,7 @@ export default function AddProductModal({
             {/* Search and Filters */}
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
                   placeholder="Buscar por nome..."
                   value={searchTerm}
@@ -387,7 +387,7 @@ export default function AddProductModal({
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
+                    <Calendar aria-hidden="true"
                       mode="single"
                       selected={formData.expiryDate}
                       onSelect={(date) => handleInputChange("expiryDate", date)}
@@ -453,11 +453,11 @@ export default function AddProductModal({
               Cancelar
             </Button>
             <Button variant="outline" onClick={handleSaveDraft}>
-              <Save className="w-4 h-4 mr-2" />
+              <Save aria-hidden="true" className="w-4 h-4 mr-2" />
               Salvar Rascunho
             </Button>
             <Button onClick={handleApprove}>
-              <CheckCircle className="w-4 h-4 mr-2" />
+              <CheckCircle aria-hidden="true" className="w-4 h-4 mr-2" />
               Aprovar Alimento
             </Button>
           </div>

@@ -195,7 +195,7 @@ const ProductCycleCard: React.FC<ProductCycleCardProps> = ({
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
+                <Calendar aria-hidden="true"
                   mode="single"
                   selected={localProduct.expiryDate}
                   onSelect={(date) => handleFieldChange("expiryDate", date)}

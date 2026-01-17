@@ -31,7 +31,7 @@ export function FiltersBar({
     <div className="space-y-3">
       <div className="flex gap-3">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder={searchPlaceholder}
             value={searchValue}
@@ -45,7 +45,7 @@ export function FiltersBar({
           aria-expanded={filtersOpen}
           className="gap-2"
         >
-          <Filter className="h-4 w-4" />
+          <Filter aria-hidden="true" className="h-4 w-4" />
           Filtros
           {hasActiveFilters && (
             <Badge variant="secondary" className="ml-1 h-5 min-w-5 px-1">
@@ -70,7 +70,7 @@ export function FiltersBar({
                 className="ml-1 rounded-full hover:bg-muted-foreground/20 p-0.5"
                 aria-label={`Remover filtro ${chip.label}`}
               >
-                <X className="h-3 w-3" />
+                <X aria-hidden="true" className="h-3 w-3" />
               </button>
             </Badge>
           ))}

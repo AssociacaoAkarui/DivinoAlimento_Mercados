@@ -67,7 +67,7 @@ export function MobileFiltersSheet({
               </span>
             )}
           </span>
-          <ChevronDown className="h-3.5 w-3.5 opacity-50 ml-2" />
+          <ChevronDown aria-hidden="true" className="h-3.5 w-3.5 opacity-50 ml-2" />
         </Button>
       </SheetTrigger>
       <SheetContent side="bottom" className="h-[85vh] flex flex-col p-0">
