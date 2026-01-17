@@ -229,7 +229,7 @@ const Register = () => {
             <CardHeader className="text-center pb-4">
               <div className="flex items-center justify-center space-x-2 mb-2">
                 <LeafIcon size="lg" className="text-primary" />
-                <h1 className="font-poppins text-2xl lg:text-3xl text-gradient-primary font-semibold leading-none tracking-tight">
+                <h1 className="font-poppins text-2xl lg:text-3xl text-primary font-semibold leading-none tracking-tight">
                   Novo Cadastro
                 </h1>
                 <LeafIcon size="lg" className="text-accent" />

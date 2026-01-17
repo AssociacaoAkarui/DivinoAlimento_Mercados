@@ -18,7 +18,7 @@ const NotFound = () => {
     <MobileLayout>
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="text-center max-w-md mx-auto">
-          <h1 className="font-poppins text-4xl font-bold mb-4 text-gradient-primary">404</h1>
+          <h1 className="font-poppins text-4xl font-bold mb-4 text-primary">404</h1>
           <p className="text-xl text-muted-foreground mb-6">Oops! Página não encontrada</p>
           <p className="text-sm text-muted-foreground mb-8">
             A página que você está procurando não existe ou foi movida.

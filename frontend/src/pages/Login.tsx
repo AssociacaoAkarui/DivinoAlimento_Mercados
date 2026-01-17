@@ -97,7 +97,7 @@ const Login = () => {
 
             <Card className="w-full shadow-lg">
               <CardHeader className="text-center pb-4">
-                <h1 className="font-poppins text-2xl lg:text-3xl text-gradient-primary font-semibold leading-none tracking-tight">
+                <h1 className="font-poppins text-2xl lg:text-3xl text-primary font-semibold leading-none tracking-tight">
                   Entrar
                 </h1>
                 <p className="text-sm lg:text-base text-muted-foreground">

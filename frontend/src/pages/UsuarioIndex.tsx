@@ -97,7 +97,7 @@ const UsuarioIndex = () => {
         toast({
           title: "Sucesso",
           description: resultado.deletarUsuario.message,
-          className: "bg-green-600 text-white",
+          className: "bg-green-800 text-white",
         });
       } else {
         toast({

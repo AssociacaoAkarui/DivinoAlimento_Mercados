@@ -59,7 +59,7 @@ const AdminMercadoDashboard = () => {
         {/* Header */}
         <div className="md:flex md:items-center md:justify-between">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-gradient-primary">
+            <h1 className="text-2xl md:text-3xl font-bold text-primary">
               {pageTitle}
             </h1>
             <p className="text-sm md:text-base text-muted-foreground">

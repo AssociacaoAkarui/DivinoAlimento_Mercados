@@ -33,7 +33,7 @@ export const RoleTitle: React.FC<RoleTitleProps> = ({
   return (
     <Tag
       className={cn(
-        "text-2xl lg:text-3xl font-bold text-gradient-primary",
+        "text-2xl lg:text-3xl font-bold text-primary",
         className,
       )}
     >
