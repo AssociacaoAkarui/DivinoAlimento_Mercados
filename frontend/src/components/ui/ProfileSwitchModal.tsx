@@ -98,7 +98,7 @@ export const ProfileSwitchModal = ({ isOpen, onClose, currentProfile }: ProfileS
                 <RadioGroupItem value="consumidor" id="modal-consumidor" className="mt-1" />
                 <div className="flex-1">
                   <Label htmlFor="modal-consumidor" className="flex items-center space-x-2 cursor-pointer">
-                    <ShoppingBasket className="w-4 h-4 text-primary" />
+                    <ShoppingBasket aria-hidden="true" className="w-4 h-4 text-primary" />
                     <span className="font-medium">Consumidor</span>
                   </Label>
                   <p className="text-xs text-muted-foreground mt-1">
@@ -113,7 +113,7 @@ export const ProfileSwitchModal = ({ isOpen, onClose, currentProfile }: ProfileS
                 <RadioGroupItem value="fornecedor" id="modal-fornecedor" className="mt-1" />
                 <div className="flex-1">
                   <Label htmlFor="modal-fornecedor" className="flex items-center space-x-2 cursor-pointer">
-                    <Store className="w-4 h-4 text-accent" />
+                    <Store aria-hidden="true" className="w-4 h-4 text-accent" />
                     <span className="font-medium">Fornecedor</span>
                   </Label>
                   <p className="text-xs text-muted-foreground mt-1">
@@ -150,7 +150,7 @@ export const ProfileSwitchModal = ({ isOpen, onClose, currentProfile }: ProfileS
             className="w-full flex items-center space-x-2"
             disabled={isLoading}
           >
-            <LogOut className="w-4 h-4" />
+            <LogOut aria-hidden="true" className="w-4 h-4" />
             <span>Sair do Aplicativo</span>
           </Button>
         </DialogFooter>

@@ -100,7 +100,7 @@ export const CycleCard = ({
         {/* Countdown Timer */}
         {timeRemaining && status === 'active' && (
           <div className="flex items-center space-x-2 mb-2 p-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-md">
-            <Timer className="w-4 h-4 text-primary" />
+            <Timer aria-hidden="true" className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">
               Termina em: {timeRemaining}
             </span>
@@ -115,11 +115,11 @@ export const CycleCard = ({
 
         <div className="flex items-center space-x-4 text-xs text-muted-foreground">
           <div className="flex items-center space-x-1">
-            <Calendar className="w-3 h-3" />
+            <Calendar aria-hidden="true" className="w-3 h-3" />
             <span>Início: {startDate}</span>
           </div>
           <div className="flex items-center space-x-1">
-            <Clock className="w-3 h-3" />
+            <Clock aria-hidden="true" className="w-3 h-3" />
             <span>Fim: {endDate}</span>
           </div>
         </div>

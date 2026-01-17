@@ -71,7 +71,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({
       {label && <Label>{label}</Label>}
 
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+        <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
         <Input
           type="text"
           placeholder={placeholder}
@@ -109,7 +109,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({
                       onClick={handleCreateNew}
                       className="w-full"
                     >
-                      <Plus className="w-4 h-4 mr-2" />
+                      <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                       Criar novo alimento base
                       <ExternalLink className="w-3 h-3 ml-2" />
                     </Button>
@@ -151,7 +151,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({
                           onClick={handleCreateNew}
                           className="w-full justify-start"
                         >
-                          <Plus className="w-4 h-4 mr-2" />
+                          <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                           Criar novo alimento base
                           <ExternalLink className="w-3 h-3 ml-2" />
                         </Button>

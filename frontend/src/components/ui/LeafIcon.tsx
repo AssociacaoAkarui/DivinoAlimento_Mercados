@@ -15,7 +15,7 @@ const sizeClasses = {
 
 export const LeafIcon = ({ className, size = 'md' }: LeafIconProps) => {
   return (
-    <Leaf 
+    <Leaf aria-hidden="true" 
       className={cn(
         sizeClasses[size],
         'text-accent',

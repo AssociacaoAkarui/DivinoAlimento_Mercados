@@ -154,7 +154,7 @@ const Countdown: React.FC<CountdownProps> = ({ endDate, textColor }) => {
 
   return (
     <div className="flex items-center space-x-4">
-      <Clock className={cn("w-5 h-5", textColor)} />
+      <Clock aria-hidden="true" className={cn("w-5 h-5", textColor)} />
       <div className="flex space-x-2">
         {[
           { label: "Dias", value: timeLeft.days },
@@ -287,7 +287,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
                               banner.textColor,
                             )}
                           >
-                            <Calendar className="w-4 h-4 mr-2" />
+                            <Calendar aria-hidden="true" className="w-4 h-4 mr-2" />
                             {getBadgeText(banner)}
                           </Badge>
 
@@ -298,7 +298,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
                                 banner.textColor,
                               )}
                             >
-                              <Percent className="w-4 h-4 mr-2" />
+                              <Percent aria-hidden="true" className="w-4 h-4 mr-2" />
                               {banner.discount}
                             </Badge>
                           )}
@@ -324,7 +324,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ className }) => {
                                 banner.textColor,
                               )}
                             >
-                              <ShoppingCart className="w-4 h-4 mr-2" />
+                              <ShoppingCart aria-hidden="true" className="w-4 h-4 mr-2" />
                               <span className="text-sm">{product}</span>
                             </div>
                           ))}

@@ -61,11 +61,11 @@ export const StatusToggle: React.FC<StatusToggleProps> = ({
         )}
       >
         {isUpdating ? (
-          <Loader2 className="w-3 h-3 animate-spin" />
+          <Loader2 aria-hidden="true" className="w-3 h-3 animate-spin" />
         ) : (
           <>
             {localStatus}
-            <ChevronDown className="w-3 h-3" />
+            <ChevronDown aria-hidden="true" className="w-3 h-3" />
           </>
         )}
       </DropdownMenuTrigger>
