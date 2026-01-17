@@ -136,7 +136,7 @@ const AdminMercadoPontoEntregaNovo = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
+              <MapPin aria-hidden="true" className="w-5 h-5" />
               Informações do Ponto de Entrega
             </CardTitle>
           </CardHeader>

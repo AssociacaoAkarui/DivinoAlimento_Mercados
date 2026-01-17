@@ -592,9 +592,9 @@ export default function AdminOferta() {
               >
                 <div className="flex items-center gap-2">
                   {isSaving ? (
-                    <Loader2 className="h-5 w-5 text-yellow-600 animate-spin" />
+                    <Loader2 aria-hidden="true" className="h-5 w-5 text-yellow-600 animate-spin" />
                   ) : (
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <CheckCircle2 aria-hidden="true" className="h-5 w-5 text-green-600" />
                   )}
                   <p
                     className={`text-sm ${
@@ -614,7 +614,7 @@ export default function AdminOferta() {
               {/* Etapa 1 - Completa */}
               <div className="flex items-center gap-2">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white font-bold">
-                  <CheckCircle2 className="h-5 w-5" />
+                  <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
                 </div>
                 <span className="text-sm font-medium text-foreground">
                   Período aberto
@@ -628,7 +628,7 @@ export default function AdminOferta() {
                 <div
                   className={`flex items-center justify-center w-8 h-8 rounded-full ${ofertaSalva ? "bg-green-600" : "bg-green-600"} text-white font-bold`}
                 >
-                  {ofertaSalva ? <CheckCircle2 className="h-5 w-5" /> : "2"}
+                  {ofertaSalva ? <CheckCircle2 aria-hidden="true" className="h-5 w-5" /> : "2"}
                 </div>
                 <span className="text-sm font-medium text-foreground">
                   Seleção de produtos
@@ -693,7 +693,7 @@ export default function AdminOferta() {
               <div>
                 <Label htmlFor="search">Buscar alimento</Label>
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="search"
                     placeholder="Digite o nome do alimento..."

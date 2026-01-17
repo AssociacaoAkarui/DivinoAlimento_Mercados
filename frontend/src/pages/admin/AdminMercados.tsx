@@ -460,7 +460,7 @@ const AdminMercados = () => {
         headerContent={<UserMenuLarge />}
       >
         <div className="flex items-center justify-center h-[60vh]">
-          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          <Loader2 aria-hidden="true" className="w-8 h-8 animate-spin text-primary" />
         </div>
       </ResponsiveLayout>
     );
@@ -544,7 +544,7 @@ const AdminMercados = () => {
                 <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                   <DialogTrigger asChild>
                     <Button className="w-full">
-                      <Plus className="w-4 h-4 mr-2" />
+                      <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                       Novo Mercado
                     </Button>
                   </DialogTrigger>
@@ -573,7 +573,7 @@ const AdminMercados = () => {
                             {market.name}
                           </h2>
                           <div className="flex items-center space-x-1 mt-1">
-                            <MapPin className="w-3 h-3 text-muted-foreground flex-shrink-0" />
+                            <MapPin aria-hidden="true" className="w-3 h-3 text-muted-foreground flex-shrink-0" />
                             <span className="text-xs text-muted-foreground">
                               {market.deliveryPoints.length} pontos
                             </span>
@@ -633,7 +633,7 @@ const AdminMercados = () => {
               {filteredMarkets.length === 0 && (
                 <Card>
                   <CardContent className="p-8 text-center space-y-4">
-                    <Store className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
+                    <Store aria-hidden="true" className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
                     <p className="text-muted-foreground">
                       {hasActiveFilters()
                         ? "Sem resultados para os filtros selecionados."
@@ -657,7 +657,7 @@ const AdminMercados = () => {
               <CardHeader className="flex flex-row items-center justify-between">
                 <div>
                   <CardTitle className="text-lg lg:text-xl flex items-center space-x-3">
-                    <Store className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
+                    <Store aria-hidden="true" className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
                     <span>{selectedMarket.name}</span>
                   </CardTitle>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -687,7 +687,7 @@ const AdminMercados = () => {
                       Cancelar
                     </Button>
                     <Button onClick={saveEditMarket}>
-                      <Save className="w-4 h-4 mr-2" />
+                      <Save aria-hidden="true" className="w-4 h-4 mr-2" />
                       Salvar
                     </Button>
                   </div>
@@ -825,7 +825,7 @@ const AdminMercados = () => {
                                 value={admin.id.toString()}
                               >
                                 <div className="flex items-center space-x-2">
-                                  <User className="w-4 h-4" />
+                                  <User aria-hidden="true" className="w-4 h-4" />
                                   <span>{admin.name}</span>
                                 </div>
                               </SelectItem>
@@ -835,7 +835,7 @@ const AdminMercados = () => {
                       ) : (
                         <div className="mt-2 p-3 bg-muted/30 rounded-lg border">
                           <div className="flex items-center space-x-2">
-                            <User className="w-4 h-4 text-muted-foreground" />
+                            <User aria-hidden="true" className="w-4 h-4 text-muted-foreground" />
                             <span className="text-sm font-medium">
                               {getAdministratorName(selectedMarket)}
                             </span>
@@ -1007,7 +1007,7 @@ const AdminMercados = () => {
                             );
                           }}
                         >
-                          <Plus className="w-4 h-4 mr-2" />
+                          <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                           Adicionar Ponto
                         </Button>
                       </div>
@@ -1019,7 +1019,7 @@ const AdminMercados = () => {
                               key={index}
                               className="flex items-center space-x-2 p-3 bg-muted/30 rounded-lg"
                             >
-                              <MapPin className="w-4 h-4 text-accent" />
+                              <MapPin aria-hidden="true" className="w-4 h-4 text-accent" />
                               <span className="text-sm">{point}</span>
                             </div>
                           ),
@@ -1058,7 +1058,7 @@ const AdminMercados = () => {
           ) : (
             <Card>
               <CardContent className="p-8 lg:p-16 text-center">
-                <Store className="w-16 h-16 lg:w-24 lg:h-24 mx-auto text-muted-foreground mb-6" />
+                <Store aria-hidden="true" className="w-16 h-16 lg:w-24 lg:h-24 mx-auto text-muted-foreground mb-6" />
                 <h2 className="text-lg lg:text-xl font-medium text-foreground mb-2">
                   Selecione um Mercado
                 </h2>
@@ -1070,7 +1070,7 @@ const AdminMercados = () => {
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
                       <Button>
-                        <Plus className="w-4 h-4 mr-2" />
+                        <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                         Criar Primeiro Mercado
                       </Button>
                     </DialogTrigger>
@@ -1195,7 +1195,7 @@ const AdminMercados = () => {
                       {marketAdministrators.map((admin) => (
                         <SelectItem key={admin.id} value={admin.id.toString()}>
                           <div className="flex items-center space-x-2">
-                            <User className="w-4 h-4" />
+                            <User aria-hidden="true" className="w-4 h-4" />
                             <span>{admin.name}</span>
                           </div>
                         </SelectItem>
@@ -1298,7 +1298,7 @@ const AdminMercados = () => {
                     onClick={addDeliveryPoint}
                     className="w-full h-11 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    <Plus className="w-4 h-4 mr-2" />
+                    <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                     Adicionar Ponto
                   </Button>
                   {newMarket.pontoEntregaIds.length > 0 && (
@@ -1324,7 +1324,7 @@ const AdminMercados = () => {
                                 onClick={() => removeDeliveryPoint(pontoId)}
                                 className="hover:bg-white/20 rounded-full p-0.5"
                               >
-                                <Plus className="w-3 h-3 rotate-45" />
+                                <Plus aria-hidden="true" className="w-3 h-3 rotate-45" />
                               </button>
                             </Badge>
                           );
@@ -1363,9 +1363,9 @@ const AdminMercados = () => {
                 disabled={criarMercadoMutation.isPending}
               >
                 {criarMercadoMutation.isPending ? (
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  <Loader2 aria-hidden="true" className="w-4 h-4 mr-2 animate-spin" />
                 ) : (
-                  <Plus className="w-4 h-4 mr-2" />
+                  <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                 )}
                 Criar Mercado
               </Button>

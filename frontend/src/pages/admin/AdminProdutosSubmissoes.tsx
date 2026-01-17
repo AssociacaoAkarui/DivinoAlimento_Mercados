@@ -149,7 +149,7 @@ const AdminProdutosSubmissoes = () => {
         }
       >
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin" />
+          <Loader2 aria-hidden="true" className="w-8 h-8 animate-spin" />
         </div>
       </ResponsiveLayout>
     );
@@ -364,9 +364,9 @@ const AdminProdutosSubmissoes = () => {
                 className="w-full sm:w-auto text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground"
               >
                 {reprovarMutation.isPending ? (
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  <Loader2 aria-hidden="true" className="w-4 h-4 mr-2 animate-spin" />
                 ) : (
-                  <X className="w-4 h-4 mr-2" />
+                  <X aria-hidden="true" className="w-4 h-4 mr-2" />
                 )}
                 Reprovar
               </Button>
@@ -376,7 +376,7 @@ const AdminProdutosSubmissoes = () => {
                 className="w-full sm:w-auto"
               >
                 {aprovarMutation.isPending ? (
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  <Loader2 aria-hidden="true" className="w-4 h-4 mr-2 animate-spin" />
                 ) : (
                   <Check className="w-4 h-4 mr-2" />
                 )}

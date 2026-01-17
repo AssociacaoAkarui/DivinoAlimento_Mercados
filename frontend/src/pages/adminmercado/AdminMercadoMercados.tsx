@@ -439,7 +439,7 @@ const AdminMercadoMercados = () => {
         headerContent={<UserMenuLarge />}
       >
         <div className="flex items-center justify-center h-[60vh]">
-          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          <Loader2 aria-hidden="true" className="w-8 h-8 animate-spin text-primary" />
         </div>
       </ResponsiveLayout>
     );
@@ -523,7 +523,7 @@ const AdminMercadoMercados = () => {
                 <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                   <DialogTrigger asChild>
                     <Button className="w-full">
-                      <Plus className="w-4 h-4 mr-2" />
+                      <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                       Novo Mercado
                     </Button>
                   </DialogTrigger>
@@ -552,7 +552,7 @@ const AdminMercadoMercados = () => {
                             {market.name}
                           </h2>
                           <div className="flex items-center space-x-1 mt-1">
-                            <MapPin className="w-3 h-3 text-muted-foreground flex-shrink-0" />
+                            <MapPin aria-hidden="true" className="w-3 h-3 text-muted-foreground flex-shrink-0" />
                             <span className="text-xs text-muted-foreground">
                               {market.deliveryPoints.length} pontos
                             </span>
@@ -612,7 +612,7 @@ const AdminMercadoMercados = () => {
               {filteredMarkets.length === 0 && (
                 <Card>
                   <CardContent className="p-8 text-center space-y-4">
-                    <Store className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
+                    <Store aria-hidden="true" className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
                     <p className="text-muted-foreground">
                       {hasActiveFilters()
                         ? "Sem resultados para os filtros selecionados."
@@ -636,7 +636,7 @@ const AdminMercadoMercados = () => {
               <CardHeader className="flex flex-row items-center justify-between">
                 <div>
                   <CardTitle className="text-lg lg:text-xl flex items-center space-x-3">
-                    <Store className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
+                    <Store aria-hidden="true" className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
                     <span>{selectedMarket.name}</span>
                   </CardTitle>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -666,7 +666,7 @@ const AdminMercadoMercados = () => {
                       Cancelar
                     </Button>
                     <Button onClick={saveEditMarket}>
-                      <Save className="w-4 h-4 mr-2" />
+                      <Save aria-hidden="true" className="w-4 h-4 mr-2" />
                       Salvar
                     </Button>
                   </div>
@@ -956,7 +956,7 @@ const AdminMercadoMercados = () => {
                             );
                           }}
                         >
-                          <Plus className="w-4 h-4 mr-2" />
+                          <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                           Adicionar Ponto
                         </Button>
                       </div>
@@ -968,7 +968,7 @@ const AdminMercadoMercados = () => {
                               key={index}
                               className="flex items-center space-x-2 p-3 bg-muted/30 rounded-lg"
                             >
-                              <MapPin className="w-4 h-4 text-accent" />
+                              <MapPin aria-hidden="true" className="w-4 h-4 text-accent" />
                               <span className="text-sm">{point}</span>
                             </div>
                           ),
@@ -1007,7 +1007,7 @@ const AdminMercadoMercados = () => {
           ) : (
             <Card>
               <CardContent className="p-8 lg:p-16 text-center">
-                <Store className="w-16 h-16 lg:w-24 lg:h-24 mx-auto text-muted-foreground mb-6" />
+                <Store aria-hidden="true" className="w-16 h-16 lg:w-24 lg:h-24 mx-auto text-muted-foreground mb-6" />
                 <h2 className="text-lg lg:text-xl font-medium text-foreground mb-2">
                   Selecione um Mercado
                 </h2>
@@ -1019,7 +1019,7 @@ const AdminMercadoMercados = () => {
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
                       <Button>
-                        <Plus className="w-4 h-4 mr-2" />
+                        <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                         Criar Primeiro Mercado
                       </Button>
                     </DialogTrigger>
@@ -1220,7 +1220,7 @@ const AdminMercadoMercados = () => {
                       size="icon"
                       onClick={addDeliveryPoint}
                     >
-                      <Plus className="w-4 h-4" />
+                      <Plus aria-hidden="true" className="w-4 h-4" />
                     </Button>
                   </div>
                   {newMarket.pontoEntregaIds.length > 0 && (
@@ -1260,7 +1260,7 @@ const AdminMercadoMercados = () => {
               disabled={criarMercadoMutation.isPending}
             >
               {criarMercadoMutation.isPending ? (
-                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                <Loader2 aria-hidden="true" className="w-4 h-4 mr-2 animate-spin" />
               ) : (
                 <Save className="w-4 h-4 mr-2" />
               )}

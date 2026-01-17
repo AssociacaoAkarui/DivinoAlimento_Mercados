@@ -120,7 +120,7 @@ export default function FornecedorSelecionarCicloEntregas() {
                           onClick={() => handleVerEntregas(ciclo.id)}
                           className="bg-primary hover:bg-primary/90"
                         >
-                          <Truck className="h-4 w-4 mr-2" />
+                          <Truck aria-hidden="true" className="h-4 w-4 mr-2" />
                           Ver Entregas
                         </Button>
                       </TableCell>
@@ -170,7 +170,7 @@ export default function FornecedorSelecionarCicloEntregas() {
                   onClick={() => handleVerEntregas(ciclo.id)}
                   className="w-full bg-primary hover:bg-primary/90"
                 >
-                  <Truck className="h-4 w-4 mr-2" />
+                  <Truck aria-hidden="true" className="h-4 w-4 mr-2" />
                   Ver Entregas
                 </Button>
               </Card>

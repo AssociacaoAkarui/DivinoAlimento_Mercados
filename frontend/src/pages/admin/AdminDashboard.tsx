@@ -102,7 +102,7 @@ const AdminDashboard = () => {
         {/* Gestão de Ciclo */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <RefreshCcw className="w-5 h-5 mr-2 text-primary" />
+            <RefreshCcw aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
             Gestão de Ciclo
           </h2>
 
@@ -113,7 +113,7 @@ const AdminDashboard = () => {
             <CardHeader className="pb-3 md:pb-4">
               <div className="flex items-center space-x-3">
                 <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                  <RefreshCcw className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  <RefreshCcw aria-hidden="true" className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <CardTitle className="text-sm md:text-base font-poppins">
@@ -131,7 +131,7 @@ const AdminDashboard = () => {
         {/* Gestão de Alimentos */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <Package className="w-5 h-5 mr-2 text-primary" />
+            <Package aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
             Gestão de Alimentos
           </h2>
 
@@ -165,7 +165,7 @@ const AdminDashboard = () => {
         {/* Relatórios Section */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <FileText className="w-5 h-5 mr-2 text-primary" />
+            <FileText aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
             Relatórios
           </h2>
 
@@ -178,7 +178,7 @@ const AdminDashboard = () => {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <Truck className="w-6 h-6 text-primary" />
+                    <Truck aria-hidden="true" className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -202,7 +202,7 @@ const AdminDashboard = () => {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <ShoppingBag className="w-6 h-6 text-primary" />
+                    <ShoppingBag aria-hidden="true" className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -223,7 +223,7 @@ const AdminDashboard = () => {
         {/* Pagamentos Section */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <Wallet className="w-5 h-5 mr-2 text-primary" />
+            <Wallet aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
             Pagamentos
           </h2>
 
@@ -236,7 +236,7 @@ const AdminDashboard = () => {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <ReceiptText className="w-6 h-6 text-primary" />
+                    <ReceiptText aria-hidden="true" className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -259,7 +259,7 @@ const AdminDashboard = () => {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <Wallet className="w-6 h-6 text-primary" />
+                    <Wallet aria-hidden="true" className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -279,7 +279,7 @@ const AdminDashboard = () => {
         {/* Administração Geral */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <Settings className="w-5 h-5 mr-2 text-primary" />
+            <Settings aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
             Administração Geral
           </h2>
 

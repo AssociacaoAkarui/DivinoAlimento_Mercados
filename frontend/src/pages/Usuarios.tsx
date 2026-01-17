@@ -72,7 +72,7 @@ const Usuarios = () => {
           onClick={handleLogout}
           className="focus-ring text-primary-foreground hover:bg-primary-hover"
         >
-          <LogOut className="w-4 h-4 mr-1" />
+          <LogOut aria-hidden="true" className="w-4 h-4 mr-1" />
           <span className="hidden md:inline">Sair</span>
         </Button>
       }
@@ -93,7 +93,7 @@ const Usuarios = () => {
           <CardHeader className="pb-4">
             <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
                   placeholder="Buscar usuário por nome ou e-mail..."
                   value={searchTerm}
@@ -102,7 +102,7 @@ const Usuarios = () => {
                 />
               </div>
               <Button onClick={handleAddUser} className="w-full md:w-auto">
-                <Plus className="w-4 h-4 mr-2" />
+                <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
                 Adicionar Usuário
               </Button>
             </div>

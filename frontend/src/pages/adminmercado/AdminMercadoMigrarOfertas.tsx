@@ -423,7 +423,7 @@ export default function AdminMercadoMigrarOfertas() {
             <CardContent>
               {ciclosLoading ? (
                 <div className="flex items-center justify-center py-8">
-                  <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                  <Loader2 aria-hidden="true" className="h-6 w-6 animate-spin text-primary" />
                 </div>
               ) : (
                 <Select
@@ -533,7 +533,7 @@ export default function AdminMercadoMigrarOfertas() {
                   >
                     {carregandoSobras ? (
                       <>
-                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        <Loader2 aria-hidden="true" className="h-4 w-4 mr-2 animate-spin" />
                         Carregando...
                       </>
                     ) : (
@@ -674,7 +674,7 @@ export default function AdminMercadoMigrarOfertas() {
                                   size="icon"
                                   className="h-8 w-8"
                                 >
-                                  <Edit2 className="h-4 w-4" />
+                                  <Edit2 title="Editar" className="h-4 w-4" />
                                 </Button>
                               </PopoverTrigger>
                               <PopoverContent className="w-80">
@@ -794,7 +794,7 @@ export default function AdminMercadoMigrarOfertas() {
                 >
                   {migrarOfertasMutation.isPending ? (
                     <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
+                      <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
                       Salvando...
                     </>
                   ) : (

@@ -215,7 +215,7 @@ const AdminCiclo = () => {
         headerContent={<UserMenuLarge />}
       >
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="h-8 w-8 animate-spin" />
+          <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin" />
         </div>
       </ResponsiveLayout>
     );
@@ -436,7 +436,7 @@ const AdminCiclo = () => {
             <Card className="bg-gradient-to-br from-primary/5 to-accent/5">
               <CardContent className="pt-6 flex flex-col items-center text-center space-y-4">
                 <div className="p-4 bg-primary/10 rounded-full">
-                  <Calendar className="h-12 w-12 text-primary" />
+                  <Calendar aria-hidden="true" className="h-12 w-12 text-primary" />
                 </div>
                 <div>
                   <h2 className="font-semibold mb-2">Gestao de Ciclos</h2>
@@ -468,7 +468,7 @@ const AdminCiclo = () => {
             >
               {isPending ? (
                 <>
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  <Loader2 aria-hidden="true" className="h-4 w-4 mr-2 animate-spin" />
                   {isEdit ? "Salvando..." : "Criando..."}
                 </>
               ) : isEdit ? (

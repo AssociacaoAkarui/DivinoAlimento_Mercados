@@ -183,7 +183,7 @@ const UsuarioIndex = () => {
             />
           </div>
           <Button onClick={handleAddUser} className="whitespace-nowrap">
-            <Plus className="w-4 h-4 mr-2" />
+            <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
             Adicionar Usuário
           </Button>
         </div>

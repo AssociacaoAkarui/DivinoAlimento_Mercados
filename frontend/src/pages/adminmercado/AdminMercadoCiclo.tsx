@@ -507,7 +507,7 @@ const AdminMercadoCiclo = () => {
                         onClick={handleAddMercado}
                         className="border-primary text-primary"
                       >
-                        <Plus className="h-4 w-4 mr-1" />
+                        <Plus aria-hidden="true" className="h-4 w-4 mr-1" />
                         Adicionar Mercado
                       </Button>
                     </div>
@@ -548,7 +548,7 @@ const AdminMercadoCiclo = () => {
                                 onClick={() => handleRemoveMercado(mercado.id)}
                                 className="text-destructive hover:text-destructive"
                               >
-                                <X className="h-4 w-4" />
+                                <X aria-hidden="true" className="h-4 w-4" />
                               </Button>
                             </div>
                           </CardHeader>
@@ -1051,7 +1051,7 @@ const AdminMercadoCiclo = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-base flex items-center gap-2">
-                      <Calendar className="h-5 w-5" />
+                      <Calendar aria-hidden="true" className="h-5 w-5" />
                       Ordem de Atendimento
                     </CardTitle>
                   </CardHeader>
@@ -1089,7 +1089,7 @@ const AdminMercadoCiclo = () => {
                 <Card className="bg-gradient-to-br from-primary/5 to-accent/5">
                   <CardContent className="pt-6 flex flex-col items-center text-center space-y-4">
                     <div className="p-4 bg-primary/10 rounded-full">
-                      <Calendar className="h-12 w-12 text-primary" />
+                      <Calendar aria-hidden="true" className="h-12 w-12 text-primary" />
                     </div>
                     <div>
                       <h2 className="font-semibold mb-2">Gestão de Ciclos</h2>

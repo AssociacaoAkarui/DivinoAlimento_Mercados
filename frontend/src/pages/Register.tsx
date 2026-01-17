@@ -261,7 +261,7 @@ const Register = () => {
                             <FormLabel>Nome Completo</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <User className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <User aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   placeholder="Digite seu nome completo"
                                   className="pl-10 lg:pl-12 lg:h-12 lg:text-base"
@@ -282,7 +282,7 @@ const Register = () => {
                             <FormLabel>Celular</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <Phone className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <Phone aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   placeholder="(11) 99999-9999"
                                   className="pl-10 lg:pl-12 lg:h-12 lg:text-base"
@@ -344,7 +344,7 @@ const Register = () => {
                             <FormLabel>E-mail</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <Mail className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <Mail aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   type="email"
                                   placeholder="seu@email.com"
@@ -366,7 +366,7 @@ const Register = () => {
                             <FormLabel>Confirmar E-mail</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <Mail className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <Mail aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   type="email"
                                   placeholder="Digite novamente seu e-mail"
@@ -376,7 +376,7 @@ const Register = () => {
                                 {watchedValues.confirmEmail &&
                                   watchedValues.email ===
                                     watchedValues.confirmEmail && (
-                                    <CheckCircle2 className="absolute right-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" />
+                                    <CheckCircle2 aria-hidden="true" className="absolute right-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-success" />
                                   )}
                               </div>
                             </FormControl>
@@ -393,7 +393,7 @@ const Register = () => {
                             <FormLabel>Senha</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <Lock className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <Lock aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   type={showPassword ? "text" : "password"}
                                   placeholder="Digite sua senha"
@@ -430,7 +430,7 @@ const Register = () => {
                             <FormLabel>Confirmar Senha</FormLabel>
                             <FormControl>
                               <div className="relative">
-                                <Lock className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
+                                <Lock aria-hidden="true" className="absolute left-3 top-3 w-4 h-4 lg:w-5 lg:h-5 text-muted-foreground" />
                                 <Input
                                   type={showConfirmPassword ? "text" : "password"}
                                   placeholder="Digite novamente sua senha"
@@ -508,7 +508,7 @@ const Register = () => {
                                         className="pointer-events-none"
                                       />
                                     </FormControl>
-                                    <ShoppingBasket className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-primary flex-shrink-0" />
+                                    <ShoppingBasket aria-hidden="true" className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-primary flex-shrink-0" />
                                     <FormLabel className="cursor-pointer font-semibold text-base max-[767px]:text-[15px] min-[1200px]:text-[17px] leading-[1.25] whitespace-normal break-words hyphens-auto m-0">
                                       {roleLabel(
                                         "consumidor",
@@ -553,7 +553,7 @@ const Register = () => {
                                         className="pointer-events-none"
                                       />
                                     </FormControl>
-                                    <Store className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-accent flex-shrink-0" />
+                                    <Store aria-hidden="true" className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-accent flex-shrink-0" />
                                     <FormLabel className="cursor-pointer font-semibold text-base max-[767px]:text-[15px] min-[1200px]:text-[17px] leading-[1.25] whitespace-normal break-words hyphens-auto m-0">
                                       {roleLabel(
                                         "fornecedor",
@@ -598,7 +598,7 @@ const Register = () => {
                                         className="pointer-events-none"
                                       />
                                     </FormControl>
-                                    <Shield className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-destructive flex-shrink-0" />
+                                    <Shield aria-hidden="true" className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-destructive flex-shrink-0" />
                                     <FormLabel className="cursor-pointer font-semibold text-base max-[767px]:text-[15px] min-[1200px]:text-[17px] leading-[1.25] whitespace-normal break-words hyphens-auto m-0">
                                       {roleLabel("admin", watchedValues.gender)}
                                     </FormLabel>
@@ -640,7 +640,7 @@ const Register = () => {
                                         className="pointer-events-none"
                                       />
                                     </FormControl>
-                                    <UserCheck className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-warning flex-shrink-0" />
+                                    <UserCheck aria-hidden="true" className="w-5 h-5 max-[767px]:w-[20px] max-[767px]:h-[20px] min-[1200px]:w-[22px] min-[1200px]:h-[22px] text-warning flex-shrink-0" />
                                     <FormLabel className="cursor-pointer font-semibold text-base max-[767px]:text-[15px] min-[1200px]:text-[17px] leading-[1.25] whitespace-normal break-words hyphens-auto m-0">
                                       {roleLabel(
                                         "adminmercado",

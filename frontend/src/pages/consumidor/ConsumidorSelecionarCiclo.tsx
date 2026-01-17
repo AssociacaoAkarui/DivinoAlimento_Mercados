@@ -76,7 +76,7 @@ export default function ConsumidorSelecionarCiclo() {
         {/* Loading State */}
         {isLoading && (
           <div className="flex justify-center py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin text-primary" />
           </div>
         )}
 
@@ -136,7 +136,7 @@ export default function ConsumidorSelecionarCiclo() {
                             onClick={() => handlePedidoVarejo(ciclo.id)}
                             className="bg-primary hover:bg-primary/90"
                           >
-                            <ShoppingCart className="h-4 w-4 mr-2" />
+                            <ShoppingCart aria-hidden="true" className="h-4 w-4 mr-2" />
                             Pedido em Varejo
                           </Button>
                         </TableCell>
@@ -182,7 +182,7 @@ export default function ConsumidorSelecionarCiclo() {
                     onClick={() => handlePedidoVarejo(ciclo.id)}
                     className="w-full bg-primary hover:bg-primary/90"
                   >
-                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    <ShoppingCart aria-hidden="true" className="h-4 w-4 mr-2" />
                     Pedido em Varejo
                   </Button>
                 </Card>

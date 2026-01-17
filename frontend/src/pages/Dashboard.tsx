@@ -182,7 +182,7 @@ const Dashboard = () => {
 
             {isLoading ? (
               <div className="flex justify-center py-8">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin text-primary" />
               </div>
             ) : cicloAtivo ? (
               <>
@@ -343,7 +343,7 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <ChevronRight aria-hidden="true" className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                   </div>
                 </CardContent>
               </Card>
@@ -385,7 +385,7 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <ChevronRight aria-hidden="true" className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                   </div>
                 </CardContent>
               </Card>

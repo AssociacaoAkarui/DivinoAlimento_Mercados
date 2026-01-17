@@ -241,7 +241,7 @@ export default function AdminMercadoPrecos() {
                           navigate(`/adminmercado/precos/${mercado.id}`)
                         }
                       >
-                        <DollarSign className="w-4 h-4 mr-2" />
+                        <DollarSign aria-hidden="true" className="w-4 h-4 mr-2" />
                         Gerenciar Preços
                       </Button>
                     </TableCell>
@@ -287,7 +287,7 @@ export default function AdminMercadoPrecos() {
                   className="w-full bg-success hover:bg-success/90"
                   onClick={() => navigate(`/adminmercado/precos/${mercado.id}`)}
                 >
-                  <DollarSign className="w-4 h-4 mr-2" />
+                  <DollarSign aria-hidden="true" className="w-4 h-4 mr-2" />
                   Gerenciar Preços
                 </Button>
               </CardContent>

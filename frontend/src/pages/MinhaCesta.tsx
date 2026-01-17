@@ -115,7 +115,7 @@ const MinhaCesta = () => {
             <CardContent className="py-12">
               <div className="text-center space-y-4">
                 <div className="mx-auto w-20 h-20 rounded-full bg-muted flex items-center justify-center">
-                  <ShoppingBasket className="w-10 h-10 text-muted-foreground" />
+                  <ShoppingBasket aria-hidden="true" className="w-10 h-10 text-muted-foreground" />
                 </div>
                 <div>
                   <h2 className="text-lg font-semibold mb-2">
@@ -177,7 +177,7 @@ const MinhaCesta = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <ShoppingBasket className="w-5 h-5" />
+              <ShoppingBasket aria-hidden="true" className="w-5 h-5" />
               Resumo da Cesta
             </CardTitle>
           </CardHeader>

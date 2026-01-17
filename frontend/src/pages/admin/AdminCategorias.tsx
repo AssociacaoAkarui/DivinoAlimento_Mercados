@@ -241,7 +241,7 @@ const AdminCategorias = () => {
             onClick={() => navigate("/admin/categorias/novo")}
             className="whitespace-nowrap"
           >
-            <Plus className="w-4 h-4 mr-2" />
+            <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
             Adicionar Categoria
           </Button>
         </div>

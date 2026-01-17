@@ -267,7 +267,7 @@ const PedidoConsumidores = () => {
         <Card className="sticky top-4 z-10 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <ShoppingCart className="w-5 h-5" />
+              <ShoppingCart aria-hidden="true" className="w-5 h-5" />
               Resumo do Pedido
             </CardTitle>
           </CardHeader>
@@ -385,7 +385,7 @@ const PedidoConsumidores = () => {
                               }
                               className="h-8 w-8 p-0"
                             >
-                              <Plus className="w-4 h-4" />
+                              <Plus aria-hidden="true" className="w-4 h-4" />
                             </Button>
                           </div>
                         </div>
@@ -475,7 +475,7 @@ const PedidoConsumidores = () => {
               <CardTitle>Alimentos Disponíveis</CardTitle>
               <div className="flex items-center gap-2">
                 <div className="relative flex-1 lg:w-80">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                  <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                   <Input
                     placeholder="Buscar alimento ou fornecedor"
                     value={busca}
@@ -527,7 +527,7 @@ const PedidoConsumidores = () => {
                           {isSelected ? (
                             <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                           ) : (
-                            <Circle className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                            <Circle aria-hidden="true" className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                           )}
                           <div className="flex-1">
                             <h2 className="font-poppins font-bold text-base text-primary leading-tight">
@@ -616,7 +616,7 @@ const PedidoConsumidores = () => {
                                     }
                                     className="h-8 w-8 p-0"
                                   >
-                                    <Plus className="w-4 h-4" />
+                                    <Plus aria-hidden="true" className="w-4 h-4" />
                                   </Button>
                                 </div>
                               </div>
@@ -753,7 +753,7 @@ const PedidoConsumidores = () => {
             disabled={selectedProducts.size === 0}
             className="bg-primary hover:bg-primary/90"
           >
-            <ShoppingCart className="w-4 h-4 mr-2" />
+            <ShoppingCart aria-hidden="true" className="w-4 h-4 mr-2" />
             Confirmar Pedido
           </Button>
         </div>

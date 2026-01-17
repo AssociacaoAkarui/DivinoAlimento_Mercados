@@ -29,7 +29,7 @@ const NotFound = () => {
             onClick={() => window.location.href = '/'}
             className="focus-ring"
           >
-            <Home className="w-4 h-4 mr-2" />
+            <Home aria-hidden="true" className="w-4 h-4 mr-2" />
             Voltar ao Início
           </Button>
         </div>

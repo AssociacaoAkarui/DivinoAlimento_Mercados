@@ -260,7 +260,7 @@ const AdminMercadoPontosEntrega = () => {
             onClick={() => navigate("/adminmercado/pontos-entrega/novo")}
             className="whitespace-nowrap"
           >
-            <Plus className="w-4 h-4 mr-2" />
+            <Plus aria-hidden="true" className="w-4 h-4 mr-2" />
             Adicionar Ponto
           </Button>
         </div>
@@ -268,7 +268,7 @@ const AdminMercadoPontosEntrega = () => {
         <Card>
           <CardHeader>
             <CardTitle className="text-lg md:text-xl flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
+              <MapPin aria-hidden="true" className="w-5 h-5" />
               Lista de Pontos de Entrega
             </CardTitle>
           </CardHeader>

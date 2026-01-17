@@ -112,7 +112,7 @@ export default function ConsumidorRelatorioPedidos() {
                           onClick={() => handleVerRelatorio(ciclo.id)}
                           className="bg-primary hover:bg-primary/90"
                         >
-                          <FileText className="h-4 w-4 mr-2" />
+                          <FileText aria-hidden="true" className="h-4 w-4 mr-2" />
                           Ver Relatório
                         </Button>
                       </TableCell>
@@ -156,7 +156,7 @@ export default function ConsumidorRelatorioPedidos() {
                   onClick={() => handleVerRelatorio(ciclo.id)}
                   className="w-full bg-primary hover:bg-primary/90"
                 >
-                  <FileText className="h-4 w-4 mr-2" />
+                  <FileText aria-hidden="true" className="h-4 w-4 mr-2" />
                   Ver Relatório
                 </Button>
               </Card>

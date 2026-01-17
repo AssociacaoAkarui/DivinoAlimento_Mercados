@@ -286,7 +286,7 @@ export default function AdminComposicaoVendaDireta() {
         {/* Cabeçalho */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <ShoppingCart className="h-8 w-8 text-primary" />
+            <ShoppingCart aria-hidden="true" className="h-8 w-8 text-primary" />
             <RoleTitle
               page={`Composição de Venda Direta – ${ciclo?.nome || "Carregando..."}`}
               className="text-3xl"
@@ -403,7 +403,7 @@ export default function AdminComposicaoVendaDireta() {
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3">
                 <div className="relative w-64">
-                  <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Search aria-hidden="true" className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Buscar produto..."
                     value={busca}
@@ -470,7 +470,7 @@ export default function AdminComposicaoVendaDireta() {
                     /* TODO: filtrar apenas produtos com saldo */
                   }}
                 >
-                  <Package className="h-4 w-4 mr-2" />
+                  <Package aria-hidden="true" className="h-4 w-4 mr-2" />
                   Com Estoque
                 </Button>
 
@@ -498,7 +498,7 @@ export default function AdminComposicaoVendaDireta() {
               <Skeleton className="h-64 w-full" />
             ) : productGroups.length === 0 ? (
               <div className="text-center py-12 text-muted-foreground">
-                <Package className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                <Package aria-hidden="true" className="h-16 w-16 mx-auto mb-4 opacity-50" />
                 <p>Nenhum produto encontrado com os filtros aplicados.</p>
               </div>
             ) : (
@@ -625,7 +625,7 @@ export default function AdminComposicaoVendaDireta() {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center gap-2">
-              <ShoppingCart className="h-6 w-6 text-[#006C35]" />
+              <ShoppingCart aria-hidden="true" className="h-6 w-6 text-[#006C35]" />
               Confirmar Consolidação de Vendas
             </AlertDialogTitle>
             <AlertDialogDescription className="space-y-3 pt-2">

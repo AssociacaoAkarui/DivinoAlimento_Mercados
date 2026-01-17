@@ -483,7 +483,7 @@ export default function AdminMercadoCicloIndex() {
             onClick={() => navigate("/adminmercado/ciclo")}
             className="bg-primary hover:bg-primary/90 whitespace-nowrap"
           >
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus aria-hidden="true" className="h-4 w-4 mr-2" />
             Novo Ciclo
           </Button>
         </div>
@@ -559,7 +559,7 @@ export default function AdminMercadoCicloIndex() {
                                   >
                                     <div className="flex items-center gap-2">
                                       {bloqueado && (
-                                        <Lock className="h-3 w-3" />
+                                        <Lock aria-hidden="true" className="h-3 w-3" />
                                       )}
                                       <span
                                         className={isCurrent ? "font-bold" : ""}
@@ -599,7 +599,7 @@ export default function AdminMercadoCicloIndex() {
                                     }
                                     className="h-10 w-10 border-2 border-primary hover:bg-primary/10"
                                   >
-                                    <Settings className="h-5 w-5 text-primary" />
+                                    <Settings aria-hidden="true" className="h-5 w-5 text-primary" />
                                   </Button>
                                 </TooltipTrigger>
                                 <TooltipContent>
@@ -762,7 +762,7 @@ export default function AdminMercadoCicloIndex() {
                                     disabled={!mercadoAtual}
                                     className="h-10 w-10 border-2 border-primary hover:bg-primary/10 disabled:opacity-40 disabled:cursor-not-allowed"
                                   >
-                                    <Truck className="h-5 w-5 text-primary" />
+                                    <Truck aria-hidden="true" className="h-5 w-5 text-primary" />
                                   </Button>
                                 </TooltipTrigger>
                                 <TooltipContent>
@@ -789,7 +789,7 @@ export default function AdminMercadoCicloIndex() {
                                     disabled={!mercadoAtual}
                                     className="h-10 w-10 border-2 border-primary hover:bg-primary/10 disabled:opacity-40 disabled:cursor-not-allowed"
                                   >
-                                    <Users className="h-5 w-5 text-primary" />
+                                    <Users aria-hidden="true" className="h-5 w-5 text-primary" />
                                   </Button>
                                 </TooltipTrigger>
                                 <TooltipContent>

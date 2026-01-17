@@ -526,7 +526,7 @@ export default function AdminMercadoComposicaoLote() {
               {/* Action Bar */}
               <div className="flex items-center gap-2">
                 <div className="relative flex-1 max-w-md">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Buscar alimento..."
                     value={busca}
@@ -546,12 +546,12 @@ export default function AdminMercadoComposicaoLote() {
                 >
                   {expandedGroups.size === productGroups.length ? (
                     <>
-                      <ChevronUp className="h-4 w-4 mr-1" />
+                      <ChevronUp aria-hidden="true" className="h-4 w-4 mr-1" />
                       Recolher Tudo
                     </>
                   ) : (
                     <>
-                      <ChevronDown className="h-4 w-4 mr-1" />
+                      <ChevronDown aria-hidden="true" className="h-4 w-4 mr-1" />
                       Expandir Tudo
                     </>
                   )}

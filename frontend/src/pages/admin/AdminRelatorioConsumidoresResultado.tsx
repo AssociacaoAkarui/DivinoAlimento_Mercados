@@ -220,7 +220,7 @@ export default function AdminRelatorioConsumidoresResultado() {
 
             <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center justify-between">
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   placeholder="Filtrar por consumidor, produto, fornecedor ou ciclo"
                   value={searchTerm}
@@ -272,7 +272,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                   Exportar CSV
                 </Button>
                 <Button variant="outline" onClick={handleExportPDF}>
-                  <FileText className="h-4 w-4 mr-2" />
+                  <FileText aria-hidden="true" className="h-4 w-4 mr-2" />
                   Exportar PDF
                 </Button>
               </div>

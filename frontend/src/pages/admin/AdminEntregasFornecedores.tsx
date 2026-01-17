@@ -229,7 +229,7 @@ export default function AdminEntregasFornecedores() {
         {/* Toolbar */}
         <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center justify-between">
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Buscar fornecedor ou alimento"
               value={searchTerm}
@@ -291,7 +291,7 @@ export default function AdminEntregasFornecedores() {
               onClick={handleExportPDF}
               className="border-primary text-primary hover:bg-primary/10"
             >
-              <FileText className="h-4 w-4 mr-2" />
+              <FileText aria-hidden="true" className="h-4 w-4 mr-2" />
               Exportar PDF
             </Button>
           </div>

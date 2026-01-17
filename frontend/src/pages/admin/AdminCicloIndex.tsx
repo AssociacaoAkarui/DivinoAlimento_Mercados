@@ -139,7 +139,7 @@ export default function AdminCicloIndex() {
         headerContent={<UserMenuLarge />}
       >
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="h-8 w-8 animate-spin" />
+          <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin" />
         </div>
       </ResponsiveLayout>
     );
@@ -208,7 +208,7 @@ export default function AdminCicloIndex() {
             onClick={() => navigate("/admin/ciclo")}
             className="bg-primary hover:bg-primary/90 whitespace-nowrap"
           >
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus aria-hidden="true" className="h-4 w-4 mr-2" />
             Novo Ciclo
           </Button>
         </div>
@@ -270,7 +270,7 @@ export default function AdminCicloIndex() {
                                   }
                                   className="h-10 w-10 border-2 border-primary hover:bg-primary/10"
                                 >
-                                  <Settings className="h-5 w-5 text-primary" />
+                                  <Settings aria-hidden="true" className="h-5 w-5 text-primary" />
                                 </Button>
                               </TooltipTrigger>
                               <TooltipContent>
@@ -330,7 +330,7 @@ export default function AdminCicloIndex() {
                                   }
                                   className="h-10 w-10 border-2 border-primary hover:bg-primary/10"
                                 >
-                                  <Truck className="h-5 w-5 text-primary" />
+                                  <Truck aria-hidden="true" className="h-5 w-5 text-primary" />
                                 </Button>
                               </TooltipTrigger>
                               <TooltipContent>
@@ -350,7 +350,7 @@ export default function AdminCicloIndex() {
                                   }
                                   className="h-10 w-10 border-2 border-primary hover:bg-primary/10"
                                 >
-                                  <Users className="h-5 w-5 text-primary" />
+                                  <Users aria-hidden="true" className="h-5 w-5 text-primary" />
                                 </Button>
                               </TooltipTrigger>
                               <TooltipContent>
@@ -423,7 +423,7 @@ export default function AdminCicloIndex() {
                       size="sm"
                       onClick={() => navigate(`/admin/ciclo/${ciclo.id}`)}
                     >
-                      <Settings className="h-4 w-4 mr-1" />
+                      <Settings aria-hidden="true" className="h-4 w-4 mr-1" />
                       Editar
                     </Button>
                     <Button
@@ -493,7 +493,7 @@ export default function AdminCicloIndex() {
             >
               {deletarCicloMutation.isPending ? (
                 <>
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  <Loader2 aria-hidden="true" className="h-4 w-4 mr-2 animate-spin" />
                   Excluindo...
                 </>
               ) : (

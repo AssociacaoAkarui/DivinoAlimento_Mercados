@@ -170,7 +170,7 @@ const AdminMercadoRelatorioFornecedoresCiclo = () => {
                           <TableCell>{ciclo.pontoEntrega}</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Calendar className="w-4 h-4 text-muted-foreground" />
+                              <Calendar aria-hidden="true" className="w-4 h-4 text-muted-foreground" />
                               {formatDate(ciclo.ofertaFim)}
                             </div>
                           </TableCell>
@@ -230,7 +230,7 @@ const AdminMercadoRelatorioFornecedoresCiclo = () => {
                                 <span>{ciclo.pontoEntrega}</span>
                               </div>
                               <div className="flex items-center gap-2 mt-1">
-                                <Calendar className="w-4 h-4" />
+                                <Calendar aria-hidden="true" className="w-4 h-4" />
                                 <span>
                                   Fim de Oferta: {formatDate(ciclo.ofertaFim)}
                                 </span>

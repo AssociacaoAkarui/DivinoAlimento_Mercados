@@ -212,7 +212,7 @@ export default function OfertaCiclo() {
         {loadingOferta || loadingProdutos ? (
           <Card>
             <CardContent className="py-12 text-center">
-              <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4" />
+              <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin mx-auto mb-4" />
               <p className="text-muted-foreground">Carregando oferta...</p>
             </CardContent>
           </Card>
@@ -465,7 +465,7 @@ export default function OfertaCiclo() {
                       <div className="md:col-span-2">
                         <Label>Alimento *</Label>
                         <div className="relative">
-                          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                          <Search aria-hidden="true" className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             placeholder="Digite o nome do alimento..."
                             value={busca}
@@ -606,7 +606,7 @@ export default function OfertaCiclo() {
                       onClick={handleAdicionarProduto}
                       className="w-full md:w-auto"
                     >
-                      <Plus className="mr-2 h-4 w-4" />
+                      <Plus aria-hidden="true" className="mr-2 h-4 w-4" />
                       Adicionar Alimento
                     </Button>
                   </CardContent>

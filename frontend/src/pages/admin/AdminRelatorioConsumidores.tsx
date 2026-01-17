@@ -164,7 +164,7 @@ const AdminRelatorioConsumidores = () => {
                           <TableCell>{ciclo.pontoEntrega}</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Calendar className="w-4 h-4 text-muted-foreground" />
+                              <Calendar aria-hidden="true" className="w-4 h-4 text-muted-foreground" />
                               {formatDate(ciclo.ofertaFim)}
                             </div>
                           </TableCell>
@@ -220,7 +220,7 @@ const AdminRelatorioConsumidores = () => {
                                 <span>{ciclo.pontoEntrega}</span>
                               </div>
                               <div className="flex items-center gap-2 mt-1">
-                                <Calendar className="w-4 h-4" />
+                                <Calendar aria-hidden="true" className="w-4 h-4" />
                                 <span>Fim: {formatDate(ciclo.ofertaFim)}</span>
                               </div>
                             </div>

@@ -228,7 +228,7 @@ export default function AdminPrecosLista() {
                         className="bg-success hover:bg-success/90"
                         onClick={() => navigate(`/admin/precos/${mercado.id}`)}
                       >
-                        <DollarSign className="w-4 h-4 mr-2" />
+                        <DollarSign aria-hidden="true" className="w-4 h-4 mr-2" />
                         Gerenciar Preços
                       </Button>
                     </TableCell>
@@ -274,7 +274,7 @@ export default function AdminPrecosLista() {
                   className="w-full bg-success hover:bg-success/90"
                   onClick={() => navigate(`/admin/precos/${mercado.id}`)}
                 >
-                  <DollarSign className="w-4 h-4 mr-2" />
+                  <DollarSign aria-hidden="true" className="w-4 h-4 mr-2" />
                   Gerenciar Preços
                 </Button>
               </CardContent>

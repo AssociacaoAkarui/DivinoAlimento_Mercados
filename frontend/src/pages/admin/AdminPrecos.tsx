@@ -270,7 +270,7 @@ export default function AdminPrecos() {
 
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search aria-hidden="true" className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Buscar produto..."
             value={searchTerm}
@@ -370,7 +370,7 @@ export default function AdminPrecos() {
         {/* Action Buttons */}
         <div className="mt-6 flex gap-2 justify-end">
           <Button variant="outline" onClick={handleCancel}>
-            <X className="mr-2 h-4 w-4" />
+            <X aria-hidden="true" className="mr-2 h-4 w-4" />
             Cancelar
           </Button>
           <Button
@@ -378,7 +378,7 @@ export default function AdminPrecos() {
             disabled={!hasModifications}
             className="bg-green-700 hover:bg-green-800"
           >
-            <Save className="mr-2 h-4 w-4" />
+            <Save aria-hidden="true" className="mr-2 h-4 w-4" />
             {hasModifications
               ? `Salvar Mudanças (${modificationsCount})`
               : "Nenhuma Mudança"}

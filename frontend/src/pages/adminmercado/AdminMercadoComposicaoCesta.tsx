@@ -455,7 +455,7 @@ export default function AdminMercadoComposicaoCesta() {
               {/* Action Bar */}
               <div className="flex items-center gap-2">
                 <div className="relative flex-1 max-w-md">
-                  <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Search aria-hidden="true" className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Buscar alimento, fornecedor ou unidade..."
                     value={busca}
@@ -475,12 +475,12 @@ export default function AdminMercadoComposicaoCesta() {
                 >
                   {expandedGroups.size === productGroups.length ? (
                     <>
-                      <ChevronUp className="h-4 w-4 mr-1" />
+                      <ChevronUp aria-hidden="true" className="h-4 w-4 mr-1" />
                       Recolher tudo
                     </>
                   ) : (
                     <>
-                      <ChevronDown className="h-4 w-4 mr-1" />
+                      <ChevronDown aria-hidden="true" className="h-4 w-4 mr-1" />
                       Expandir tudo
                     </>
                   )}

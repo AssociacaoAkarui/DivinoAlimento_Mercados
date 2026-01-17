@@ -93,7 +93,7 @@ const LojaProdutor = () => {
         {/* Loja */}
         <div>
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-primary" />
+            <ShoppingBag aria-hidden="true" className="w-5 h-5 text-primary" />
             Loja
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -124,7 +124,7 @@ const LojaProdutor = () => {
         {/* Administração */}
         <div>
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <Package className="w-5 h-5 text-primary" />
+            <Package aria-hidden="true" className="w-5 h-5 text-primary" />
             Administração
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

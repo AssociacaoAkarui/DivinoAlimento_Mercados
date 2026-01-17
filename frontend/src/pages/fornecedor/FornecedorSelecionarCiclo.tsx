@@ -57,7 +57,7 @@ export default function FornecedorSelecionarCiclo() {
         headerContent={<UserMenuLarge />}
       >
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="h-8 w-8 animate-spin" />
+          <Loader2 aria-hidden="true" className="h-8 w-8 animate-spin" />
         </div>
       </ResponsiveLayout>
     );
@@ -150,7 +150,7 @@ export default function FornecedorSelecionarCiclo() {
                           onClick={() => handleOfertarAlimento(ciclo.id)}
                           className="bg-primary hover:bg-primary/90"
                         >
-                          <ShoppingBag className="h-4 w-4 mr-2" />
+                          <ShoppingBag aria-hidden="true" className="h-4 w-4 mr-2" />
                           Ofertar Alimento
                         </Button>
                       </TableCell>
@@ -193,7 +193,7 @@ export default function FornecedorSelecionarCiclo() {
                   onClick={() => handleOfertarAlimento(ciclo.id)}
                   className="w-full bg-primary hover:bg-primary/90"
                 >
-                  <ShoppingBag className="h-4 w-4 mr-2" />
+                  <ShoppingBag aria-hidden="true" className="h-4 w-4 mr-2" />
                   Ofertar Alimento
                 </Button>
               </Card>
