@@ -63,7 +63,7 @@ export const UserMenuLarge: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   // @ts-expect-error - gender pode não existir ainda no tipo User
-  const userGender: Gender = user.gender || "unspecified";
+  const userGender: Gender = user?.gender || "unspecified";
 
   const handleSwitchRole = (role: UserRole) => {
     if (role === activeRole) return;
@@ -91,17 +91,17 @@ export const UserMenuLarge: React.FC = () => {
 
   // Get first and second name only
   const getDisplayName = () => {
-    if (user.name) {
+    if (user?.name) {
       const nameParts = user.name.trim().split(" ");
       return nameParts.slice(0, 2).join(" ");
     }
-    return user.email?.split("@")[0] || "Usuário";
+    return user?.email?.split("@")[0] || "Usuário";
   };
 
   const displayName = getDisplayName();
 
   const getInitials = () => {
-    if (user.name) {
+    if (user?.name) {
       const nameParts = user.name.trim().split(" ");
       return nameParts
         .slice(0, 2)
@@ -109,7 +109,7 @@ export const UserMenuLarge: React.FC = () => {
         .join("")
         .toUpperCase();
     }
-    return user.email?.[0]?.toUpperCase() || "U";
+    return user?.email?.[0]?.toUpperCase() || "U";
   };
 
   // Close menu on outside click (desktop only) and Escape key
@@ -202,7 +202,8 @@ export const UserMenuLarge: React.FC = () => {
           <span className="font-semibold text-lg text-foreground">
             {displayName}
           </span>
-          <ChevronDown aria-hidden="true"
+          <ChevronDown
+            aria-hidden="true"
             className={cn(
               "h-4 w-4 text-muted-foreground transition-transform",
               isOpen && "rotate-180",
@@ -286,7 +287,10 @@ export const UserMenuLarge: React.FC = () => {
               className="w-full px-4 py-3 text-left transition-colors hover:bg-destructive/10 focus:bg-destructive/10 focus:outline-none"
             >
               <div className="flex items-center gap-2">
-                <LogOut aria-hidden="true" className="h-4 w-4 text-destructive" />
+                <LogOut
+                  aria-hidden="true"
+                  className="h-4 w-4 text-destructive"
+                />
                 <span className="text-sm font-medium text-destructive">
                   Sair
                 </span>
