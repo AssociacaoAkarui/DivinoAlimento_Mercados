@@ -100,7 +100,7 @@ const AdminCategorias = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
         headerContent={<UserMenuLarge />}
@@ -123,7 +123,7 @@ const AdminCategorias = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
         headerContent={<UserMenuLarge />}
@@ -204,9 +204,9 @@ const AdminCategorias = () => {
           size="icon-sm"
           onClick={() => navigate("/admin/dashboard")}
           className="text-primary-foreground hover:bg-primary-hover"
-            aria-label="Voltar"
-          >
-          <ArrowLeft className="w-4 h-4" />
+          aria-label="Voltar"
+        >
+          <ArrowLeft aria-hidden="true" className="w-4 h-4" />
         </Button>
       }
       headerContent={<UserMenuLarge />}
@@ -300,7 +300,7 @@ const AdminCategorias = () => {
                               onClick={() => handleEdit(categoria.id)}
                               className="flex items-center gap-2"
                             >
-                              <Edit2 className="w-4 h-4" />
+                              <Edit2 aria-hidden="true" className="w-4 h-4" />
                               <span className="hidden md:inline">Editar</span>
                             </Button>
                             <Button
@@ -309,7 +309,7 @@ const AdminCategorias = () => {
                               onClick={() => handleDelete(categoria)}
                               className="flex items-center gap-2 text-destructive hover:text-destructive"
                             >
-                              <Trash2 className="w-4 h-4" />
+                              <Trash2 aria-hidden="true" className="w-4 h-4" />
                               <span className="hidden md:inline">Excluir</span>
                             </Button>
                           </div>

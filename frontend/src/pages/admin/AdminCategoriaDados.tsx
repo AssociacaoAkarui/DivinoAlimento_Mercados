@@ -140,7 +140,7 @@ const AdminCategoriaDados = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
       >
@@ -162,7 +162,7 @@ const AdminCategoriaDados = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
       >
@@ -183,9 +183,9 @@ const AdminCategoriaDados = () => {
           size="icon-sm"
           onClick={() => navigate("/admin/categorias")}
           className="text-primary-foreground hover:bg-primary-hover"
-            aria-label="Voltar"
-          >
-          <ArrowLeft className="w-4 h-4" />
+          aria-label="Voltar"
+        >
+          <ArrowLeft aria-hidden="true" className="w-4 h-4" />
         </Button>
       }
     >
@@ -223,21 +223,26 @@ const AdminCategoriaDados = () => {
             </div>
 
             <div className="space-y-2">
-              <Label>
+              <Label id="status-label">
                 Situação <span className="text-destructive">*</span>
               </Label>
               <RadioGroup
                 value={formData.status}
                 onValueChange={(value) => handleInputChange("status", value)}
+                aria-labelledby="status-label"
               >
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="ativo" id="ativo" />
+                  <RadioGroupItem value="ativo" id="ativo" aria-label="Ativo" />
                   <Label htmlFor="ativo" className="cursor-pointer">
                     Ativo
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="inativo" id="inativo" />
+                  <RadioGroupItem
+                    value="inativo"
+                    id="inativo"
+                    aria-label="Inativo"
+                  />
                   <Label htmlFor="inativo" className="cursor-pointer">
                     Inativo
                   </Label>
