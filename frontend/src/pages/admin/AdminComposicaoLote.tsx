@@ -276,7 +276,7 @@ export default function AdminComposicaoLote() {
       toast({
         title: "Composição lote salva com sucesso",
         description: `${selectedItems.length} alimento(s), ${totalItens} itens, ${formatBRL(valorAtual)}`,
-        className: "bg-green-600 text-white border-green-700",
+        className: "bg-green-800 text-white border-green-700",
         duration: 5000,
       });
 
@@ -557,7 +557,7 @@ export default function AdminComposicaoLote() {
                       <Button
                         onClick={handlePublicarClick}
                         disabled={!podePublicar || isLoading}
-                        className="bg-green-600 hover:bg-green-700 text-white"
+                        className="bg-green-800 hover:bg-green-900 text-white"
                       >
                         {isLoading ? "Salvando..." : "Salvar composição"}
                       </Button>

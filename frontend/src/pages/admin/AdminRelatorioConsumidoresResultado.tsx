@@ -210,7 +210,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                     <p className="text-sm text-muted-foreground">
                       Valor Total Comercializado
                     </p>
-                    <p className="text-2xl font-bold text-green-600">
+                    <p className="text-2xl font-bold text-green-700">
                       R$ {resumo.valorTotal.toFixed(2).replace(".", ",")}
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                                   variant="outline"
                                   className={`text-xs ${
                                     pedido.certificacao === "organico"
-                                      ? "border-green-600 text-green-600"
+                                      ? "border-green-700 text-green-700"
                                       : pedido.certificacao === "transicao"
                                         ? "border-yellow-600 text-yellow-600"
                                         : "border-gray-400 text-gray-600"
@@ -364,7 +364,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                           <TableCell className="text-right">
                             {pedido.quantidade}
                           </TableCell>
-                          <TableCell className="text-right font-semibold text-green-600">
+                          <TableCell className="text-right font-semibold text-green-700">
                             R$ {pedido.total.toFixed(2).replace(".", ",")}
                           </TableCell>
                         </TableRow>
@@ -402,7 +402,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                             <p className="text-xs text-muted-foreground">
                               Total
                             </p>
-                            <p className="text-lg font-bold text-green-600">
+                            <p className="text-lg font-bold text-green-700">
                               R$ {pedido.total.toFixed(2).replace(".", ",")}
                             </p>
                           </div>
@@ -424,7 +424,7 @@ export default function AdminRelatorioConsumidoresResultado() {
                                   variant="outline"
                                   className={`text-xs ${
                                     pedido.certificacao === "organico"
-                                      ? "border-green-600 text-green-600"
+                                      ? "border-green-700 text-green-700"
                                       : pedido.certificacao === "transicao"
                                         ? "border-yellow-600 text-yellow-600"
                                         : "border-gray-400 text-gray-600"

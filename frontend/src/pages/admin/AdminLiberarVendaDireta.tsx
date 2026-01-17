@@ -238,7 +238,7 @@ export default function AdminLiberarVendaDireta() {
       toast({
         title: "Venda Direta publicada com sucesso!",
         description: `Os consumidores já podem visualizar os alimentos liberados. ${selectedItems.length} alimento(s), ${quantidadeTotal} unidades, ${formatBRL(valorTotal)}`,
-        className: "bg-green-600 text-white border-green-700",
+        className: "bg-green-800 text-white border-green-700",
         duration: 5000,
       });
 

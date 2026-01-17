@@ -244,7 +244,7 @@ export default function AdminComposicaoVendaDireta() {
       toast({
         title: "✅ Composição de vendas salva com sucesso!",
         description: `O ciclo foi consolidado e encerrado. Valor total: ${formatBRL(totais.valorTotalVendido)} • ${totais.quantidadeTotalVendida} unidades vendidas`,
-        className: "bg-green-600 text-white border-green-700",
+        className: "bg-green-800 text-white border-green-700",
         duration: 5000,
       });
 
@@ -354,7 +354,7 @@ export default function AdminComposicaoVendaDireta() {
                 <p className="text-xs text-muted-foreground mb-1">
                   Valor Total Vendido
                 </p>
-                <p className="text-lg font-semibold text-green-600">
+                <p className="text-lg font-semibold text-green-700">
                   {formatBRL(totais.valorTotalVendido)}
                 </p>
               </div>
@@ -557,7 +557,7 @@ export default function AdminComposicaoVendaDireta() {
                             <TableCell className="text-center tabular-nums font-semibold">
                               {qtdVendida}
                             </TableCell>
-                            <TableCell className="text-right font-semibold tabular-nums text-green-600">
+                            <TableCell className="text-right font-semibold tabular-nums text-green-700">
                               {formatBRL(valorFinal)}
                             </TableCell>
                             <TableCell className="text-center tabular-nums">
@@ -587,7 +587,7 @@ export default function AdminComposicaoVendaDireta() {
                       <TableCell className="text-center font-bold tabular-nums">
                         {totais.quantidadeTotalVendida}
                       </TableCell>
-                      <TableCell className="text-right font-bold tabular-nums text-green-600">
+                      <TableCell className="text-right font-bold tabular-nums text-green-700">
                         {formatBRL(totais.valorTotalVendido)}
                       </TableCell>
                       <TableCell className="text-center font-bold tabular-nums">

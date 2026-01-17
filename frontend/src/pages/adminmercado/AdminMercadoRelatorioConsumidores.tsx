@@ -347,7 +347,7 @@ export default function AdminMercadoRelatorioConsumidores() {
                               variant="outline"
                               className={`text-xs ${
                                 pedido.certificacao === "organico"
-                                  ? "border-green-600 text-green-600"
+                                  ? "border-green-700 text-green-700"
                                   : pedido.certificacao === "transicao"
                                     ? "border-yellow-600 text-yellow-600"
                                     : "border-gray-400 text-gray-600"
@@ -415,7 +415,7 @@ export default function AdminMercadoRelatorioConsumidores() {
                       </div>
                       <div className="text-right">
                         <p className="text-xs text-muted-foreground">Total</p>
-                        <p className="text-lg font-bold text-green-600">
+                        <p className="text-lg font-bold text-green-700">
                           R$ {pedido.valorTotal.toFixed(2).replace(".", ",")}
                         </p>
                       </div>
@@ -434,7 +434,7 @@ export default function AdminMercadoRelatorioConsumidores() {
                               variant="outline"
                               className={`text-xs ${
                                 pedido.certificacao === "organico"
-                                  ? "border-green-600 text-green-600"
+                                  ? "border-green-700 text-green-700"
                                   : pedido.certificacao === "transicao"
                                     ? "border-yellow-600 text-yellow-600"
                                     : "border-gray-400 text-gray-600"

@@ -406,7 +406,7 @@ const AdminPagamentosGerir = () => {
                               size="icon-sm"
                               onClick={() => handleMarcarPago(pagamento.id)}
                               title="Marcar como pago"
-                              className="border-green-500 text-green-600 hover:bg-green-50"
+                              className="border-green-500 text-green-700 hover:bg-green-50"
                             >
                               <Check className="h-4 w-4" />
                             </Button>
@@ -416,7 +416,7 @@ const AdminPagamentosGerir = () => {
                             size="icon-sm"
                             onClick={() => handleEditarPagamento(pagamento)}
                             title="Editar"
-                            className="border-green-500 text-green-600 hover:bg-green-50"
+                            className="border-green-500 text-green-700 hover:bg-green-50"
                           >
                             <Edit2 className="h-4 w-4" />
                           </Button>

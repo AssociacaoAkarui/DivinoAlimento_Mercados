@@ -209,7 +209,7 @@ export default function AdminRelatorioFornecedoresResultado() {
                     <p className="text-sm text-muted-foreground">
                       Valor Total Consolidado
                     </p>
-                    <p className="text-2xl font-bold text-green-600">
+                    <p className="text-2xl font-bold text-green-700">
                       R$ {resumo.valorTotal.toFixed(2).replace(".", ",")}
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export default function AdminRelatorioFornecedoresResultado() {
                                   variant="outline"
                                   className={`text-xs ${
                                     entrega.certificacao === "organico"
-                                      ? "border-green-600 text-green-600"
+                                      ? "border-green-700 text-green-700"
                                       : entrega.certificacao === "transicao"
                                         ? "border-yellow-600 text-yellow-600"
                                         : "border-gray-400 text-gray-600"
@@ -365,7 +365,7 @@ export default function AdminRelatorioFornecedoresResultado() {
                           <TableCell className="text-right">
                             {entrega.quantidade_entregue}
                           </TableCell>
-                          <TableCell className="text-right font-semibold text-green-600">
+                          <TableCell className="text-right font-semibold text-green-700">
                             R${" "}
                             {entrega.valor_total.toFixed(2).replace(".", ",")}
                           </TableCell>
@@ -404,7 +404,7 @@ export default function AdminRelatorioFornecedoresResultado() {
                             <p className="text-xs text-muted-foreground">
                               Valor Total
                             </p>
-                            <p className="text-lg font-bold text-green-600">
+                            <p className="text-lg font-bold text-green-700">
                               R${" "}
                               {entrega.valor_total.toFixed(2).replace(".", ",")}
                             </p>
@@ -427,7 +427,7 @@ export default function AdminRelatorioFornecedoresResultado() {
                                   variant="outline"
                                   className={`text-xs ${
                                     entrega.certificacao === "organico"
-                                      ? "border-green-600 text-green-600"
+                                      ? "border-green-700 text-green-700"
                                       : entrega.certificacao === "transicao"
                                         ? "border-yellow-600 text-yellow-600"
                                         : "border-gray-400 text-gray-600"

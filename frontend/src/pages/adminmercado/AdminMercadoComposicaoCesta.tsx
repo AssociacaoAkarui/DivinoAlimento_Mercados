@@ -264,7 +264,7 @@ export default function AdminMercadoComposicaoCesta() {
 
       toast({
         title: "Cesta publicada com sucesso.",
-        className: "bg-green-600 text-white border-green-700",
+        className: "bg-green-800 text-white border-green-700",
       });
     } catch (error) {
       toast({
@@ -328,7 +328,7 @@ export default function AdminMercadoComposicaoCesta() {
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground">Saldo</p>
                   <p
-                    className={`text-2xl font-bold ${saldo >= 0 ? "text-green-600" : "text-red-600"}`}
+                    className={`text-2xl font-bold ${saldo >= 0 ? "text-green-700" : "text-red-600"}`}
                   >
                     R$ {saldo.toFixed(2).replace(".", ",")}
                   </p>
