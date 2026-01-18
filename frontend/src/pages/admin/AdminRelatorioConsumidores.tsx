@@ -114,7 +114,9 @@ const AdminRelatorioConsumidores = () => {
                 <Table caption="Lista de relatórios de consumidores por ciclo">
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-12"></TableHead>
+                      <TableHead className="w-12">
+                        <span className="sr-only">Selecionar</span>
+                      </TableHead>
                       <TableHead>Ciclo</TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Ponto de Entrega</TableHead>
@@ -145,6 +147,7 @@ const AdminRelatorioConsumidores = () => {
                                 handleCicloToggle(ciclo.id)
                               }
                               onClick={(e) => e.stopPropagation()}
+                              aria-label={`Selecionar ciclo ${ciclo.nome}`}
                             />
                           </TableCell>
                           <TableCell className="font-medium">
@@ -164,7 +167,10 @@ const AdminRelatorioConsumidores = () => {
                           <TableCell>{ciclo.pontoEntrega}</TableCell>
                           <TableCell>
                             <div className="flex items-center gap-2">
-                              <Calendar aria-hidden="true" className="w-4 h-4 text-muted-foreground" />
+                              <Calendar
+                                aria-hidden="true"
+                                className="w-4 h-4 text-muted-foreground"
+                              />
                               {formatDate(ciclo.ofertaFim)}
                             </div>
                           </TableCell>
@@ -199,6 +205,7 @@ const AdminRelatorioConsumidores = () => {
                             onCheckedChange={() => handleCicloToggle(ciclo.id)}
                             onClick={(e) => e.stopPropagation()}
                             className="mt-1"
+                            aria-label={`Selecionar ciclo ${ciclo.nome}`}
                           />
                           <div className="flex-1 space-y-2">
                             <div className="flex items-start justify-between gap-2">
@@ -220,7 +227,10 @@ const AdminRelatorioConsumidores = () => {
                                 <span>{ciclo.pontoEntrega}</span>
                               </div>
                               <div className="flex items-center gap-2 mt-1">
-                                <Calendar aria-hidden="true" className="w-4 h-4" />
+                                <Calendar
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                />
                                 <span>Fim: {formatDate(ciclo.ofertaFim)}</span>
                               </div>
                             </div>
