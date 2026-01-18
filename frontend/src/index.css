@@ -166,6 +166,12 @@
         overflow-x: hidden;
     }
 
+    /* Accessibility: scroll margin for keyboard navigation */
+    :focus {
+        scroll-margin-top: 120px;
+        scroll-margin-bottom: 20px;
+    }
+
     /* Typography Scale - Desktop optimized */
     h1,
     h2,
