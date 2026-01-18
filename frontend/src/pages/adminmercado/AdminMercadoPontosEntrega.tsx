@@ -117,7 +117,7 @@ const AdminMercadoPontosEntrega = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
         headerContent={<UserMenuLarge />}
@@ -142,7 +142,7 @@ const AdminMercadoPontosEntrega = () => {
             className="text-primary-foreground hover:bg-primary-hover"
             aria-label="Voltar"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft aria-hidden="true" className="w-4 h-4" />
           </Button>
         }
         headerContent={<UserMenuLarge />}
@@ -223,9 +223,9 @@ const AdminMercadoPontosEntrega = () => {
           size="icon-sm"
           onClick={() => navigate("/adminmercado/dashboard")}
           className="text-primary-foreground hover:bg-primary-hover"
-            aria-label="Voltar"
-          >
-          <ArrowLeft className="w-4 h-4" />
+          aria-label="Voltar"
+        >
+          <ArrowLeft aria-hidden="true" className="w-4 h-4" />
         </Button>
       }
       headerContent={<UserMenuLarge />}
@@ -326,7 +326,7 @@ const AdminMercadoPontosEntrega = () => {
                               onClick={() => handleEdit(ponto.id)}
                               className="flex items-center gap-2"
                             >
-                              <Edit2 className="w-4 h-4" />
+                              <Edit2 aria-hidden="true" className="w-4 h-4" />
                               <span className="hidden md:inline">Editar</span>
                             </Button>
                             <Button
@@ -335,7 +335,7 @@ const AdminMercadoPontosEntrega = () => {
                               onClick={() => handleDelete(ponto)}
                               className="flex items-center gap-2 text-destructive hover:text-destructive"
                             >
-                              <Trash2 className="w-4 h-4" />
+                              <Trash2 aria-hidden="true" className="w-4 h-4" />
                               <span className="hidden md:inline">Excluir</span>
                             </Button>
                           </div>
