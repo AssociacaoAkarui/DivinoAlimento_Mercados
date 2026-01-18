@@ -112,6 +112,12 @@ const AdminDashboard = () => {
           <Card
             className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02]"
             onClick={() => navigate("/admin/ciclo-index")}
+            onKeyDown={(e) =>
+              e.key === "Enter" && navigate("/admin/ciclo-index")
+            }
+            role="link"
+            tabIndex={0}
+            aria-label="Ciclos - Gerencie períodos de oferta e operação por mercado"
           >
             <CardHeader className="pb-3 md:pb-4">
               <div className="flex items-center space-x-3">
@@ -147,11 +153,18 @@ const AdminDashboard = () => {
                 key={index}
                 className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] md:hover:scale-105"
                 onClick={() => navigate(item.route)}
+                onKeyDown={(e) => e.key === "Enter" && navigate(item.route)}
+                role="link"
+                tabIndex={0}
+                aria-label={`${item.title} - ${item.description}`}
               >
                 <CardHeader className="pb-3 md:pb-4">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="w-5 h-5 md:w-6 md:h-6 text-primary"
+                      />
                     </div>
                     <div className="min-w-0 flex-1">
                       <CardTitle className="text-sm md:text-base font-poppins truncate">
@@ -183,6 +196,12 @@ const AdminDashboard = () => {
             <Card
               className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
               onClick={() => navigate("/admin/relatorio-fornecedores")}
+              onKeyDown={(e) =>
+                e.key === "Enter" && navigate("/admin/relatorio-fornecedores")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Relatório Fornecedores - Escolha os ciclos e gere o relatório com todas as movimentações dos fornecedores"
             >
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
@@ -210,6 +229,12 @@ const AdminDashboard = () => {
             <Card
               className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
               onClick={() => navigate("/admin/relatorio-consumidores")}
+              onKeyDown={(e) =>
+                e.key === "Enter" && navigate("/admin/relatorio-consumidores")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Relatório Consumidores - Escolha os ciclos e gere o relatório com todas as movimentações dos consumidores"
             >
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
@@ -247,6 +272,12 @@ const AdminDashboard = () => {
             <Card
               className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
               onClick={() => navigate("/admin/pagamentos-gerar")}
+              onKeyDown={(e) =>
+                e.key === "Enter" && navigate("/admin/pagamentos-gerar")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Gerar Registros de Pagamento - Gerar registros de pagamentos de consumidores e fornecedores"
             >
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
@@ -273,6 +304,12 @@ const AdminDashboard = () => {
             <Card
               className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
               onClick={() => navigate("/admin/pagamentos-gerir")}
+              onKeyDown={(e) =>
+                e.key === "Enter" && navigate("/admin/pagamentos-gerir")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Administrar Pagamentos - Acompanhe, edite e registre os pagamentos pendentes e realizados"
             >
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
@@ -313,11 +350,18 @@ const AdminDashboard = () => {
                 key={index}
                 className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] md:hover:scale-105"
                 onClick={() => navigate(item.route)}
+                onKeyDown={(e) => e.key === "Enter" && navigate(item.route)}
+                role="link"
+                tabIndex={0}
+                aria-label={`${item.title} - ${item.description}`}
               >
                 <CardHeader className="pb-3 md:pb-4">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="w-5 h-5 md:w-6 md:h-6 text-primary"
+                      />
                     </div>
                     <div className="min-w-0 flex-1">
                       <CardTitle className="text-sm md:text-base font-poppins truncate">
