@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ResponsiveLayout from "@/components/layout/ResponsiveLayout";
@@ -20,18 +20,14 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { UserMenuLarge } from "@/components/layout/UserMenuLarge";
+import {
+  usePageAnnouncement,
+  PageAnnouncer,
+} from "@/hooks/use-page-announcement";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
-  const [announcement, setAnnouncement] = useState("");
-
-  useEffect(() => {
-    document.title = "Painel Administrativo - Divino Alimento";
-    const timer = setTimeout(() => {
-      setAnnouncement("Painel Administrativo");
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+  const announcement = usePageAnnouncement({ title: "Painel Administrativo" });
 
   const gestaoAlimentos = [
     {
@@ -89,14 +85,7 @@ const AdminDashboard = () => {
 
   return (
     <ResponsiveLayout headerContent={<UserMenuLarge />}>
-      <div
-        role="status"
-        aria-live="assertive"
-        aria-atomic="true"
-        className="sr-only"
-      >
-        {announcement}
-      </div>
+      <PageAnnouncer message={announcement} />
       {/* Desktop Layout */}
       <div className="space-y-6 md:space-y-8">
         {/* Header */}
