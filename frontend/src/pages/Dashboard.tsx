@@ -20,6 +20,10 @@ import {
   useListarComposicoesPorCiclo,
 } from "@/hooks/graphql";
 import { useMemo, useState } from "react";
+import {
+  usePageAnnouncement,
+  PageAnnouncer,
+} from "@/hooks/use-page-announcement";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -27,6 +31,7 @@ const Dashboard = () => {
   const [cicloSelecionadoId, setCicloSelecionadoId] = useState<string | null>(
     null,
   );
+  const announcement = usePageAnnouncement({ title: "Painel do Consumidor" });
 
   const { data: ciclosData, isLoading: ciclosLoading } = useListarCiclos(10);
 
@@ -156,7 +161,8 @@ const Dashboard = () => {
 
   return (
     <ResponsiveLayout headerContent={<UserMenuLarge />}>
-      <div className="space-y-6 pt-8">
+      <PageAnnouncer message={announcement} />
+      <div className="space-y-6 pt-8 pb-8">
         {/* Header */}
         <div className="text-center relative mb-8">
           <img
@@ -170,15 +176,15 @@ const Dashboard = () => {
         </div>
 
         {/* Resumo do Ciclo Atual */}
-        <div className="mb-8 bg-white rounded-[14px] shadow-[0px_2px_10px_rgba(0,0,0,0.05)] overflow-hidden">
+        <div className="mb-8 bg-white rounded-[14px] shadow-[0px_2px_10px_rgba(0,0,0,0.05)]">
           {/* Cabeçalho */}
           <div className="px-6 pt-6 pb-4">
-            <h3
+            <h2
               className="text-center text-[#2C3E50] text-xl font-bold mb-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Resumo do Ciclo Atual
-            </h3>
+            </h2>
 
             {isLoading ? (
               <div className="flex justify-center py-8">
@@ -195,12 +201,13 @@ const Dashboard = () => {
                       <button
                         key={ciclo.id}
                         onClick={() => setCicloSelecionadoId(ciclo.id)}
-                        className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                        className={`rounded-full px-4 py-2 text-sm font-medium transition-colors scroll-mt-32 ${
                           cicloAtivo.id === ciclo.id
                             ? "bg-[#BF360C] text-white"
                             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                         }`}
                         style={{ fontFamily: "Poppins, sans-serif" }}
+                        aria-pressed={cicloAtivo.id === ciclo.id}
                       >
                         {ciclo.nome}
                       </button>
@@ -253,12 +260,12 @@ const Dashboard = () => {
             <div className="px-6 pb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Coluna Esquerda - Alimentos da Cesta */}
               <div className="bg-[#E8F5E9] rounded-[10px] p-4">
-                <h4
+                <h3
                   className="text-[#2C3E50] text-base font-bold mb-3"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   Alimentos da Cesta:
-                </h4>
+                </h3>
                 <ul className="space-y-2 text-[#333] text-sm mb-4">
                   {produtosCesta.length > 0 ? (
                     produtosCesta.map((item) => (
@@ -282,12 +289,12 @@ const Dashboard = () => {
 
               {/* Coluna Direita - Compras em Varejo */}
               <div className="bg-white border border-[#E0E0E0] rounded-[10px] p-4">
-                <h4
+                <h3
                   className="text-[#2C3E50] text-base font-bold mb-3"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   Compras em Varejo:
-                </h4>
+                </h3>
                 <ul className="space-y-2 text-[#333] text-sm mb-4">
                   {produtosVarejo.length > 0 ? (
                     produtosVarejo.map((item) => (
@@ -321,12 +328,19 @@ const Dashboard = () => {
             {acoes.slice(0, 2).map((acao, idx) => (
               <Card
                 key={idx}
-                className={`hover:shadow-lg transition-all cursor-pointer ${
+                className={`hover:shadow-lg transition-all cursor-pointer scroll-mt-32 ${
                   !acao.habilitado ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 onClick={() => acao.habilitado && navigate(acao.rota)}
+                onKeyDown={(e) =>
+                  e.key === "Enter" && acao.habilitado && navigate(acao.rota)
+                }
+                role="link"
+                tabIndex={acao.habilitado ? 0 : -1}
+                aria-label={`${acao.titulo} - ${acao.descricao}`}
+                aria-disabled={!acao.habilitado}
               >
-                <CardContent className="p-6">
+                <CardContent className="p-6" aria-hidden="true">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <acao.icone className="w-6 h-6 text-primary" />
@@ -346,10 +360,7 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight
-                      aria-hidden="true"
-                      className="w-5 h-5 text-muted-foreground flex-shrink-0"
-                    />
+                    <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                   </div>
                 </CardContent>
               </Card>
@@ -366,12 +377,19 @@ const Dashboard = () => {
             {acoes.slice(2).map((acao, idx) => (
               <Card
                 key={idx}
-                className={`hover:shadow-lg transition-all cursor-pointer ${
+                className={`hover:shadow-lg transition-all cursor-pointer scroll-mt-32 scroll-mb-8 ${
                   !acao.habilitado ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 onClick={() => acao.habilitado && navigate(acao.rota)}
+                onKeyDown={(e) =>
+                  e.key === "Enter" && acao.habilitado && navigate(acao.rota)
+                }
+                role="link"
+                tabIndex={acao.habilitado ? 0 : -1}
+                aria-label={`${acao.titulo} - ${acao.descricao}`}
+                aria-disabled={!acao.habilitado}
               >
-                <CardContent className="p-6">
+                <CardContent className="p-6" aria-hidden="true">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <acao.icone className="w-6 h-6 text-primary" />
@@ -391,10 +409,7 @@ const Dashboard = () => {
                         {acao.descricao}
                       </p>
                     </div>
-                    <ChevronRight
-                      aria-hidden="true"
-                      className="w-5 h-5 text-muted-foreground flex-shrink-0"
-                    />
+                    <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                   </div>
                 </CardContent>
               </Card>
