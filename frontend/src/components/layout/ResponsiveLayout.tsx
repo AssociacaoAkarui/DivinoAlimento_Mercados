@@ -50,7 +50,10 @@ export const ResponsiveLayout = ({
                 {headerContent}
               </AppBarDivino>
             )}
-            <main id="main-content" className="flex-1 flex items-center justify-center px-8 py-12">
+            <main
+              id="main-content"
+              className="flex-1 flex items-center justify-center px-8 py-12"
+            >
               <div className="w-full max-w-md">{children}</div>
             </main>
           </AppShell>
@@ -66,7 +69,9 @@ export const ResponsiveLayout = ({
             {headerContent}
           </AppBarDivino>
         )}
-        <main id="main-content" className="flex-1 flex flex-col px-4 py-6">{children}</main>
+        <main id="main-content" className="flex-1 flex flex-col px-4 py-6">
+          {children}
+        </main>
       </div>
     );
   }
@@ -97,27 +102,25 @@ export const ResponsiveLayout = ({
 
   if (isDesktop) {
     return (
-      <div className="min-h-screen bg-gradient-surface overflow-x-hidden">
+      <AppShell className={className}>
         <SkipLink />
-        <AppShell className={className}>
-          {showHeader && (
-            <AppBarDivino leftContent={leftHeaderContent}>
-              {headerContent}
-            </AppBarDivino>
-          )}
+        {showHeader && (
+          <AppBarDivino leftContent={leftHeaderContent}>
+            {headerContent}
+          </AppBarDivino>
+        )}
 
-          <main
-            id="main-content"
-            className={cn(
-              "flex-1 py-8",
-              "grid grid-cols-1 lg:grid-cols-12 gap-8",
-              className,
-            )}
-          >
-            <div className="lg:col-span-12">{children}</div>
-          </main>
-        </AppShell>
-      </div>
+        <main
+          id="main-content"
+          className={cn(
+            "flex-1 py-8",
+            "grid grid-cols-1 lg:grid-cols-12 gap-8",
+            className,
+          )}
+        >
+          <div className="lg:col-span-12">{children}</div>
+        </main>
+      </AppShell>
     );
   }
 
@@ -129,7 +132,9 @@ export const ResponsiveLayout = ({
           {headerContent}
         </AppBarDivino>
       )}
-      <main id="main-content" className="flex-1 px-4 pt-8 pb-6">{children}</main>
+      <main id="main-content" className="flex-1 px-4 pt-8 pb-6">
+        {children}
+      </main>
     </div>
   );
 };
