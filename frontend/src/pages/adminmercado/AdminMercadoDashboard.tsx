@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ResponsiveLayout from "@/components/layout/ResponsiveLayout";
@@ -17,6 +17,10 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { UserMenuLarge } from "@/components/layout/UserMenuLarge";
 import { roleLabel } from "@/utils/labels";
+import {
+  usePageAnnouncement,
+  PageAnnouncer,
+} from "@/hooks/use-page-announcement";
 
 const AdminMercadoDashboard = () => {
   const navigate = useNavigate();
@@ -24,12 +28,7 @@ const AdminMercadoDashboard = () => {
 
   const roleText = activeRole ? roleLabel(activeRole, user?.gender) : "";
   const pageTitle = `Painel do ${roleText}`;
-
-  useEffect(() => {
-    if (pageTitle) {
-      document.title = `${pageTitle} | Divino Alimento`;
-    }
-  }, [pageTitle]);
+  const announcement = usePageAnnouncement({ title: pageTitle });
 
   const gestaoAlimentos = [
     {
@@ -54,6 +53,7 @@ const AdminMercadoDashboard = () => {
 
   return (
     <ResponsiveLayout headerContent={<UserMenuLarge />}>
+      <PageAnnouncer message={announcement} />
       {/* Desktop Layout */}
       <div className="space-y-6 md:space-y-8">
         {/* Header */}
@@ -76,18 +76,30 @@ const AdminMercadoDashboard = () => {
         {/* Gestão de Ciclo */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <RefreshCcw aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
+            <RefreshCcw
+              aria-hidden="true"
+              className="w-5 h-5 mr-2 text-primary"
+            />
             Gestão de Ciclo
           </h2>
 
           <Card
-            className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+            className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] scroll-mt-32"
             onClick={() => navigate("/adminmercado/ciclo-index")}
+            onKeyDown={(e) =>
+              e.key === "Enter" && navigate("/adminmercado/ciclo-index")
+            }
+            role="link"
+            tabIndex={0}
+            aria-label="Criar/Editar Ciclo - Configure e edite ciclos de vendas e ofertas"
           >
-            <CardHeader className="pb-3 md:pb-4">
+            <CardHeader className="pb-3 md:pb-4" aria-hidden="true">
               <div className="flex items-center space-x-3">
                 <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                  <RefreshCcw aria-hidden="true" className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  <RefreshCcw
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-primary"
+                  />
                 </div>
                 <div className="min-w-0 flex-1">
                   <CardTitle className="text-sm md:text-base font-poppins">
@@ -113,13 +125,20 @@ const AdminMercadoDashboard = () => {
             {gestaoAlimentos.map((item, index) => (
               <Card
                 key={index}
-                className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] md:hover:scale-105"
+                className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] md:hover:scale-105 scroll-mt-32"
                 onClick={() => navigate(item.route)}
+                onKeyDown={(e) => e.key === "Enter" && navigate(item.route)}
+                role="link"
+                tabIndex={0}
+                aria-label={`${item.title} - ${item.description}`}
               >
-                <CardHeader className="pb-3 md:pb-4">
+                <CardHeader className="pb-3 md:pb-4" aria-hidden="true">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="w-5 h-5 md:w-6 md:h-6 text-primary"
+                      />
                     </div>
                     <div className="min-w-0 flex-1">
                       <CardTitle className="text-sm md:text-base font-poppins truncate">
@@ -139,22 +158,35 @@ const AdminMercadoDashboard = () => {
         {/* Relatórios Section */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <FileText aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
+            <FileText
+              aria-hidden="true"
+              className="w-5 h-5 mr-2 text-primary"
+            />
             Relatórios
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {/* Card - Relatório Fornecedores por Ciclo */}
             <Card
-              className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+              className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02] scroll-mt-32"
               onClick={() =>
                 navigate("/adminmercado/relatorios/fornecedores-ciclo")
               }
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                navigate("/adminmercado/relatorios/fornecedores-ciclo")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Relatório Pedidos Fornecedores por Ciclo - Gere relatórios com as entregas e valores dos fornecedores em cada ciclo"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6" aria-hidden="true">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <Truck aria-hidden="true" className="w-6 h-6 text-primary" />
+                    <Truck
+                      aria-hidden="true"
+                      className="w-6 h-6 text-primary"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -171,15 +203,25 @@ const AdminMercadoDashboard = () => {
 
             {/* Card - Relatório Consumidores por Ciclo */}
             <Card
-              className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+              className="shadow-sm hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-[1.02] scroll-mt-32"
               onClick={() =>
                 navigate("/adminmercado/relatorios/consumidores-ciclo")
               }
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                navigate("/adminmercado/relatorios/consumidores-ciclo")
+              }
+              role="link"
+              tabIndex={0}
+              aria-label="Relatório Pedidos Consumidores por Ciclo - Gere relatórios com as compras e quantidades dos consumidores"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6" aria-hidden="true">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-full border-2 border-primary">
-                    <ShoppingBag aria-hidden="true" className="w-6 h-6 text-primary" />
+                    <ShoppingBag
+                      aria-hidden="true"
+                      className="w-6 h-6 text-primary"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-poppins font-semibold text-base text-foreground mb-1">
@@ -199,18 +241,28 @@ const AdminMercadoDashboard = () => {
         {/* Administração Geral */}
         <div>
           <h2 className="font-semibold mb-4 md:mb-6 flex items-center text-lg md:text-xl">
-            <Settings aria-hidden="true" className="w-5 h-5 mr-2 text-primary" />
+            <Settings
+              aria-hidden="true"
+              className="w-5 h-5 mr-2 text-primary"
+            />
             Administração Geral
           </h2>
 
           <Card
-            className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+            className="shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] scroll-mt-32"
             onClick={() => navigate("/usuario/1")}
+            onKeyDown={(e) => e.key === "Enter" && navigate("/usuario/1")}
+            role="link"
+            tabIndex={0}
+            aria-label="Dados Pessoais - Atualize seus dados pessoais"
           >
-            <CardHeader className="pb-3 md:pb-4">
+            <CardHeader className="pb-3 md:pb-4" aria-hidden="true">
               <div className="flex items-center space-x-3">
                 <div className="p-2 md:p-3 bg-primary/10 rounded-lg">
-                  <Settings aria-hidden="true" className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  <Settings
+                    aria-hidden="true"
+                    className="w-5 h-5 md:w-6 md:h-6 text-primary"
+                  />
                 </div>
                 <div className="min-w-0 flex-1">
                   <CardTitle className="text-sm md:text-base font-poppins">
