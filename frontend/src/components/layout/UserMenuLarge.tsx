@@ -188,27 +188,29 @@ export const UserMenuLarge: React.FC = () => {
         className="flex flex-col items-center pt-14 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md transition-all hover:opacity-80 cursor-pointer"
         aria-expanded={isOpen}
         aria-haspopup="menu"
+        aria-label={`Menu do usuário ${displayName}`}
       >
         {/* Avatar - inside orange header */}
-        <Avatar className="h-20 w-20 border-4 border-white shadow-lg">
-          <AvatarImage src={user.photoURL} alt={displayName} />
-          <AvatarFallback className="bg-primary text-primary-foreground text-xl">
-            <User aria-hidden="true" className="h-10 w-10" />
-          </AvatarFallback>
-        </Avatar>
+        <div aria-hidden="true">
+          <Avatar className="h-20 w-20 border-4 border-white shadow-lg">
+            <AvatarImage src={user.photoURL} alt="" />
+            <AvatarFallback className="bg-primary text-primary-foreground text-xl">
+              <User className="h-10 w-10" />
+            </AvatarFallback>
+          </Avatar>
 
-        {/* User Name with dropdown indicator - in white area below */}
-        <div className="mt-8 flex items-center justify-center gap-1">
-          <span className="font-semibold text-lg text-foreground">
-            {displayName}
-          </span>
-          <ChevronDown
-            aria-hidden="true"
-            className={cn(
-              "h-4 w-4 text-muted-foreground transition-transform",
-              isOpen && "rotate-180",
-            )}
-          />
+          {/* User Name with dropdown indicator - in white area below */}
+          <div className="mt-8 flex items-center justify-center gap-1">
+            <span className="font-semibold text-lg text-foreground">
+              {displayName}
+            </span>
+            <ChevronDown
+              className={cn(
+                "h-4 w-4 text-muted-foreground transition-transform",
+                isOpen && "rotate-180",
+              )}
+            />
+          </div>
         </div>
       </button>
 
