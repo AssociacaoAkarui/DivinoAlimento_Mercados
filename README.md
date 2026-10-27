@@ -20,7 +20,7 @@ Clonar o repositório em um lugar do computador de seu conhecimento.
 
 No terminal, utilizar o código abaixo:
 
-`git clone https://github.com/AssociacaoAkarui/DivinoAlimento.git`
+`git clone https://github.com/AssociacaoAkarui/DivinoAlimento_Mercados.git`
 
 *obs:*  a versão mais atualizada está na [rama](https://github.com/AssociacaoAkarui/DivinoAlimento/tree/feature/graphql-client-cors)
 
