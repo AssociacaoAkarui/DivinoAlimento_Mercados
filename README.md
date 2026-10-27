@@ -16,9 +16,9 @@ Para conhecer um pouco mais da plataforma connheça o [site](https://site.multif
 
 ## Passo a passo para instalar a plataforma em seu computador
 
-Clonar o repositório em um lugar do computador de seu conhecimento. 
+1. Clonar o repositório em um lugar do computador de seu conhecimento. 
 
-No terminal, utilizar o código abaixo:
+2. No terminal, utilizar o código abaixo:
 
 `git clone https://github.com/AssociacaoAkarui/DivinoAlimento_Mercados.git`
 
@@ -28,13 +28,13 @@ No terminal, utilizar o código abaixo:
 
 `cd DivinoAlimento`
 
-Copiar o arquivo com nome "env.example" para a pasta oculta com nome .env. Nesse documento "env.example" tem as configuração das portas e dos acessos incluíndo login e senha.
+4. Copiar o arquivo com nome "env.example" para a pasta oculta com nome .env. Nesse documento "env.example" tem as configuração das portas e dos acessos incluíndo login e senha.
 
 `cp env.example .env`
 
-Nesse arquivo, a porta padrão é 13000 e pode ser alterada na [linha](https://github.com/AssociacaoAkarui/DivinoAlimento/blob/main/env.example#L7) 
+5. Nesse arquivo, a porta padrão é 13000 
 
-Vamos ao *rake*, para poder ligar ou desligar o docker que contém o programa do Divino Alimento. Para conhecer os comandos, utilize:
+6. Vamos ao *rake*, para poder ligar ou desligar o docker que contém o programa do Divino Alimento. Para conhecer os comandos, utilize:
 
 `rake --tasks`
 
@@ -52,9 +52,9 @@ Assim precisamos popular o banco de dados. Para tanto:
 
 `rake vivo:popular`
 
-*observação: na tela do sistema é possível acrescentar outras cestas ou editar as informações destas duas. Porém os relatórios não irão incluir as novas cestas cadastradas.*
+Para acessar o programa usamos a porta 13000 (ou a porta que deixamos configurada no arquivo .env).
 
-Para acessar o programa usamos a porta 13000 (ou a porta que deixamos configurada no arquivo .env). Para tanto no buscador de internet colocar:
+Para tanto no buscador de internet colocar:
 
 `localhost:13000`
 
